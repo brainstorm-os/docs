@@ -47,13 +47,16 @@
 	color: #fff;
 }
 
-/* Glassy header — mirrors getbrainstorm.online: translucent blush surface
-   with a backdrop blur so content scrolls under it. */
+/* Header — mirrors getbrainstorm.online's scrolled state: a near-solid blush
+   surface (so page content never ghosts through), a faint backdrop blur, a
+   hairline border, and a soft drop shadow. */
 :root {
-	--bs-header-bg: rgba(24, 16, 20, 0.6);
+	--bs-header-bg: rgba(22, 15, 18, 0.95);
+	--bs-header-shadow: 0 6px 24px rgba(0, 0, 0, 0.28);
 }
 :root[data-theme="light"] {
-	--bs-header-bg: rgba(253, 244, 246, 0.66);
+	--bs-header-bg: rgba(253, 244, 246, 0.95);
+	--bs-header-shadow: 0 6px 24px rgba(58, 31, 41, 0.07);
 }
 
 .header {
@@ -61,6 +64,7 @@
 	backdrop-filter: blur(14px) saturate(150%);
 	-webkit-backdrop-filter: blur(14px) saturate(150%);
 	border-bottom: 1px solid var(--sl-color-hairline-shade);
+	box-shadow: var(--bs-header-shadow);
 }
 
 /* Splash CardGrid — drop Starlight's per-card multicolor chips for one
