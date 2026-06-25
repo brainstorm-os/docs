@@ -46,3 +46,50 @@
 	border-color: transparent;
 	color: #fff;
 }
+
+/* Glassy header — mirrors getbrainstorm.online: translucent blush surface
+   with a backdrop blur so content scrolls under it. */
+:root {
+	--bs-header-bg: rgba(24, 16, 20, 0.6);
+}
+:root[data-theme="light"] {
+	--bs-header-bg: rgba(253, 244, 246, 0.66);
+}
+
+.header {
+	background: var(--bs-header-bg);
+	backdrop-filter: blur(14px) saturate(150%);
+	-webkit-backdrop-filter: blur(14px) saturate(150%);
+	border-bottom: 1px solid var(--sl-color-hairline-shade);
+}
+
+/* Splash CardGrid — drop Starlight's per-card multicolor chips for one
+   cohesive Rose treatment, softer corners, and a quiet hover lift. */
+.card {
+	--sl-card-border: var(--sl-color-accent);
+	--sl-card-bg: var(--sl-color-accent-low);
+	border-radius: 14px;
+	transition:
+		border-color var(--bs-dur, 200ms) ease,
+		box-shadow var(--bs-dur, 200ms) ease,
+		transform var(--bs-dur, 200ms) ease;
+}
+.card:hover {
+	border-color: var(--sl-color-accent);
+	box-shadow: 0 12px 32px -14px rgba(190, 18, 60, 0.3);
+	transform: translateY(-2px);
+}
+.card .icon {
+	color: var(--sl-color-accent);
+	border-radius: 9px;
+	padding: 0.3em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.card,
+	.card:hover {
+		transition: none;
+		transform: none;
+	}
+}
+
