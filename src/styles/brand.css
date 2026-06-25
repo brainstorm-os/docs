@@ -83,8 +83,8 @@
    bare `.header` hits both and double-stacks the background + border. */
 header.header {
 	background: var(--bs-header-bg);
-	backdrop-filter: blur(22px) saturate(180%);
-	-webkit-backdrop-filter: blur(22px) saturate(180%);
+	backdrop-filter: blur(6px) saturate(180%);
+	-webkit-backdrop-filter: blur(6px) saturate(180%);
 	border-bottom: 1px solid var(--sl-color-hairline-shade);
 }
 
