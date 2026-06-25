@@ -1,0 +1,43 @@
+---
+title: Brainstorm Docs
+description: Documentation for Brainstorm — the local-first, AI-native operating system for knowledge work.
+template: splash
+hero:
+  tagline: Your apps, your data, your AI — all on your machine, under permissions you grant.
+  image:
+    file: ../../assets/brandmark.svg
+  actions:
+    - text: What is Brainstorm?
+      link: /start-here/what-is-brainstorm/
+      icon: right-arrow
+    - text: Quickstart
+      link: /start-here/quickstart/
+      icon: rocket
+      variant: minimal
+    - text: getbrainstorm.online
+      link: https://getbrainstorm.online
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Find your way around
+
+<CardGrid stagger>
+	<Card title="Start here" icon="open-book">
+		New to Brainstorm? [Read the overview](/start-here/what-is-brainstorm/), then
+		[install](/start-here/install/) and [run through the quickstart](/start-here/quickstart/).
+	</Card>
+	<Card title="Concepts" icon="setting">
+		Understand [vaults](/concepts/vaults/), [apps and permissions](/concepts/apps-and-permissions/),
+		and how [local-first sync](/concepts/local-first-and-sync/) keeps your data yours.
+	</Card>
+	<Card title="Apps" icon="puzzle">
+		Brainstorm ships nothing but apps — [Notes, Database, Files, Graph and more](/apps/).
+	</Card>
+	<Card title="For agents" icon="robot">
+		Every page has a Markdown twin. Point an agent at
+		[`/llms.txt`](/llms.txt) or [`/llms-full.txt`](/llms-full.txt).
+	</Card>
+</CardGrid>

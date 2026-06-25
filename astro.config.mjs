@@ -1,0 +1,66 @@
+// @ts-check
+import starlight from "@astrojs/starlight";
+import { defineConfig } from "astro/config";
+import starlightLlmsTxt from "starlight-llms-txt";
+
+// https://astro.build/config
+export default defineConfig({
+	site: "https://docs.getbrainstorm.online",
+	integrations: [
+		starlight({
+			title: "Brainstorm Docs",
+			description:
+				"Documentation for Brainstorm — the local-first, AI-native operating system for knowledge work.",
+			logo: {
+				src: "./src/assets/brandmark.svg",
+				alt: "Brainstorm",
+			},
+			favicon: "/favicon.svg",
+			customCss: ["./src/styles/brand.css"],
+			social: [
+				{
+					icon: "github",
+					label: "GitHub",
+					href: "https://github.com/brainst0rm-os/shell",
+				},
+			],
+			// Source lives in a private repo — no public "edit this page" link.
+			editLink: undefined,
+			plugins: [
+				// Emits /llms.txt, /llms-full.txt and a .md twin of every page so
+				// agents can read the docs as plain Markdown.
+				starlightLlmsTxt({
+					projectName: "Brainstorm",
+					description:
+						"Brainstorm is a local-first, AI-native operating system for knowledge work. A desktop shell hosts sandboxed apps over your own data; every app and every agent only touches what you allow.",
+					details:
+						"These docs cover using Brainstorm: vaults, apps, objects, local-first sync, and the permission model. App-development docs land alongside the app-publishing pipeline.",
+				}),
+			],
+			sidebar: [
+				{
+					label: "Start here",
+					items: [
+						{ label: "What is Brainstorm?", slug: "start-here/what-is-brainstorm" },
+						{ label: "Install", slug: "start-here/install" },
+						{ label: "Quickstart", slug: "start-here/quickstart" },
+					],
+				},
+				{
+					label: "Concepts",
+					items: [
+						{ label: "Vaults", slug: "concepts/vaults" },
+						{ label: "Apps & permissions", slug: "concepts/apps-and-permissions" },
+						{ label: "Objects", slug: "concepts/objects" },
+						{ label: "Local-first & sync", slug: "concepts/local-first-and-sync" },
+						{ label: "Your data & security", slug: "concepts/your-data-and-security" },
+					],
+				},
+				{
+					label: "Apps",
+					items: [{ autogenerate: { directory: "apps" } }],
+				},
+			],
+		}),
+	],
+});
