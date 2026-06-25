@@ -2,6 +2,19 @@
 import Default from "@astrojs/starlight/components/Head.astro";
 ---
 
+<script is:inline>
+	// Adopt the theme shared across getbrainstorm.online subdomains (set by the
+	// marketing site) before Starlight paints, so the docs open in the same theme.
+	(() => {
+		const m = document.cookie.match(/(?:^|; )bs-theme=(light|dark)/);
+		if (!m) return;
+		try {
+			localStorage.setItem("starlight-theme", m[1]);
+		} catch (_) {}
+		document.documentElement.dataset.theme = m[1];
+	})();
+</script>
+
 <Default><slot /></Default>
 
 <script>
@@ -14,4 +27,24 @@ import Default from "@astrojs/starlight/components/Head.astro";
 			autocapture: true,
 		});
 	}
+</script>
+
+<script is:inline>
+	// Mirror the docs theme back to the shared cookie so the site matches too.
+	(() => {
+		const root = document.documentElement;
+		const write = () => {
+			const t = root.dataset.theme;
+			if (t !== "light" && t !== "dark") return;
+			const dom = location.hostname.endsWith("getbrainstorm.online")
+				? "; domain=.getbrainstorm.online"
+				: "";
+			document.cookie = `bs-theme=${t}; path=/; max-age=31536000; samesite=lax${dom}`;
+		};
+		write();
+		new MutationObserver(write).observe(root, {
+			attributes: true,
+			attributeFilter: ["data-theme"],
+		});
+	})();
 </script>
