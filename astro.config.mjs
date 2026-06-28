@@ -16,6 +16,16 @@ export default defineConfig({
 			title: "Brainstorm Docs",
 			description:
 				"Documentation for Brainstorm — the local-first, AI-native operating system for knowledge work.",
+			// Bing Webmaster Tools site verification for docs.getbrainstorm.online.
+			head: [
+				{
+					tag: "meta",
+					attrs: {
+						name: "msvalidate.01",
+						content: "E5A4E21AFE9DE84C10B6A60D56F7E341",
+					},
+				},
+			],
 			logo: {
 				// Pink mark in the Rose (light) theme, blue mark in Midnight (dark).
 				light: "./src/assets/brandmark.svg",
