@@ -69,10 +69,14 @@
 :root {
 	--bs-bg-top: #121a30;
 	--bs-bg-base: #0a1020;
+	/* A clearly-visible divider — Starlight's hairline (0.08) reads as nothing
+	   on a full-width footer rule. */
+	--bs-separator: rgba(180, 200, 255, 0.16);
 }
 :root[data-theme="light"] {
 	--bs-bg-top: #ffffff;
 	--bs-bg-base: #fdf4f6;
+	--bs-separator: rgba(58, 31, 41, 0.14);
 }
 body {
 	background: linear-gradient(
