@@ -1,0 +1,39 @@
+---
+// Override of Starlight's social links so the header icons match the theme
+// toggle: a neutral icon that gets a hover *background area* (not an accent
+// colour that shifts on hover).
+import { Icon } from "@astrojs/starlight/components";
+import config from "virtual:starlight/user-config";
+
+const links = config.social || [];
+---
+
+{
+	links.length > 0 &&
+		links.map(({ label, href, icon }) => (
+			<a {href} rel="me" class="bs-social-link sl-flex">
+				<span class="sr-only">{label}</span>
+				<Icon name={icon} />
+			</a>
+		))
+}
+
+<style>
+	.bs-social-link {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 34px;
+		height: 34px;
+		border-radius: 0.25rem;
+		color: var(--sl-color-gray-3);
+		background: transparent;
+		transition:
+			color 0.2s ease,
+			background 0.2s ease;
+	}
+	.bs-social-link:hover {
+		color: var(--sl-color-white);
+		background: var(--sl-color-gray-6);
+	}
+</style>
