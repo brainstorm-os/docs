@@ -8,23 +8,47 @@ sidebar:
 
 Brainstorm's shell hosts **apps** — and that's all it does. Each app is a focused tool, sandboxed and independently updatable, and every app works over the same shared [objects](/concepts/objects/) in your vault. Add the ones you want; ignore the rest.
 
-## Core apps
+Twenty first-party apps ship with the public beta. Each page below describes the app in full, with screenshots.
+
+## Knowledge & planning
 
 | App | What it's for |
 | --- | --- |
-| **[Notes](/apps/notes/)** | Rich-text writing with links, commands, and embedded objects. |
-| **[Database](/apps/database/)** | Structured tables of objects with typed properties and multiple views. |
-| **[Files](/apps/files/)** | Bring documents and media into your vault and browse them. |
-| **[Graph](/apps/graph/)** | See how your objects link together as a navigable graph. |
-| **[Calendar](/apps/calendar/)** | A time view over any dated objects in your vault. |
+| **[Notes](/apps/notes/)** | A block editor with mentions, transclusion, and embeds. |
+| **[Database](/apps/database/)** | Every object in your vault as a grid, board, calendar, or timeline. |
+| **[Tasks](/apps/tasks/)** | Inbox, Today, boards, and timelines over shared Task objects. |
+| **[Calendar](/apps/calendar/)** | Everything with a date, on one calendar. |
+| **[Journal](/apps/journal/)** | Daily entries with moods, habits, and streaks. |
+| **[Contacts](/apps/contacts/)** | People and companies as real objects. |
+| **[Bookmarks](/apps/bookmarks/)** | Save the web, keep it readable offline. |
+| **[Files](/apps/files/)** | Browse and organize the whole vault. |
+| **[Graph](/apps/graph/)** | The shape of your vault, drawn live. |
+| **[Whiteboard](/apps/whiteboard/)** | An infinite canvas next to your data. |
 
-## And more
+## AI & automation
 
-Brainstorm also includes a **Journal**, **Tasks**, a **Whiteboard**, a **Code editor**, a **Browser**, a **Mailbox**, a **Chat**, **Automations**, and a file **Preview** app — with more arriving over time. Because every app reads and writes the same object layer, the set you run composes into one connected workspace rather than a drawer of disconnected tools.
+| App | What it's for |
+| --- | --- |
+| **[Agent](/apps/agent/)** | AI chat grounded in your vault, under your permissions. |
+| **[Automations](/apps/automations/)** | Reviewable workflows that drive the other apps. |
 
-:::note
-Brainstorm is in active development. The app set and individual features are still expanding ahead of the public beta.
-:::
+## Connected
+
+| App | What it's for |
+| --- | --- |
+| **[Mailbox](/apps/mailbox/)** | Email as vault objects — Gmail or any IMAP/SMTP account. |
+| **[Browser](/apps/browser/)** | Tabbed browsing that clips pages into your vault. |
+| **[Chat](/apps/chat/)** | Team channels over shared vault objects. |
+
+## Tools
+
+| App | What it's for |
+| --- | --- |
+| **[Books](/apps/books/)** | Read EPUB and PDF, keep highlights. |
+| **[Code Editor](/apps/code-editor/)** | A real editor for code-shaped objects. |
+| **[Form Designer](/apps/form-designer/)** | Forms that create real objects — plus invoices to PDF. |
+| **[Preview](/apps/preview/)** | Quick previews for almost any file. |
+| **[Theme Editor](/apps/theme-editor/)** | Design the OS you work in. |
 
 ## How apps get access
 

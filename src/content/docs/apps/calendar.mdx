@@ -1,0 +1,43 @@
+---
+title: Calendar
+description: A time view over any dated objects in your vault — events, tasks, and anything with a date property.
+sidebar:
+  order: 4
+---
+
+import ShotSlider from "../../../components/ShotSlider.astro";
+
+**Calendar** is a time-based lens over your vault. Anything with a date — an event, a task's due date, a note's deadline — can appear on it.
+
+<ShotSlider
+  name="Calendar"
+  shots={[
+    { src: "/screenshots/apps/calendar/01-month.webp", title: "Month", caption: "Events, task due dates, journal days, and birthdays project onto one month grid." },
+    { src: "/screenshots/apps/calendar/02-week.webp", title: "Week", caption: "Timed events and multi-day ribbons laid out hour by hour." },
+    { src: "/screenshots/apps/calendar/03-agenda.webp", title: "Agenda", caption: "A linear agenda of everything coming up, one row per item." },
+  ]}
+/>
+
+## What it can do
+
+- Recurring events on a full RRULE engine, edited through a plain-language recurrence editor.
+- ICS import and export, plus two-way CalDAV sync through the connector framework.
+- Attendees with per-person RSVP, event status, colors, location, and per-event reminders.
+- Click empty space to create, drag a chip to reschedule, multi-select for bulk reschedule.
+- Time-zone aware events and multi-day ribbons that lay out cleanly across the week.
+- Ranked event search with keyboard navigation, and Today's Agenda / Week Ahead dashboard widgets.
+
+## A view, not a separate store
+
+The Calendar doesn't keep its own private list of events. It reads [objects](/concepts/objects/) that have a date [property](/concepts/objects/) and lays them out in time. Create a task in the [Database](/apps/database/) with a due date and it shows up on the Calendar automatically — they're the same object.
+
+## Working with time
+
+- See your week or month at a glance.
+- Move an object in time by dragging it; the change writes straight back to the object.
+- Jump from a calendar entry to the object itself to add detail.
+
+## Related
+
+- [Database](/apps/database/) — create dated objects that surface here
+- [Objects](/concepts/objects/) — the date properties the Calendar reads

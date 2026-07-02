@@ -2,10 +2,29 @@
 title: Files
 description: Bring documents and media into your vault and browse them alongside your other objects.
 sidebar:
-  order: 3
+  order: 8
 ---
 
+import ShotSlider from "../../../components/ShotSlider.astro";
+
 **Files** brings existing documents and media — PDFs, images, and other attachments — into your vault so they live alongside your notes, tasks, and databases.
+
+<ShotSlider
+  name="Files"
+  shots={[
+    { src: "/screenshots/apps/files/01-list.webp", title: "The vault as files", caption: "Folders are entities; the list view shows type and metadata per row." },
+    { src: "/screenshots/apps/files/03-inspector.webp", title: "File inspector", caption: "Preview, Properties, and Links tabs on the selected file." },
+  ]}
+/>
+
+## What it can do
+
+- List, icon-list, grid, and gallery views, remembered per folder.
+- Smart folders capture a search's query and scope as a live sidebar entry.
+- Upload real files through the OS picker or drag them in from Finder — bytes, MIME type, size, and SHA-256 hash included.
+- Multi-select bulk delete, move, copy, and rename with collision-safe naming.
+- An inspector with Preview, Properties, and Links tabs; folder covers and icons are click-to-edit.
+- Virtualized lists keep large folders fast; breadcrumbs, grouping, and a Recently Deleted view keep them navigable.
 
 ## Files are objects too
 

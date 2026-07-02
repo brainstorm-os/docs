@@ -1,0 +1,254 @@
+---
+/**
+ * Screenshot slider for app pages. Dependency-free: scroll-snap slides,
+ * prev/next buttons, dot pagination, per-slide captions. Every shot has a
+ * light (Rose theme) and dark (Midnight theme) capture; the pair swaps with
+ * the site theme — dark is the default, `[data-theme="light"]` flips.
+ */
+interface Shot {
+	src: string;
+	title: string;
+	caption: string;
+}
+
+interface Props {
+	name: string;
+	shots: Shot[];
+}
+
+const { name, shots } = Astro.props;
+const multi = shots.length > 1;
+const darkSrc = (src: string) => src.replace(/\/([^/]+)$/, "/midnight/$1");
+---
+
+<figure class="shot-slider" data-shot-slider>
+	<div class="frame">
+		<div class="track" data-track tabindex="0" aria-label={`${name} screenshots`}>
+			{
+				shots.map((shot) => (
+					<figure class="slide">
+						<img
+							class="shot shot--light"
+							src={shot.src}
+							alt={`${name}: ${shot.title}`}
+							loading="lazy"
+							decoding="async"
+							width="1440"
+							height="900"
+							draggable="false"
+						/>
+						<img
+							class="shot shot--dark"
+							src={darkSrc(shot.src)}
+							alt={`${name}: ${shot.title}`}
+							loading="lazy"
+							decoding="async"
+							width="1440"
+							height="900"
+							draggable="false"
+						/>
+						<figcaption class="slide-cap">
+							<strong>{shot.title}</strong> — {shot.caption}
+						</figcaption>
+					</figure>
+				))
+			}
+		</div>
+
+		{
+			multi && (
+				<>
+					<button class="arrow arrow--prev" data-prev type="button" aria-label="Previous screenshot">
+						<svg width="18" height="18" viewBox="0 0 22 22" aria-hidden="true">
+							<path
+								d="M13 5l-6 6 6 6"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="1.8"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+						</svg>
+					</button>
+					<button class="arrow arrow--next" data-next type="button" aria-label="Next screenshot">
+						<svg width="18" height="18" viewBox="0 0 22 22" aria-hidden="true">
+							<path
+								d="M9 5l6 6-6 6"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="1.8"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+						</svg>
+					</button>
+				</>
+			)
+		}
+	</div>
+	{
+		multi && (
+			<div class="dots" data-dots role="tablist" aria-label={`${name} screenshot pagination`}>
+				{shots.map((shot, i) => (
+					<button
+						class="dot"
+						data-dot={i}
+						type="button"
+						role="tab"
+						aria-label={`Screenshot ${i + 1}: ${shot.title}`}
+					/>
+				))}
+			</div>
+		)
+	}
+</figure>
+
+<style>
+	.shot-slider {
+		margin: 1.5rem 0 2rem;
+	}
+	.frame {
+		position: relative;
+		border: 1px solid var(--sl-color-hairline);
+		border-radius: 10px;
+		overflow: hidden;
+		background: var(--sl-color-bg-nav);
+	}
+	.track {
+		display: flex;
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+		scrollbar-width: none;
+	}
+	.track::-webkit-scrollbar {
+		display: none;
+	}
+	.slide {
+		flex: 0 0 100%;
+		margin: 0;
+		scroll-snap-align: start;
+	}
+	.shot {
+		display: block;
+		width: 100%;
+		height: auto;
+		aspect-ratio: 1440 / 900;
+		object-fit: cover;
+		object-position: top left;
+		user-select: none;
+	}
+	/* Dark captures by default; Rose captures when the reader picks light. */
+	.shot--light {
+		display: none;
+	}
+	:global(:root[data-theme="light"]) .shot--light {
+		display: block;
+	}
+	:global(:root[data-theme="light"]) .shot--dark {
+		display: none;
+	}
+	.slide-cap {
+		padding: 0.6rem 0.9rem 0.7rem;
+		border-top: 1px solid var(--sl-color-hairline);
+		font-size: var(--sl-text-sm);
+		line-height: 1.5;
+		color: var(--sl-color-gray-2);
+	}
+	.slide-cap strong {
+		color: var(--sl-color-white);
+		font-weight: 600;
+	}
+
+	.arrow {
+		position: absolute;
+		top: calc(50% - 1.4rem);
+		transform: translateY(-50%);
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 34px;
+		height: 34px;
+		padding: 0;
+		border-radius: 999px;
+		border: 1px solid var(--sl-color-hairline);
+		background: color-mix(in srgb, var(--sl-color-bg) 82%, transparent);
+		backdrop-filter: blur(5px);
+		-webkit-backdrop-filter: blur(5px);
+		color: var(--sl-color-white);
+		cursor: pointer;
+		opacity: 0;
+		transition: opacity 0.15s ease;
+	}
+	.arrow--prev {
+		left: 10px;
+	}
+	.arrow--next {
+		right: 10px;
+	}
+	.frame:hover .arrow,
+	.arrow:focus-visible {
+		opacity: 1;
+	}
+	.arrow:hover {
+		background: var(--sl-color-accent-low);
+	}
+	@media (hover: none), (pointer: coarse) {
+		.arrow {
+			display: none;
+		}
+	}
+
+	.dots {
+		display: flex;
+		gap: 7px;
+		justify-content: center;
+		margin-top: 0.7rem;
+	}
+	.dot {
+		width: 7px;
+		height: 7px;
+		padding: 0;
+		border: 0;
+		border-radius: 999px;
+		background: var(--sl-color-gray-5);
+		cursor: pointer;
+		transition:
+			background 0.15s ease,
+			width 0.15s ease;
+	}
+	.dot[aria-selected="true"] {
+		background: var(--sl-color-accent);
+		width: 20px;
+	}
+</style>
+
+<script>
+	for (const root of document.querySelectorAll<HTMLElement>("[data-shot-slider]")) {
+		const track = root.querySelector<HTMLElement>("[data-track]");
+		if (!track) continue;
+		const slides = [...track.querySelectorAll<HTMLElement>(".slide")];
+		const dots = [...root.querySelectorAll<HTMLButtonElement>("[data-dot]")];
+		if (slides.length <= 1) continue;
+
+		const index = () => Math.round(track.scrollLeft / track.clientWidth);
+		const goTo = (i: number) => {
+			const n = ((i % slides.length) + slides.length) % slides.length;
+			track.scrollTo({ left: n * track.clientWidth, behavior: "smooth" });
+		};
+		const sync = () => {
+			const i = index();
+			for (const [d, dot] of dots.entries())
+				dot.setAttribute("aria-selected", d === i ? "true" : "false");
+		};
+
+		root.querySelector("[data-prev]")?.addEventListener("click", () => goTo(index() - 1));
+		root.querySelector("[data-next]")?.addEventListener("click", () => goTo(index() + 1));
+		for (const [i, dot] of dots.entries()) dot.addEventListener("click", () => goTo(i));
+		track.addEventListener("scroll", sync, { passive: true });
+		track.addEventListener("keydown", (e) => {
+			if (e.key === "ArrowLeft") goTo(index() - 1);
+			if (e.key === "ArrowRight") goTo(index() + 1);
+		});
+		sync();
+	}
+</script>
