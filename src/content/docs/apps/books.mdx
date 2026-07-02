@@ -1,0 +1,30 @@
+---
+title: Books
+description: "Read EPUB and PDF, keep highlights."
+sidebar:
+  order: 16
+---
+
+import ShotSlider from "../../../components/ShotSlider.astro";
+
+**Books.** A reading app with an in-vault library: import an EPUB or PDF and it becomes a Book object that remembers your position and progress. Highlights are first-class objects you can embed in notes.
+
+<ShotSlider
+  name="Books"
+  shots={[
+    { src: "/screenshots/apps/books/01-library.webp", title: "The library", caption: "Imported books with author and progress, ready to reopen where you left off." },
+  ]}
+/>
+
+## What it can do
+
+- Paginated reflow reading for EPUB with five typography controls — family, size, leading, measure, theme — that re-paginate without losing your place.
+- PDF reading with the document's real outline, page navigation, and safe clickable links.
+- Select to highlight in five colors and attach a note; the anchor survives typography changes.
+- A library shelf with search and sorting, showing author and progress per book.
+- Reopen any book exactly where you left off.
+- Embed a highlight card in Notes with the /book command.
+
+## Related
+
+- [Notes](/apps/notes/) — embed a highlight card with the /book command
