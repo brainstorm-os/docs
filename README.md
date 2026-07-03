@@ -1,17 +1,16 @@
-# Brainstorm — Docs
+# Brainstorm — docs
 
-The documentation portal for [Brainstorm](https://github.com/brainstorm-os/shell), the local-first, AI-native operating system for knowledge work — live at **[docs.getbrainstorm.online](https://docs.getbrainstorm.online)**.
+The documentation for [Brainstorm](https://github.com/brainstorm-os/shell), a desktop OS for you and your AI — live at **[docs.getbrainstorm.online](https://docs.getbrainstorm.online)**.
 
-Built with [Astro](https://astro.build) + [Starlight](https://starlight.astro.build). Every page also ships an agent-readable Markdown twin via [`starlight-llms-txt`](https://github.com/HiDeoo/starlight-llms-txt): see `/llms.txt`, `/llms-full.txt`, and the `.md` version of any page.
+Built with [Astro](https://astro.build) + [Starlight](https://starlight.astro.build), themed to match [getbrainstorm.online](https://getbrainstorm.online). The docs cover both sides of the product: using Brainstorm (vaults, apps, objects, sync, the permission model) and building on it (the app model, manifest, capabilities, SDK, data layer).
 
-## Develop
+## Readable by agents, by design
 
-```sh
-bun install
-bun run dev          # starlight dev server (port 4321)
-bun run build        # static build to dist/
-bun run preview      # serve the production build locally
-```
+Brainstorm is a product about giving AI governed access to your knowledge, so its docs are natively readable by agents — every page ships a plain-Markdown twin via [`starlight-llms-txt`](https://github.com/HiDeoo/starlight-llms-txt):
+
+- [`/llms.txt`](https://docs.getbrainstorm.online/llms.txt) — an index of the docs for agents
+- [`/llms-full.txt`](https://docs.getbrainstorm.online/llms-full.txt) — the entire documentation as one Markdown file
+- append `.md` to any page URL for that page alone
 
 ## Structure
 
@@ -24,19 +23,24 @@ src/content/docs/
   build/               # developer hub: app model, manifest, capabilities, SDK, data
 ```
 
-- Sidebar and site config: `astro.config.mjs`
-- Brand theme (Rose, matches getbrainstorm.online): `src/styles/brand.css`
+- Sidebar and site config: [`astro.config.mjs`](astro.config.mjs)
+- Brand theme, matching the marketing site: `src/styles/brand.css`
 
-The `build/` section is the hand-written developer hub for app builders. The
-auto-generated reference (SDK API, capability catalogue, IPC/wire) lands
-alongside the app-publishing pipeline.
+The `build/` section is the hand-written developer hub for app builders. The auto-generated reference (SDK API, capability catalogue, IPC/wire format) lands alongside the app-publishing pipeline.
+
+## Develop
+
+```sh
+bun install
+bun run dev          # starlight dev server (port 4321)
+bun run build        # static build to dist/
+bun run preview      # serve the production build locally
+```
 
 ## Deploy
 
-Static build deployed on Vercel to `docs.getbrainstorm.online`. Config in `vercel.json`.
+Static build deployed on Vercel to `docs.getbrainstorm.online`. Config in [`vercel.json`](vercel.json).
 
 ## License
 
-Documentation content is licensed under [CC BY 4.0](LICENSE) — share and adapt
-with attribution to Brainstorm. Code samples in the docs are free to use without
-restriction.
+Documentation content is licensed under [CC BY 4.0](LICENSE) — share and adapt with attribution to Brainstorm. Code samples in the docs are free to use without restriction.
