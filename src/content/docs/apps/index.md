@@ -45,10 +45,10 @@ Twenty first-party apps ship with the public beta. Each page below describes the
 | App | What it's for |
 | --- | --- |
 | **[Books](/apps/books/)** | Read EPUB and PDF, keep highlights. |
-| **[Code Editor](/apps/code-editor/)** | A real editor for code-shaped objects. |
-| **[Form Designer](/apps/form-designer/)** | Forms that create real objects — plus invoices to PDF. |
+| **[Code](/apps/code-editor/)** | A real editor for code-shaped objects. |
+| **[Forms](/apps/form-designer/)** | Forms that create real objects — plus invoices to PDF. |
 | **[Preview](/apps/preview/)** | Quick previews for almost any file. |
-| **[Theme Editor](/apps/theme-editor/)** | Design the OS you work in. |
+| **[Themes](/apps/theme-editor/)** | Design the OS you work in. |
 
 ## How apps get access
 
