@@ -5,8 +5,8 @@ description: How to get Brainstorm running on macOS, Windows, and Linux.
 
 Brainstorm is a desktop application for **macOS, Windows, and Linux**.
 
-:::caution[Private beta]
-Brainstorm is in private beta ahead of its public release. Downloads are gated to waitlist members. [Join the waitlist at getbrainstorm.online](https://getbrainstorm.online) — you'll get a download link and a short setup walkthrough when your invite lands.
+:::note[Beta]
+Brainstorm is in open beta. Grab the build for your platform from the [downloads page](https://getbrainstorm.online/downloads) — every release is posted there.
 :::
 
 ## System requirements
@@ -18,7 +18,7 @@ Brainstorm is in private beta ahead of its public release. Downloads are gated t
 
 ## Installing
 
-Once you have a download link:
+Download the build for your platform from [getbrainstorm.online/downloads](https://getbrainstorm.online/downloads), then:
 
 1. **macOS** — open the `.dmg` and drag Brainstorm to Applications. On first launch, right-click → Open to clear Gatekeeper.
 2. **Windows** — run the installer and follow the prompts.

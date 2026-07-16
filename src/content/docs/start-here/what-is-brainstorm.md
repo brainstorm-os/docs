@@ -30,7 +30,7 @@ Brainstorm is built on open building blocks rather than a proprietary format:
 That means your content is structured, portable, and not locked to one vendor.
 
 :::note
-Brainstorm is in active development ahead of its public beta. Some features described in these docs are still rolling out. [Join the waitlist](https://getbrainstorm.online) to get early access.
+Brainstorm is in open beta and under active development. Some features described in these docs are still rolling out. [Download the beta](https://getbrainstorm.online/downloads) to try it today.
 :::
 
 ## Next steps
