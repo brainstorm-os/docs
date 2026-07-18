@@ -27,7 +27,7 @@ export default defineConfig({
 				},
 			],
 			logo: {
-				// Pink mark in the Rose (light) theme, blue mark in Midnight (dark).
+				// Indigo mark in the light theme, blue mark in Midnight (dark).
 				light: "./src/assets/brandmark.svg",
 				dark: "./src/assets/brandmark-midnight.svg",
 				alt: "Brainstorm",
