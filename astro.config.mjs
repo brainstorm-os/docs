@@ -27,7 +27,7 @@ export default defineConfig({
 				},
 			],
 			logo: {
-				// Indigo mark in the light theme, blue mark in Midnight (dark).
+				// Indigo mark in both themes (the dark variant keeps its own gradient).
 				light: "./src/assets/brandmark.svg",
 				dark: "./src/assets/brandmark-midnight.svg",
 				alt: "Brainstorm",

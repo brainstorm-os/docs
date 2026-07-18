@@ -1,29 +1,29 @@
-/* Brainstorm docs — two real product themes layered over Starlight tokens:
-   light = Default Light (neutral + violet-indigo), dark = Midnight (cool navy/cyan). Values mirror
-   packages/tokens/src/themes.ts. */
+/* Brainstorm docs — the two product default themes layered over Starlight
+   tokens: light = Default Light, dark = Default Dark (both neutral surfaces +
+   violet-indigo accent). Values mirror packages/tokens/src/themes.ts. */
 
-/* Dark theme = Midnight. Starlight applies its dark tokens on :root. */
+/* Dark theme = Default Dark. Starlight applies its dark tokens on :root. */
 :root {
-	--sl-color-accent-low: #0c2a40;
-	--sl-color-accent: #38bdf8;
-	--sl-color-accent-high: #bae6fd;
-	--sl-color-text-accent: #7dd3fc;
+	--sl-color-accent-low: #2a2f6e;
+	--sl-color-accent: #8b95ff;
+	--sl-color-accent-high: #c6ccf5;
+	--sl-color-text-accent: #a8b2ff;
 
-	--sl-color-white: #e7eef9;
-	--sl-color-gray-1: #dbe4f2;
-	--sl-color-gray-2: #aebdd6;
-	--sl-color-gray-3: #7185a3;
-	--sl-color-gray-4: #44557a;
-	--sl-color-gray-5: #2a3656;
-	--sl-color-gray-6: #1a2440;
-	--sl-color-gray-7: #121a30;
-	--sl-color-black: #0a1020;
+	--sl-color-white: #f7f7f7;
+	--sl-color-gray-1: #ededed;
+	--sl-color-gray-2: #d4d4d4;
+	--sl-color-gray-3: #a8a8a8;
+	--sl-color-gray-4: #7a7a7a;
+	--sl-color-gray-5: #424242;
+	--sl-color-gray-6: #303030;
+	--sl-color-gray-7: #232323;
+	--sl-color-black: #161616;
 
-	--sl-color-bg: #0a1020;
-	--sl-color-bg-nav: #121a30;
-	--sl-color-bg-sidebar: #121a30;
-	--sl-color-hairline: rgba(180, 200, 255, 0.08);
-	--sl-color-hairline-shade: rgba(180, 200, 255, 0.08);
+	--sl-color-bg: #161616;
+	--sl-color-bg-nav: #232323;
+	--sl-color-bg-sidebar: #232323;
+	--sl-color-hairline: rgba(231, 238, 249, 0.08);
+	--sl-color-hairline-shade: rgba(231, 238, 249, 0.08);
 
 	/* Fonts — match the marketing site. Inter falls back to system UI. */
 	--sl-font: "Inter Variable", "Inter", ui-sans-serif, -apple-system, BlinkMacSystemFont,
@@ -75,11 +75,11 @@
 /* Page background — the marketing site's soft vertical gradient (elevated at
    the top fading into the base surface), instead of a flat fill. */
 :root {
-	--bs-bg-top: #121a30;
-	--bs-bg-base: #0a1020;
+	--bs-bg-top: #232323;
+	--bs-bg-base: #161616;
 	/* A clearly-visible divider — Starlight's hairline (0.08) reads as nothing
 	   on a full-width footer rule. */
-	--bs-separator: rgba(180, 200, 255, 0.16);
+	--bs-separator: rgba(231, 238, 249, 0.16);
 }
 :root[data-theme="light"] {
 	--bs-bg-top: #ffffff;
@@ -169,7 +169,7 @@ body {
    surface (so page content never ghosts through), a faint backdrop blur, a
    hairline border, and a soft drop shadow. */
 :root {
-	--bs-header-bg: rgba(10, 16, 32, 0.8);
+	--bs-header-bg: rgba(22, 22, 22, 0.8);
 }
 :root[data-theme="light"] {
 	--bs-header-bg: rgba(247, 247, 247, 0.8);
@@ -191,7 +191,7 @@ header.header {
    cohesive accent treatment: a distinct elevated surface, softer corners, a
    larger accent icon tile, and a quiet hover lift. */
 :root {
-	--bs-card-bg: #121a30;
+	--bs-card-bg: #232323;
 	--bs-card-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 	--bs-card-shadow-hover: 0 16px 40px -18px rgba(0, 0, 0, 0.7);
 }
