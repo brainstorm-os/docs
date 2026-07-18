@@ -1,5 +1,5 @@
 /* Brainstorm docs — two real product themes layered over Starlight tokens:
-   light = Rose (warm blush), dark = Midnight (cool navy/cyan). Values mirror
+   light = Default Light (neutral + violet-indigo), dark = Midnight (cool navy/cyan). Values mirror
    packages/tokens/src/themes.ts. */
 
 /* Dark theme = Midnight. Starlight applies its dark tokens on :root. */
@@ -31,33 +31,33 @@
 	--sl-font-mono: ui-monospace, "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
 }
 
-/* Light theme — warm blush surface + dark plum ink, per the Rose theme. */
+/* Light theme — neutral near-white surface + near-black ink, per Default Light. */
 :root[data-theme="light"] {
-	--sl-color-accent-low: #ffe4e6;
-	--sl-color-accent: #be123c;
-	--sl-color-accent-high: #881337;
-	/* Links, title, active nav — must be rose in light (the :root default is
+	--sl-color-accent-low: #e3e5fc;
+	--sl-color-accent: #5b62e0;
+	--sl-color-accent-high: #3f45b5;
+	/* Links, title, active nav — must be indigo in light (the :root default is
 	   Midnight's cyan, which otherwise leaks into this theme). */
-	--sl-color-text-accent: #be123c;
+	--sl-color-text-accent: #5b62e0;
 
-	--sl-color-white: #3a1f29;
-	--sl-color-gray-1: #4a2a35;
-	--sl-color-gray-2: #5a3a45;
-	--sl-color-gray-3: #7a5560;
-	--sl-color-gray-4: #9a7580;
-	--sl-color-gray-5: #c9aab3;
-	--sl-color-gray-6: #f0dde2;
-	--sl-color-gray-7: #f7eaee;
-	--sl-color-black: #fdf4f6;
+	--sl-color-white: #161616;
+	--sl-color-gray-1: #232323;
+	--sl-color-gray-2: #424242;
+	--sl-color-gray-3: #5a5a5a;
+	--sl-color-gray-4: #7a7a7a;
+	--sl-color-gray-5: #d4d4d4;
+	--sl-color-gray-6: #ededed;
+	--sl-color-gray-7: #f2f2f2;
+	--sl-color-black: #f7f7f7;
 
-	--sl-color-bg: #fdf4f6;
-	--sl-color-bg-nav: #fcedf1;
-	--sl-color-bg-sidebar: #fcedf1;
+	--sl-color-bg: #f7f7f7;
+	--sl-color-bg-nav: #ededed;
+	--sl-color-bg-sidebar: #ededed;
 }
 
 /* Header brand mirrors getbrainstorm.online exactly: a 24px rounded-square
    mark + a 16px dark-ink wordmark at weight 500 — NOT Starlight's full-height
-   logo, h4 size, weight 600, and rose-accent colour (which read as a totally
+   logo, h4 size, weight 600, and accent colour (which read as a totally
    different header from the marketing site). --sl-color-white is the strong
    ink that equals the marketing `--paper` token in both themes. */
 .site-title {
@@ -83,8 +83,8 @@
 }
 :root[data-theme="light"] {
 	--bs-bg-top: #ffffff;
-	--bs-bg-base: #fdf4f6;
-	--bs-separator: rgba(58, 31, 41, 0.14);
+	--bs-bg-base: #f7f7f7;
+	--bs-separator: rgba(22, 22, 22, 0.14);
 }
 body {
 	background: linear-gradient(
@@ -165,14 +165,14 @@ body {
 	}
 }
 
-/* Header — mirrors getbrainstorm.online's scrolled state: a near-solid blush
+/* Header — mirrors getbrainstorm.online's scrolled state: a near-solid light
    surface (so page content never ghosts through), a faint backdrop blur, a
    hairline border, and a soft drop shadow. */
 :root {
 	--bs-header-bg: rgba(10, 16, 32, 0.8);
 }
 :root[data-theme="light"] {
-	--bs-header-bg: rgba(253, 244, 246, 0.8);
+	--bs-header-bg: rgba(247, 247, 247, 0.8);
 }
 
 /* Translucent glass header. Strong blur frosts content behind it so the page
@@ -188,8 +188,8 @@ header.header {
 }
 
 /* Splash CardGrid — drop Starlight's per-card multicolor chips for one
-   cohesive Rose treatment: a distinct elevated surface, softer corners, a
-   larger rose icon tile, and a quiet hover lift. */
+   cohesive accent treatment: a distinct elevated surface, softer corners, a
+   larger accent icon tile, and a quiet hover lift. */
 :root {
 	--bs-card-bg: #121a30;
 	--bs-card-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
@@ -197,8 +197,8 @@ header.header {
 }
 :root[data-theme="light"] {
 	--bs-card-bg: #ffffff;
-	--bs-card-shadow: 0 1px 2px rgba(58, 31, 41, 0.04), 0 12px 32px -22px rgba(58, 31, 41, 0.22);
-	--bs-card-shadow-hover: 0 18px 44px -18px rgba(190, 18, 60, 0.26);
+	--bs-card-shadow: 0 1px 2px rgba(17, 26, 46, 0.04), 0 12px 32px -22px rgba(17, 26, 46, 0.22);
+	--bs-card-shadow-hover: 0 18px 44px -18px rgba(91, 98, 224, 0.26);
 }
 
 .card {
