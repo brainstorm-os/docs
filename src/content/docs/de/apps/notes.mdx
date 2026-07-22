@@ -1,0 +1,48 @@
+---
+title: Notizen
+description: Rich-Text-Schreiben in Brainstorm — Überschriften, Listen, Code, Links zu jedem Objekt und ein Befehlsmenü.
+sidebar:
+  order: 1
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Notizen** ist Brainstorms Rich-Text-Schreib-App. Hier beginnt das meiste freie Denken.
+
+<ShotSlider
+  name="Notizen"
+  shots={[
+    { src: "/screenshots/apps/notes/01-editor.webp", title: "Notizen, die hinausverlinken", caption: "Eine Lesenotiz mit einer live eingebetteten Lesezeichen-Karte — Blöcke, Erwähnungen und Einbettungen in einem Editor." },
+    { src: "/screenshots/apps/notes/02-document.webp", title: "Echte Dokumente", caption: "Prosa mit @-Erwähnungen, die direkt auf Personen und Projekte verlinken; Rückverweise sammeln sich auf der anderen Seite." },
+    { src: "/screenshots/apps/notes/03-properties.webp", title: "Typisierte Eigenschaften auf einer Seite", caption: "Das gemeinsame Eigenschaftspanel: typisierte Felder, die auf dem Notiz-Objekt selbst leben." },
+  ]}
+/>
+
+## Was es kann
+
+- Slash-Befehle, das Block-Griffmenü und Rechtsklick schöpfen alle aus einem Befehlsregister — Umwandeln, Einfügen und Blockaktionen überall.
+- Erwähne jedes Vault-Objekt per @; Rückverweise und ausgehende Referenzen erscheinen in ihrem eigenen Panel.
+- Transkludiere einen Block oder eine ganze Notiz inline, und sie bleibt an beiden Stellen live.
+- Typisierte Eigenschaftsblöcke, sortierbare Tabellen mit Nach-unten-Füllen und syntaxhervorgehobene Codeblöcke.
+- Bereichsverankerte Kommentare und geteilte Cursor über einem lokal-first-Dokument.
+- Cover und Symbole, Schreibschutz auf Seiten- und Blockebene, Suchen-und-Ersetzen und Export nach Markdown, HTML oder PDF.
+
+## Schreiben
+
+Notizen unterstützt die Formatierung, die du erwartest — Überschriften, fett und kursiv, Listen, Kontrollkästchen, Zitate, Codeblöcke und Trenner. Text ist unter der Haube strukturiert (über Lexical), sodass er sauber und portabel bleibt, statt zu einer Suppe aus Markup zu werden.
+
+## Dein Wissen verlinken
+
+- Tippe **`@`**, um jedes [Objekt](/de/concepts/objects/) in deinem Vault zu erwähnen und zu verlinken — eine andere Notiz, eine Aufgabe, einen Kontakt. Der Link ist echt: Das Ziel weiß, dass es referenziert wird.
+- Tippe **`/`**, um das Befehlsmenü zu öffnen und Blöcke, Überschriften und Einbettungen einzufügen, ohne die Tastatur zu verlassen.
+
+Weil eine Notiz auf echte Objekte verlinkt, wird dein Schreiben Teil des verbundenen Graphen deines Vaults statt einer Insel aus Text.
+
+## Immer gespeichert, immer deins
+
+Jeder Tastenanschlag wird in deinem Vault auf der Festplatte gespeichert, offline und sofort. Wenn du [synchronisierst](/de/concepts/local-first-and-sync/), verschmelzen Bearbeitungen sauber über Geräte hinweg, ohne Versionskonflikte.
+
+## Verwandt
+
+- [Objekte](/de/concepts/objects/) — worauf `@`-Links zeigen
+- [Graph](/de/apps/graph/) — sieh die Links deiner Notizen visuell

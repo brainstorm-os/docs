@@ -1,0 +1,30 @@
+---
+title: Bücher
+description: "Lies EPUB und PDF, behalte Markierungen."
+sidebar:
+  order: 16
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Bücher.** Eine Lese-App mit einer Bibliothek im Vault: Importiere ein EPUB oder PDF und es wird zu einem Buch-Objekt, das sich deine Position und deinen Fortschritt merkt. Markierungen sind erstklassige Objekte, die du in Notizen einbetten kannst.
+
+<ShotSlider
+  name="Bücher"
+  shots={[
+    { src: "/screenshots/apps/books/01-library.webp", title: "Die Bibliothek", caption: "Importierte Bücher mit Autor und Fortschritt, bereit, dort wieder zu öffnen, wo du aufgehört hast." },
+  ]}
+/>
+
+## Was es kann
+
+- Paginiertes Reflow-Lesen für EPUB mit fünf Typografie-Reglern — Familie, Größe, Zeilenabstand, Zeilenlänge, Theme — die neu paginieren, ohne deine Position zu verlieren.
+- PDF-Lesen mit der echten Gliederung des Dokuments, Seitennavigation und sicheren, klickbaren Links.
+- Markiere durch Auswahl in fünf Farben und hänge eine Notiz an; der Anker überlebt Typografie-Änderungen.
+- Ein Bibliotheksregal mit Suche und Sortierung, das Autor und Fortschritt pro Buch zeigt.
+- Öffne jedes Buch genau dort wieder, wo du aufgehört hast.
+- Bette eine Markierungskarte in Notizen mit dem /book-Befehl ein.
+
+## Verwandt
+
+- [Notizen](/de/apps/notes/) — eine Markierungskarte mit dem /book-Befehl einbetten

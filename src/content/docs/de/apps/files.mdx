@@ -1,0 +1,44 @@
+---
+title: Dateien
+description: Bring Dokumente und Medien in deinen Vault und durchsuche sie neben deinen anderen Objekten.
+sidebar:
+  order: 8
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Dateien** bringt vorhandene Dokumente und Medien — PDFs, Bilder und andere Anhänge — in deinen Vault, sodass sie neben deinen Notizen, Aufgaben und Datenbanken leben.
+
+<ShotSlider
+  name="Dateien"
+  shots={[
+    { src: "/screenshots/apps/files/01-list.webp", title: "Der Vault als Dateien", caption: "Ordner sind Entitäten; die Listenansicht zeigt Typ und Metadaten pro Zeile." },
+    { src: "/screenshots/apps/files/03-inspector.webp", title: "Datei-Inspektor", caption: "Vorschau-, Eigenschaften- und Links-Tabs an der ausgewählten Datei." },
+  ]}
+/>
+
+## Was es kann
+
+- Listen-, Symbolliste-, Raster- und Galerieansichten, pro Ordner gemerkt.
+- Smarte Ordner erfassen die Abfrage und den Umfang einer Suche als lebenden Seitenleisten-Eintrag.
+- Lade echte Dateien über den OS-Picker hoch oder zieh sie aus dem Finder herein — Bytes, MIME-Typ, Größe und SHA-256-Hash inklusive.
+- Mehrfachauswahl für Löschen, Verschieben, Kopieren und Umbenennen in Massen mit kollisionssicherer Benennung.
+- Ein Inspektor mit Vorschau-, Eigenschaften- und Links-Tabs; Ordner-Cover und -Symbole sind per Klick bearbeitbar.
+- Virtualisierte Listen halten große Ordner schnell; Brotkrumen, Gruppierung und eine „Kürzlich gelöscht"-Ansicht halten sie navigierbar.
+
+## Dateien sind auch Objekte
+
+Eine Datei, die du hinzufügst, wird zu einem [Objekt](/de/concepts/objects/) in deinem Vault: Sie kann aus einer Notiz mit `@` verlinkt, mit Eigenschaften versehen, in Mengen gesammelt und im [Graph](/de/apps/graph/) sichtbar gemacht werden. Deine Dokumente hören auf, lose Anhänge zu sein, und werden Teil des verbundenen Arbeitsbereichs.
+
+## Durchsuchen und Vorschau
+
+Dateien gibt dir einen vertrauten Browser für das, was in deinem Vault ist, und die **Vorschau**-App rendert unterstützte Dokumente und Medien inline, sodass du lesen kannst, ohne Brainstorm zu verlassen.
+
+## Auf deiner Festplatte
+
+Dateien, die du hinzufügst, werden in deinem Vault auf deiner eigenen Festplatte gespeichert und durch deinen Vault-Schlüssel geschützt. Sie synchronisieren mit allem anderen, wenn du die [Synchronisierung aktivierst](/de/concepts/local-first-and-sync/), Ende-zu-Ende-verschlüsselt.
+
+## Verwandt
+
+- [Objekte](/de/concepts/objects/) — wie Dateien mit allem anderen in Beziehung stehen
+- [Deine Daten & Sicherheit](/de/concepts/your-data-and-security/) — wo Dateien gespeichert und wie sie geschützt werden

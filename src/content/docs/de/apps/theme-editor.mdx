@@ -1,0 +1,31 @@
+---
+title: Themes
+description: "Gestalte das OS, in dem du arbeitest."
+sidebar:
+  order: 20
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Themes.** Stelle ein Theme aus vier Teilen zusammen — einem Token-Satz, einem Icon-Pack, Typografie und einem optionalen CSS-Style-Pack — und sieh es live über die Shell und jede offene App in der Vorschau. Themes sind Vault-Objekte wie alles andere.
+
+<ShotSlider
+  name="Themes"
+  shots={[
+    { src: "/screenshots/apps/theme-editor/01-tokens.webp", title: "Der Token-Satz", caption: "Semantische Tokens mit Live-Farbmustern und Zurücksetzen pro Token, über einer hellen oder dunklen Basis." },
+    { src: "/screenshots/apps/theme-editor/02-typography.webp", title: "Typografie", caption: "Font-Stacks pro Rolle und eine Dichteskala, live in der Vorschau." },
+  ]}
+/>
+
+## Was es kann
+
+- Bearbeite den semantischen Token-Namensraum mit Live-Farbmustern, einem Farbwähler und Zurücksetzen pro Token, gegen eine helle oder dunkle Basis.
+- Wähle ein Icon-Pack und setze Font-Stacks pro Rolle — UI, Body, Code, Display — plus eine Dichteskala.
+- Ein Roh-CSS-Style-Pack-Editor, dessen Sanitizer gefährliche Konstrukte ablehnt und das Speichern bei Fehlern blockiert.
+- Ein Knopf zeigt die Komposition über dem Dashboard und jedem App-Fenster in der Vorschau und macht dann automatisch rückgängig.
+- WCAG-Kontrast-Prüfung markiert unlesbare Token-Paare.
+- Reiche das CSS des Style-Packs an die [Code](/de/apps/code-editor/)-App für eine vollständige Bearbeitungsoberfläche.
+
+## Verwandt
+
+- [Apps & Berechtigungen](/de/concepts/apps-and-permissions/) — Themes sind Vault-Objekte

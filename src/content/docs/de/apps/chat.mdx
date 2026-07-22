@@ -1,0 +1,30 @@
+---
+title: Chat
+description: "Team-Kanäle über gemeinsamen Vault-Objekten."
+sidebar:
+  order: 15
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Chat.** Kanäle, deren Nachrichten dieselben Nachrichten-Objekte sind, die der Rest des Vaults nutzt, an Mitglieder über das Teilen von Sammlungen synchronisiert. Teile einen Kanal und es kaskadiert zu allen auf der Liste — kein separates Chat-Silo.
+
+<ShotSlider
+  name="Chat"
+  shots={[
+    { src: "/screenshots/apps/chat/01-channel.webp", title: "Ein Kanal", caption: "Nachrichten sind Vault-Objekte — Formatierung, Erwähnungen und Anhänge im Verfasser." },
+    { src: "/screenshots/apps/chat/02-members.webp", title: "Mitglieder", caption: "Das Mitgliederpanel, gestützt auf eine signierte Liste." },
+  ]}
+/>
+
+## Was es kann
+
+- Ein reichhaltiger Verfasser mit Inline-Formatierung und Links; Enter sendet, Umschalt+Enter bricht um.
+- Personen per @-Erwähnung und Dokumente oder Medien als Anhang-Chips an eine Nachricht heften.
+- Ein Mitgliederpanel, gestützt auf eine signierte Liste, mit früheren Verfassern als Gäste.
+- Nachrichten gruppieren sich nach Autor innerhalb eines Fünf-Minuten-Fensters, mit Tagestrennern und stabilen Farben pro Autor.
+- Deterministische Nachrichtenreihenfolge konvergiert auf jedem Gerät zum selben Verlauf.
+
+## Verwandt
+
+- [Lokal-first & Synchronisierung](/de/concepts/local-first-and-sync/) — wie Nachrichten andere Geräte erreichen

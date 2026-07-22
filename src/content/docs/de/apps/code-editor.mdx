@@ -1,0 +1,30 @@
+---
+title: Code
+description: "Ein echter Editor für code-förmige Notizen."
+sidebar:
+  order: 17
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Code.** Bearbeitet Snippets, Konfigurationen und andere code-förmige Objekte im Vault mit einem wirklich fähigen Editor: Shiki-Hervorhebung, Multi-Cursor, Faltung, Diagnosen und Diffs. Er öffnet jeden Quellcode-MIME-Typ, den ihm der Vault reicht.
+
+<ShotSlider
+  name="Code"
+  shots={[
+    { src: "/screenshots/apps/code-editor/01-editor.webp", title: "Ein Snippet bearbeiten", caption: "Shiki-Hervorhebung und Diagnosen über einem kollaborativen Puffer, der ein Vault-Objekt ist." },
+  ]}
+/>
+
+## Was es kann
+
+- Shiki-Syntaxhervorhebung mit faul geladenen Grammatiken pro Sprache und hellen/dunklen Themes.
+- Multi-Cursor und Nächstes-Vorkommen-auswählen, Klammer-Matching, automatisches Schließen von Paaren, Code-Faltung und Zeilenumbruch.
+- Schnell-Öffnen (Cmd/Ctrl+P) und eine unscharfe Befehlspalette (Cmd/Ctrl+Umschalt+P).
+- Eingebaute Diagnosen mit Inline-Schlängellinien, Änderungsmarkierungen am Rand und vereinheitlichten oder nebeneinanderliegenden Diffs gegen die gespeicherte Baseline.
+- Prettier-Formatierung für Web-Sprachen, beim Speichern oder auf Abruf.
+- Ein kollaborativer Y.Text-Puffer auf demselben lokal-first-Substrat wie alles andere, mit virtualisiertem Rendering für große Dateien.
+
+## Verwandt
+
+- [Objekte](/de/concepts/objects/) — Code-Dateien sind auch Vault-Objekte

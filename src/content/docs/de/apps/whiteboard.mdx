@@ -1,0 +1,31 @@
+---
+title: Whiteboard
+description: "Eine unendliche Leinwand neben deinen Daten."
+sidebar:
+  order: 10
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Whiteboard.** Haftnotizen, Formen, Tinte, Bilder, Rahmen und Verbinder auf einer freien Leinwand. Knoten können jedes Vault-Objekt über das Block Protocol einbetten, sodass das Board neben deinen strukturierten Daten sitzt statt in einem anderen Werkzeug.
+
+<ShotSlider
+  name="Whiteboard"
+  shots={[
+    { src: "/screenshots/apps/whiteboard/01-board.webp", title: "Ein Arbeits-Board", caption: "Haftnotizen und Verbinder aus einer Kundenbesprechung, auf einer unendlichen Leinwand." },
+    { src: "/screenshots/apps/whiteboard/02-insert-menu.webp", title: "Zum Board hinzufügen", caption: "Formen, Haftnotizen, Text, Rahmen und Verbinder aus einem Einfügemenü." },
+  ]}
+/>
+
+## Was es kann
+
+- Rechtecke, Ellipsen, Dreiecke, Rauten, Linien und Pfeile, farbige Haftnotizen, freihändige Tinte und Rich Text.
+- Verbinder rasten zwischen Knotengriffen mit Bezier-, Stufen- oder geraden Pfaden, Pfeilspitzen und Beschriftungen; das Stufen-Routing weicht Hindernissen aus.
+- Ausrichten, verteilen, am Raster einrasten und smarte Führungslinien; ein Ebenen-Panel verwaltet die Stapelreihenfolge.
+- Rahmen enthalten, Gruppen sammeln; starte von Leer-, Kanban-, Flussdiagramm- oder Mindmap-Vorlagen.
+- Echtzeit-Präsenz mit Remote-Cursorn, Sperren auf Objekt- und Board-Ebene und Rückgängig/Wiederholen.
+- Exportiere das Board als JSON, SVG oder PNG.
+
+## Verwandt
+
+- [Objekte](/de/concepts/objects/) — Boards können jedes Vault-Objekt einbetten

@@ -1,0 +1,32 @@
+---
+title: Automatisierungen
+description: "Überprüfbare Workflows über deinen eigenen Apps."
+sidebar:
+  order: 12
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Automatisierungen.** Ein Builder für Workflows, ausgelöst durch Zeit, Entitätsereignisse oder von Hand gestartet, zusammengesetzt aus Schritten, die andere Apps über Intents steuern. Jeder Workflow deklariert genau, was er berühren darf, bevor du ihn speichern kannst.
+
+<ShotSlider
+  name="Automatisierungen"
+  shots={[
+    { src: "/screenshots/apps/automations/01-workflows.webp", title: "Workflows", caption: "Jeder Workflow zeigt seinen Auslöser und die Anzahl der Schritte neben seinem Aktiviert-Zustand." },
+    { src: "/screenshots/apps/automations/02-templates.webp", title: "Startvorlagen", caption: "Ein-Klick-Startpunkte, die deaktiviert ankommen, bis du überprüfst, was sie berühren." },
+    { src: "/screenshots/apps/automations/03-reminders.webp", title: "Erinnerungen", caption: "Schnell erfasste Erinnerungen in ihrer eigenen Liste, mit Erledigt und Schlummern eingebaut." },
+  ]}
+/>
+
+## Was es kann
+
+- Ein linearer Builder mit Intent-, Entitäts-, Benachrichtigungs-, Warte-, KI-Aufruf-, KI-Agent-, Verzweigungs-, For-Each-, Ausdrucks-, Export- und Sub-Workflow-Schritten.
+- Zeit-, Entitätsereignis- und manuelle Auslöser; Startvorlagen kommen deaktiviert an, damit du vor dem Aktivieren prüfst.
+- Ein Fähigkeitsblatt zum Speicherzeitpunkt zeigt die Berechtigungen, die die Schritte brauchen, gegen das Erteilte — Übergriffe blockieren das Speichern.
+- KI-Agent-Schritte nutzen Intents als Werkzeuge, geschlossen-scheiternd innerhalb der Fähigkeitshülle des Workflows.
+- Die Laufhistorie erfasst Status, Protokolle pro Schritt und Kosten; leichtgewichtige Erinnerungen bekommen ihre eigene Schnellerfassungs-Ansicht.
+- Importiere und exportiere Workflows als JSON; ein einziger bestimmter Automatisierungs-Host verhindert, dass Multi-Geräte-Vaults doppelt laufen.
+
+## Verwandt
+
+- [Apps & Berechtigungen](/de/concepts/apps-and-permissions/) — Workflows laufen innerhalb einer Fähigkeitshülle
