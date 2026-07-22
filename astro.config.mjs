@@ -48,6 +48,8 @@ export default defineConfig({
 				SiteTitle: "./src/components/SiteTitle.astro",
 				// Sun/moon toggle matching the marketing site (not Starlight's dropdown).
 				ThemeSelect: "./src/components/ThemeSelect.astro",
+				// EN/DE pill switcher matching the marketing site (not Starlight's dropdown).
+				LanguageSelect: "./src/components/LanguageSelect.astro",
 				// Header social icons get the theme-toggle's neutral + hover-area
 				// treatment instead of an accent colour that shifts on hover.
 				SocialIcons: "./src/components/SocialIcons.astro",
