@@ -1,0 +1,31 @@
+---
+title: Mailbox
+description: "E-Mail, die in deinem Vault lebt."
+sidebar:
+  order: 13
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Mailbox.** Ein vollständiger Mail-Client — Ordnerleiste, Nachrichtenliste, Leseansicht, Verfasser — bei dem jede Nachricht ein Vault-Objekt ist, das du durchsuchen, verlinken und automatisieren kannst. Verbinde Gmail per OAuth oder jedes IMAP/SMTP-Konto; Zugangsdaten werden shell-seitig versiegelt und berühren die App nie.
+
+<ShotSlider
+  name="Mailbox"
+  shots={[
+    { src: "/screenshots/apps/mailbox/01-connect.webp", title: "Ein Konto verbinden", caption: "Mail kommt an, sobald du ein Konto verbindest; bis dahin hält die App gar nichts." },
+    { src: "/screenshots/apps/mailbox/02-accounts.webp", title: "Bring jedes Konto mit", caption: "Gmail per OAuth oder schlichtes IMAP/SMTP — so oder so werden die Zugangsdaten shell-seitig versiegelt und berühren die App nie." },
+  ]}
+/>
+
+## Was es kann
+
+- Lesen, verfassen, antworten und weiterleiten; das Senden ist idempotent, sodass ein Wiederholungsversuch nie doppelt senden kann.
+- HTML-Mail rendert in einem Sandbox-Rahmen, der Remote-Bilder standardmäßig blockiert — Tracking-Pixel feuern nicht, es sei denn, du erlaubst es.
+- Wähle ein Sync-Fenster von 30 Tagen bis alles, mit server-maßgeblichen Flags und vault-lokalen Tags.
+- Threads, Anhänge als Datei-Objekte und Tags pro Nachricht.
+- Andere Apps und der Agent können einen Verfass-, Antwort- oder Weiterleitungsvorgang über Intents vorbelegen.
+- Absender lösen sich zu bestehenden Kontakte-Personen auf — verlinkt, nie automatisch erstellt.
+
+## Verwandt
+
+- [Kontakte](/de/apps/contacts/) — Absender lösen sich zu bestehenden Personen auf

@@ -1,0 +1,31 @@
+---
+title: Formulare
+description: "Formulare, die echte Objekte erstellen."
+sidebar:
+  order: 18
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Formulare.** Bau ein Eigenschaftsformular über einem beliebigen Entitätstyp, speichere es als wiederverwendbares Layout-Objekt, und jedes Ausfüllen erstellt ein echtes Objekt dieses Typs — es gibt keinen Eingang für Einsendungen, aus dem man Daten herausschaufeln muss. Es rendert auch Rechnungen als PDF.
+
+<ShotSlider
+  name="Formulare"
+  shots={[
+    { src: "/screenshots/apps/form-designer/01-builder.webp", title: "Der Builder", caption: "Wähle einen Zieltyp und stelle seine Felder aus dem lebenden Eigenschaftskatalog zusammen." },
+    { src: "/screenshots/apps/form-designer/02-fill.webp", title: "Ausfüllmodus", caption: "Jedes Ausfüllen validiert Pflichtfelder und erstellt ein echtes Objekt des Zieltyps." },
+    { src: "/screenshots/apps/form-designer/03-invoice.webp", title: "Rechnungen", caption: "Positionen, Summen und eine lebende Papiervorschau, als PDF exportierbar." },
+  ]}
+/>
+
+## Was es kann
+
+- Wähle einen Zieltyp und stelle seine Felder aus dem lebenden Vault-Eigenschaftskatalog zusammen, mit Label-Überschreibungen pro Feld.
+- Bedingte Sichtbarkeit pro Feld, mit derselben Prädikatsprache wie die Datenbankfilter.
+- Der Ausfüllmodus validiert Pflichtfelder und prägt beim Erstellen eine neue Entität.
+- Formulare sind wiederverwendbare Vault-Objekte, beschränkt auf den Typ, den sie erstellen.
+- Ein Rechnungs-Dokumenttyp mit Positionen, Steuer, Status und Summen, als PDF gerendert.
+
+## Verwandt
+
+- [Datenbank](/de/apps/database/) — wo die erstellten Objekte auftauchen

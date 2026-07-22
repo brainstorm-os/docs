@@ -16,6 +16,13 @@ export default defineConfig({
 			title: "Brainstorm Docs",
 			description:
 				"Documentation for Brainstorm — the local-first, AI-native operating system for knowledge work.",
+			// English at the root, German under /de/. Starlight supplies the
+			// language switcher, hreflang, <html lang> and localised UI chrome.
+			defaultLocale: "root",
+			locales: {
+				root: { label: "English", lang: "en" },
+				de: { label: "Deutsch", lang: "de" },
+			},
 			// Bing Webmaster Tools site verification for docs.getbrainstorm.online.
 			head: [
 				{
@@ -73,36 +80,84 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: "Start here",
+					translations: { de: "Erste Schritte" },
 					items: [
-						{ label: "What is Brainstorm?", slug: "start-here/what-is-brainstorm" },
-						{ label: "Install", slug: "start-here/install" },
-						{ label: "Quickstart", slug: "start-here/quickstart" },
+						{
+							label: "What is Brainstorm?",
+							translations: { de: "Was ist Brainstorm?" },
+							slug: "start-here/what-is-brainstorm",
+						},
+						{
+							label: "Install",
+							translations: { de: "Installation" },
+							slug: "start-here/install",
+						},
+						{
+							label: "Quickstart",
+							translations: { de: "Schnellstart" },
+							slug: "start-here/quickstart",
+						},
 					],
 				},
 				{
 					label: "Concepts",
+					translations: { de: "Konzepte" },
 					items: [
-						{ label: "Vaults", slug: "concepts/vaults" },
-						{ label: "Apps & permissions", slug: "concepts/apps-and-permissions" },
-						{ label: "Objects", slug: "concepts/objects" },
-						{ label: "Local-first & sync", slug: "concepts/local-first-and-sync" },
-						{ label: "Your data & security", slug: "concepts/your-data-and-security" },
+						{ label: "Vaults", translations: { de: "Vaults" }, slug: "concepts/vaults" },
+						{
+							label: "Apps & permissions",
+							translations: { de: "Apps & Berechtigungen" },
+							slug: "concepts/apps-and-permissions",
+						},
+						{ label: "Objects", translations: { de: "Objekte" }, slug: "concepts/objects" },
+						{
+							label: "Local-first & sync",
+							translations: { de: "Lokal-first & Synchronisierung" },
+							slug: "concepts/local-first-and-sync",
+						},
+						{
+							label: "Your data & security",
+							translations: { de: "Deine Daten & Sicherheit" },
+							slug: "concepts/your-data-and-security",
+						},
 					],
 				},
 				{
 					label: "Apps",
+					translations: { de: "Apps" },
 					items: [{ autogenerate: { directory: "apps" } }],
 				},
 				{
 					label: "Build",
+					translations: { de: "Entwickeln" },
 					items: [
-						{ label: "Overview", slug: "build/overview" },
-						{ label: "Your first app", slug: "build/your-first-app" },
-						{ label: "The manifest", slug: "build/the-manifest" },
-						{ label: "Capabilities", slug: "build/capabilities" },
-						{ label: "SDK & runtime", slug: "build/the-sdk" },
-						{ label: "Working with data", slug: "build/working-with-data" },
-						{ label: "Recipes & anti-patterns", slug: "build/recipes" },
+						{ label: "Overview", translations: { de: "Überblick" }, slug: "build/overview" },
+						{
+							label: "Your first app",
+							translations: { de: "Deine erste App" },
+							slug: "build/your-first-app",
+						},
+						{
+							label: "The manifest",
+							translations: { de: "Das Manifest" },
+							slug: "build/the-manifest",
+						},
+						{
+							label: "Capabilities",
+							translations: { de: "Fähigkeiten" },
+							slug: "build/capabilities",
+						},
+						{ label: "SDK & runtime", translations: { de: "SDK & Laufzeit" }, slug: "build/the-sdk" },
+						{
+							label: "Working with data",
+							translations: { de: "Mit Daten arbeiten" },
+							slug: "build/working-with-data",
+						},
+						{
+							label: "Recipes & anti-patterns",
+							translations: { de: "Rezepte & Anti-Patterns" },
+							slug: "build/recipes",
+						},
 					],
 				},
 			],

@@ -1,0 +1,52 @@
+---
+title: Datenbank
+description: Strukturierte Tabellen von Objekten mit typisierten Eigenschaften und mehreren Ansichten — Tabelle, Board und mehr.
+sidebar:
+  order: 2
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Datenbank** verwandelt deine [Objekte](/de/concepts/objects/) in strukturierte, abfragbare Tabellen — Aufgaben, Kontakte, eine Leseliste, ein CRM, ein Inventar.
+
+<ShotSlider
+  name="Datenbank"
+  shots={[
+    { src: "/screenshots/apps/database/01-collection.webp", title: "Eine abfragegestützte Liste", caption: "Die Aufgaben des Studios als Live-Sammlung — Status- und Prioritäts-Pillen in typisierten Zellen, Zählungen in der Seitenleiste." },
+    { src: "/screenshots/apps/database/02-board.webp", title: "Dieselben Objekte, Board-Ansicht", caption: "Wechsle die Ansicht und die Liste wird zu einem nach Status gruppierten Kanban — kein Export, keine Kopie." },
+    { src: "/screenshots/apps/database/03-inspector.webp", title: "Zeilen-Inspektor", caption: "Öffne jede Zeile im rechten Panel und bearbeite ihre Eigenschaften, ohne die Ansicht zu verlassen." },
+  ]}
+/>
+
+## Was es kann
+
+- Sechs Ansichtsarten pro Liste: Raster, Liste, Galerie, Kanban-Board, Kalender und Zeitachse mit Ziehen und Abhängigkeitslinien.
+- Filter mit UND/ODER-Gruppen und lebenden relativen Datumsbereichen wie „letzte 7 Tage".
+- Formel- und Rollup-Spalten rechnen über Eigenschaften und Relationen; Fußzeilen aggregieren Summe, Durchschnitt, Median und mehr.
+- Bearbeite Zellen an Ort und Stelle mit denselben typisierten Zellen, die der Rest der Plattform nutzt.
+- CSV-Import mit Typinferenz; exportiere eine Liste nach CSV, JSON oder Markdown.
+- Speichere jedes Objekt als Vorlage und starte neue Zeilen daraus.
+- Bette eine Live-Liste in eine Notiz mit dem /database-Befehl ein.
+
+## Typisierte Eigenschaften
+
+Jede Zeile ist ein Objekt, und jede Spalte ist eine typisierte **Eigenschaft** — Text, Zahl, Datum, Kontrollkästchen, Auswahl, Link und mehr. Eigenschaften werden auf Vault-Ebene definiert, sodass ein „Status" oder „Fälligkeitsdatum" überall dasselbe bedeutet, wo dieses Objekt erscheint. Zellen werden inline über Brainstorms gemeinsames Eigenschaftssystem bearbeitet.
+
+## Mehrere Ansichten
+
+Dieselbe Menge von Objekten kann auf mehrere Arten betrachtet werden, ohne Daten zu duplizieren:
+
+- **Tabelle** — das klassische Raster aus Zeilen und Spalten.
+- **Board** — ein nach einer Eigenschaft gruppiertes Kanban.
+- **Liste**, **Galerie** und andere Layouts für unterschiedliche Datenformen.
+
+Eine Ansicht definiert, wie Objekte gefiltert, sortiert und gruppiert werden; das Wechseln der Ansicht ändert nie die zugrunde liegenden Objekte.
+
+## Mit jeder App geteilt
+
+Zeilen sind gewöhnliche Objekte, sodass eine Aufgabe, die du in einer Datenbank erstellst, im [Kalender](/de/apps/calendar/), als Knoten im [Graph](/de/apps/graph/) und aus einer [Notiz](/de/apps/notes/) verlinkt erscheinen kann. Die Datenbank ist eine Linse über deinen Daten, kein Silo.
+
+## Verwandt
+
+- [Objekte](/de/concepts/objects/) — das Modell aus Zeilen und Eigenschaften
+- [Kalender](/de/apps/calendar/) — eine Zeitansicht über dieselben Objekte

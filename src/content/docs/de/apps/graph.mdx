@@ -1,0 +1,44 @@
+---
+title: Graph
+description: Sieh, wie die Objekte in deinem Vault als navigierbarer, interaktiver Graph zusammenhängen.
+sidebar:
+  order: 9
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Graph** visualisiert deinen Vault als das, was er wirklich ist — ein Netz verbundener [Objekte](/de/concepts/objects/). Notizen, Aufgaben, Dateien und die Links dazwischen werden zu einer Karte, die du erkunden kannst.
+
+<ShotSlider
+  name="Graph"
+  shots={[
+    { src: "/screenshots/apps/graph/01-graph.webp", title: "Der ganze Vault", caption: "Jedes Objekt und jeder typisierte Link live gezeichnet; Erwähnungen und Relationen werden zu Kanten." },
+    { src: "/screenshots/apps/graph/02-filters.webp", title: "Musterfilter", caption: "Filtere nach Typ und Bedingung; die Trefferzusammenfassung aktualisiert sich live, während du verfeinerst." },
+  ]}
+/>
+
+## Was es kann
+
+- Musterfilter beschreiben Subjekte, typisierte Kanten und Bedingungen pro Subjekt; die Abfrage kompiliert zu SQL und bleibt live.
+- Der lokale Modus geht 1–10 Sprünge von einer Wurzel in eine oder beide Richtungen; der Pfadmodus findet die kürzesten Pfade zwischen zwei Objekten.
+- Die Verlaufsanimation spielt den Vault über die Zeit ab, mit einem Dichte-Histogramm und einem Scrubber.
+- Kraft-, Radial-, Hierarchie- und Kreis-Layouts; ziehe Knoten oder ziehe von einem Griff, um einen echten typisierten Link zu erstellen.
+- Ein bearbeitbarer Inspektor ändert die Eigenschaften eines Knotens inline, ohne die Leinwand zu verlassen.
+- Exportiere als JSON, Graphviz DOT, GraphML oder SVG; bette einen Live-Graphen in eine Notiz ein.
+
+## Sieh die Form deines Wissens
+
+Jede `@`-Erwähnung, Sammlungszugehörigkeit und Beziehung wird zu einer Kante. Der Graph offenbart Cluster, Knotenpunkte und Waisen, die du in einer Liste nie erkennen würdest — die Notiz, auf die alles zeigt, das Thema, das sich abgekoppelt hat.
+
+## Nach Beziehung navigieren
+
+Klicke auf einen Knoten, um das Objekt zu öffnen; folge Kanten, um zwischen verwandten Objekten zu wechseln. Der Graph ist eine Art, deinen Vault nach Bedeutung statt nach Ordner zu *bereisen*.
+
+## Für Skalierung gebaut
+
+Der Graph rendert auf einer Hochleistungs-Leinwand, sodass er flüssig bleibt, während dein Vault auf Tausende von Objekten und Links anwächst.
+
+## Verwandt
+
+- [Objekte](/de/concepts/objects/) — was die Knoten und Kanten darstellen
+- [Notizen](/de/apps/notes/) — wo die meisten Links entstehen

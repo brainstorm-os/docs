@@ -1,0 +1,32 @@
+---
+title: Journal
+description: "Eine tägliche Schreibgewohnheit, eingebaut."
+sidebar:
+  order: 5
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Journal.** Jeder Tag ist ein Eintrag, betitelt nach seinem Datum, geschrieben im selben Block-Editor wie Notizen. Stimmungen, Gewohnheiten, Serien und Rückverweise machen es zu einem Journal, das Teil des Vaults ist, kein Silo.
+
+<ShotSlider
+  name="Journal"
+  shots={[
+    { src: "/screenshots/apps/journal/01-entry.webp", title: "Der Eintrag eines Tages", caption: "Datumsbetitelte Einträge im selben Block-Editor wie Notizen, mit einem Mini-Kalender zum Tagesspringen." },
+    { src: "/screenshots/apps/journal/02-weekly-rollup.webp", title: "Wochenübersicht", caption: "Die Diese-Woche-Übersicht sammelt und verlinkt die Tage, die sie abdeckt." },
+  ]}
+/>
+
+## Was es kann
+
+- Spring zu jedem Tag, jeder Woche oder jedem Monat; wöchentliche und monatliche Übersichtseinträge verlinken ihre Tage automatisch.
+- Ein Stimmungswähler und Gewohnheits-Check-ins färben den Mini-Kalender; Serien und eine Schreib-Heatmap verfolgen die Gewohnheit.
+- Vorlagen legen eine Struktur für Tagesrückblick, Dankbarkeit oder Freies Schreiben an.
+- Rückverweis- und Ausgehende-Links-Panels; erwähne alles per @ aus einem Eintrag.
+- Volltextsuche über Tage, filterbar nach Stimmung und Gewohnheit.
+- Eine opt-in-Tageserinnerung warnt, bevor eine Serie reißt; exportiere jeden Datumsbereich nach Markdown oder HTML.
+- Einträge tauchen als ganztägige Einträge im Kalender auf.
+
+## Verwandt
+
+- [Notizen](/de/apps/notes/) — derselbe Block-Editor, ohne die Daten

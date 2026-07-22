@@ -1,0 +1,43 @@
+---
+title: Kalender
+description: Eine Zeitansicht über beliebige datierte Objekte in deinem Vault — Termine, Aufgaben und alles mit einer Datumseigenschaft.
+sidebar:
+  order: 4
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Kalender** ist eine zeitbasierte Linse über deinem Vault. Alles mit einem Datum — ein Termin, das Fälligkeitsdatum einer Aufgabe, die Frist einer Notiz — kann darauf erscheinen.
+
+<ShotSlider
+  name="Kalender"
+  shots={[
+    { src: "/screenshots/apps/calendar/01-month.webp", title: "Monat", caption: "Termine, Aufgaben-Fälligkeiten, Journal-Tage und Geburtstage projizieren auf ein Monatsraster." },
+    { src: "/screenshots/apps/calendar/02-week.webp", title: "Woche", caption: "Terminierte Ereignisse und mehrtägige Bänder, Stunde für Stunde ausgelegt." },
+    { src: "/screenshots/apps/calendar/03-agenda.webp", title: "Agenda", caption: "Eine lineare Agenda von allem Anstehenden, eine Zeile pro Eintrag." },
+  ]}
+/>
+
+## Was es kann
+
+- Wiederkehrende Termine auf einer vollständigen RRULE-Engine, bearbeitet über einen Wiederholungs-Editor in einfacher Sprache.
+- ICS-Import und -Export, plus Zwei-Wege-CalDAV-Synchronisierung über das Connector-Framework.
+- Teilnehmer mit RSVP pro Person, Terminstatus, Farben, Ort und Erinnerungen pro Termin.
+- Klicke auf leeren Raum zum Erstellen, ziehe einen Chip zum Verschieben, Mehrfachauswahl für das Verschieben in Massen.
+- Zeitzonenbewusste Termine und mehrtägige Bänder, die sich sauber über die Woche legen.
+- Gerankte Terminsuche mit Tastaturnavigation, und die Dashboard-Widgets „Heutige Agenda" / „Woche voraus".
+
+## Eine Ansicht, kein separater Speicher
+
+Der Kalender hält keine eigene private Liste von Terminen. Er liest [Objekte](/de/concepts/objects/), die eine Datums-[Eigenschaft](/de/concepts/objects/) haben, und legt sie in der Zeit aus. Erstelle eine Aufgabe in der [Datenbank](/de/apps/database/) mit einem Fälligkeitsdatum und sie erscheint automatisch im Kalender — es ist dasselbe Objekt.
+
+## Mit Zeit arbeiten
+
+- Sieh deine Woche oder deinen Monat auf einen Blick.
+- Bewege ein Objekt in der Zeit, indem du es ziehst; die Änderung wird direkt zurück ins Objekt geschrieben.
+- Springe von einem Kalendereintrag zum Objekt selbst, um Details hinzuzufügen.
+
+## Verwandt
+
+- [Datenbank](/de/apps/database/) — datierte Objekte erstellen, die hier auftauchen
+- [Objekte](/de/concepts/objects/) — die Datumseigenschaften, die der Kalender liest

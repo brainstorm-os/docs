@@ -1,0 +1,31 @@
+---
+title: Vorschau
+description: "Schnelle Vorschauen für fast jede Datei."
+sidebar:
+  order: 19
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Vorschau.** Ein schneller Vorschau-Betrachter, der jede Datei an einen Renderer pro Format weiterreicht: Bilder, RAW- und HEIC-Fotos, PDF, Video, Audio, Text, Markdown, Code, Office-Dokumente und 3D-Modelle. Jeder Renderer lädt faul, sodass das Öffnen schnell bleibt.
+
+<ShotSlider
+  name="Vorschau"
+  shots={[
+    { src: "/screenshots/apps/preview/01-image.webp", title: "Ein Bild, in der Vorschau", caption: "Schwenke und zoome ohne Hochskalierung; blättere über die Filmstreifen durch benachbarte Dateien." },
+    { src: "/screenshots/apps/preview/02-inspector.webp", title: "Der Inspektor", caption: "Bearbeite die echten Vault-Eigenschaften und Kommentare der Datei direkt neben der Vorschau." },
+  ]}
+/>
+
+## Was es kann
+
+- Bilder schwenken und zoomen ohne Hochskalierung, mit Drehen und Spiegeln; HEIC dekodiert an Ort und Stelle und RAW zeigt das eingebettete JPEG der Kamera.
+- PDF mit Seitennavigation, Zoom und sicheren externen Links; Audio mit ID3-Tags, Bitrate und Abtastrate im Inspektor.
+- DOCX, XLSX und PPTX öffnen als bereinigter, schreibgeschützter Text und Tabellen.
+- glTF-, GLB- und OBJ-Modelle drehen sich unter Orbit-Steuerung.
+- Blättere über einen Filmstreifen durch benachbarte Dateien oder durchsuche die Dateien des Vaults über die eingebaute Seitenleiste.
+- Der Inspektor bearbeitet die echten Vault-Eigenschaften und Kommentare der Datei — dasselbe Objekt überall.
+
+## Verwandt
+
+- [Dateien](/de/apps/files/) — durchsuche alles, was Vorschau öffnen kann

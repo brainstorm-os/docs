@@ -1,0 +1,31 @@
+---
+title: Agent
+description: "KI, die in deinem Vault arbeitet."
+sidebar:
+  order: 11
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Agent.** Eine Chat-Oberfläche über dem gemeinsamen KI-Broker: Betreibe ein lokales Ollama-Modell oder bring deinen eigenen Schlüssel für Anthropic, OpenAI, Gemini oder GLM mit. Gespräche sind Vault-Objekte, Antworten zitieren die Objekte, aus denen sie schöpfen, und der Agent kann nur innerhalb der Fähigkeiten handeln, die du erteilt hast.
+
+<ShotSlider
+  name="Agent"
+  shots={[
+    { src: "/screenshots/apps/agent/01-conversation.webp", title: "Ein fundiertes Gespräch", caption: "Der Agent liest das Briefing aus dem Vault und entwirft dagegen — das Gespräch ist selbst ein Vault-Objekt." },
+  ]}
+/>
+
+## Was es kann
+
+- Hybride Suche verankert jede Antwort in deinem Vault, mit Zitaten, die das Quellobjekt öffnen.
+- Kontext ausdrücklich anhängen: Dokumente und Personen per @-Erwähnung, Textdateien einwerfen oder Bilder für Vision-Modelle hinzufügen.
+- Langzeitgedächtnis ist opt-in und standardmäßig aus — jeder gemerkte Eintrag ist sichtbar, redigierbar und löschbar.
+- „Mit dem Agenten zusammenfassen" und „Den Agenten dazu befragen" erscheinen bei Objekten quer durch die anderen Apps.
+- Speichere ein Gespräch als Automatisierung: Seine Werkzeugspur wird zu einem Workflow, im Builder zur Überprüfung geöffnet.
+- Geschlossen-scheiterndes Fähigkeitsmodell: Die Werkzeuge des Agenten sind immer eine Teilmenge dessen, was du dem Gespräch erteilt hast, bei jedem Aufruf erneut geprüft.
+
+## Verwandt
+
+- [Apps & Berechtigungen](/de/concepts/apps-and-permissions/) — dieselben Erlaubnisse regeln Agenten
+- [Deine Daten & Sicherheit](/de/concepts/your-data-and-security/) — warum lokale KI wichtig ist

@@ -1,0 +1,30 @@
+---
+title: Browser
+description: "Surfen, das in deinen Vault speichert."
+sidebar:
+  order: 14
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Browser.** Surfen mit Tabs über isolierten, Node-losen Web-Renderern, die die App selbst nie berührt — sie sieht Metadaten, nie Seitenbytes. Ein Klick clippt die Seite in ein Lesezeichen, mit erfasstem lesbarem Artikelkörper, wenn die Seite es erlaubt.
+
+<ShotSlider
+  name="Browser"
+  shots={[
+    { src: "/screenshots/apps/browser/01-tabs.webp", title: "Eine Seite, auf Armlänge geladen", caption: "Die Seite wird in einem isolierten, Node-losen Renderer neben der App gezeichnet — die App selbst bekommt Titel, Favicon und Sicherheitszustand, nie die Pixel oder Bytes der Seite." },
+  ]}
+/>
+
+## Was es kann
+
+- Tabs mit Anheften, private Tabs auf Wegwerf-Sessions, ein Ring kürzlich geschlossener Tabs und volle Sitzungswiederherstellung über Neustarts hinweg.
+- „In Vault speichern" schreibt ein Lesezeichen-Objekt mit angehängtem, bereinigtem lesbarem Inhalt; eine blockierte Seite degradiert zu einem Link, nie zu einem fehlgeschlagenen Clip.
+- Sicherheitszustand pro Tab, im Chrome sichtbar gemacht.
+- Auf Seite suchen, und Browserverlauf als Vault-Objekte mit Besuchszählern.
+- Geräteberechtigungen pro Seite sind standardmäßig ablehnend, über ein ausdrückliches Banner sichtbar gemacht.
+- Cookies bleiben verschlüsselt unter dem Vault-Schlüssel erhalten.
+
+## Verwandt
+
+- [Lesezeichen](/de/apps/bookmarks/) — wo geclippte Seiten landen

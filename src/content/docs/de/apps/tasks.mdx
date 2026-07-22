@@ -1,0 +1,33 @@
+---
+title: Aufgaben
+description: "Eingang, Heute, Board und Zeitachse."
+sidebar:
+  order: 3
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Aufgaben.** Fokussierte Oberflächen — Eingang, Heute, Anstehend, pro Projekt — über Aufgaben-Objekten, die Kalender, Datenbank und Graph ebenfalls lesen. Die Struktur lebt auf dem Objekt, sodass Arbeit zwischen Apps wandert, ohne die Daten zu verschieben.
+
+<ShotSlider
+  name="Aufgaben"
+  shots={[
+    { src: "/screenshots/apps/tasks/01-today.webp", title: "Heute", caption: "Eingang, Heute und Anstehend halten den Fokus; Zählungen aktualisieren sich live, während Arbeit wandert." },
+    { src: "/screenshots/apps/tasks/02-board.webp", title: "Status-Board", caption: "Zieh Karten zwischen Statusspalten — dieselben Aufgaben-Objekte, die Kalender und Graph lesen." },
+    { src: "/screenshots/apps/tasks/03-timeline.webp", title: "Zeitachse", caption: "Terminierte Arbeit über die Wochen ausgelegt, mit heute markiert und unterminierter Arbeit gezählt." },
+  ]}
+/>
+
+## Was es kann
+
+- Status-Kanban und Tag-Filter neben den Listenoberflächen, plus eine Zeitachsenansicht mit Dauer-Spannen und Abhängigkeitsketten.
+- Unteraufgaben rollen den Fortschritt zum Elternteil hoch; blockierende und blockiert-von-Abhängigkeiten sind explizit.
+- Priorität, Wiederholung mit einer Zusammenfassung in einfacher Sprache und Zeitschätzungen gegen erfasste Zeit.
+- Erinnerungen feuern echte Benachrichtigungen für fällige und terminierte Arbeit.
+- Kommentare pro Aufgabe und ein Aktivitätsstrom; Zuständige verlinken zu Personen-Objekten aus Kontakte.
+- Ein Inline-Aufgaben-Block bettet eine abhakbare Aufgabe in jede Notiz ein; zwei Dashboard-Widgets verfolgen offene Aufgaben und Statistiken.
+
+## Verwandt
+
+- [Datenbank](/de/apps/database/) — dieselben Aufgaben als Tabelle, Board oder Zeitachse
+- [Kalender](/de/apps/calendar/) — Fälligkeitsdaten auf dem Monatsraster

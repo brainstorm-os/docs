@@ -1,0 +1,46 @@
+---
+title: Brainstorm Doku
+description: Dokumentation für Brainstorm — das lokal-first, KI-native Betriebssystem für Wissensarbeit.
+template: splash
+hero:
+  tagline: Deine Apps, deine Daten, deine KI — alles auf deinem Rechner, unter den Berechtigungen, die du erteilst.
+  actions:
+    - text: Was ist Brainstorm?
+      link: /de/start-here/what-is-brainstorm/
+      icon: right-arrow
+    - text: Schnellstart
+      link: /de/start-here/quickstart/
+      icon: rocket
+      variant: minimal
+    - text: getbrainstorm.online
+      link: https://getbrainstorm.online/de
+      icon: external
+      variant: minimal
+---
+
+import { CardGrid } from '@astrojs/starlight/components';
+import GeoCard from '../../../components/GeoCard.astro';
+
+## Finde dich zurecht
+
+<CardGrid stagger>
+	<GeoCard title="Erste Schritte" shape="tetra">
+		Neu bei Brainstorm? [Lies den Überblick](/de/start-here/what-is-brainstorm/), dann
+		[installiere](/de/start-here/install/) und [geh den Schnellstart durch](/de/start-here/quickstart/).
+	</GeoCard>
+	<GeoCard title="Konzepte" shape="diamond">
+		Verstehe [Vaults](/de/concepts/vaults/), [Apps und Berechtigungen](/de/concepts/apps-and-permissions/)
+		und wie [lokal-first-Synchronisierung](/de/concepts/local-first-and-sync/) deine Daten dir überlässt.
+	</GeoCard>
+	<GeoCard title="Apps" shape="ring">
+		Brainstorm liefert nichts als Apps — [Notizen, Datenbank, Dateien, Graph und mehr](/de/apps/).
+	</GeoCard>
+	<GeoCard title="Entwickeln" shape="triangle">
+		Bau deine eigene App auf der Plattform — [das App-Modell, das Manifest, Fähigkeiten,
+		SDK und Datenschicht](/de/build/overview/).
+	</GeoCard>
+	<GeoCard title="Für Agenten" shape="ico">
+		Jede Seite hat einen Markdown-Zwilling. Richte einen Agenten auf
+		[`/llms.txt`](/llms.txt) oder [`/llms-full.txt`](/llms-full.txt).
+	</GeoCard>
+</CardGrid>

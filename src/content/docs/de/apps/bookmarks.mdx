@@ -1,0 +1,30 @@
+---
+title: Lesezeichen
+description: "Speichere das Web, halte es lesbar."
+sidebar:
+  order: 7
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Lesezeichen.** Eine Bibliothek gespeicherter Links, die Titel, Favicon und Vorschaubild jeder Seite über den Netzwerk-Broker der Shell abruft — und den lesbaren Inhalt der Seite für das Offline-Lesen erfassen kann. Lesezeichen sind Vault-Objekte: verschlagworte sie, sammle sie, bette sie in Notizen ein.
+
+<ShotSlider
+  name="Lesezeichen"
+  shots={[
+    { src: "/screenshots/apps/bookmarks/01-inbox.webp", title: "Der Eingang", caption: "Gespeicherte Seiten mit abgerufenen Titeln, Favicons und Tags." },
+  ]}
+/>
+
+## Was es kann
+
+- Opt-in-Erfassung des Lesbaren speichert den bereinigten Artikelkörper offline, mit Herkunftsstempel auf maschinell extrahiertem Inhalt.
+- Eine Leseansicht mit einem Cover-Band und einem bearbeitbaren Körper — annotiere den erfassten Artikel an Ort und Stelle.
+- Tags plus ein interaktives Tag-Kanban-Board; smarte Sammlungen speichern Live-Filter, manuelle Sammlungen halten explizite Mengen.
+- Inhaltsart-Labels — Artikel, Video, Bild, Produkt — aus OpenGraph-Metadaten abgeleitet.
+- Doppelte URLs werden erkannt und zusammengeführt.
+- Füge eine URL in Notizen ein und sie wird zu einer eingebetteten Lesezeichen-Karte; ein Dashboard-Widget zeigt kürzliche Speicherungen.
+
+## Verwandt
+
+- [Browser](/de/apps/browser/) — Seiten beim Surfen in Lesezeichen clippen

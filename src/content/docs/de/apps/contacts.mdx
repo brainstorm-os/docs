@@ -1,0 +1,31 @@
+---
+title: Kontakte
+description: "Personen und Firmen als echte Objekte."
+sidebar:
+  order: 6
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Kontakte.** Ein Adressbuch über den gemeinsamen Personen- und Firmen-Typen, die jede andere App lesen kann. Beziehungen sind Links — klicke auf eine Firma oder eine verbundene Person und sie öffnet sich dort, wo sie lebt.
+
+<ShotSlider
+  name="Kontakte"
+  shots={[
+    { src: "/screenshots/apps/contacts/01-person.webp", title: "Eine Person", caption: "Kontaktwege, Rolle und der Firmen-Link — Personen sind Objekte, auf die die anderen Apps verweisen." },
+    { src: "/screenshots/apps/contacts/02-new-contact.webp", title: "Neuer Kontakt", caption: "Erfasse Name, Firma, E-Mail und Telefon in einer Erfassungskarte." },
+  ]}
+/>
+
+## Was es kann
+
+- Eine durchsuchbare, alphabetisch gruppierte Personenliste mit E-Mails, Telefonnummern, Rolle, Biografie, Geburtstag und Jahrestag pro Person.
+- Firmengruppierung: Öffne eine Firma, um ihre Personen zu sehen; Firmen-Links aus anderen Apps landen hier.
+- vCard-3.0- und -4.0-Import und -Export.
+- Geburtstage wiederholen sich jährlich im gemeinsamen Kalender.
+- Mailbox löst eingehende Adressen zu bestehenden Personen auf — verlinkend, nie automatisch erstellend.
+- Ein Dashboard-Widget hält eine angepinnte Personenliste auf dem Desktop.
+
+## Verwandt
+
+- [Objekte](/de/concepts/objects/) — Personen und Firmen sind Objekte, auf die andere Apps verlinken
