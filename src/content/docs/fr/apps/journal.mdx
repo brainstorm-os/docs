@@ -1,0 +1,32 @@
+---
+title: Journal
+description: "Une habitude d'écriture quotidienne, intégrée."
+sidebar:
+  order: 5
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Journal.** Chaque jour est une entrée intitulée par sa date, écrite dans le même éditeur de blocs que Notes. Les humeurs, les habitudes, les séries et les rétroliens en font un journal qui fait partie du coffre, pas un silo.
+
+<ShotSlider
+  name="Journal"
+  shots={[
+    { src: "/screenshots/apps/journal/01-entry.webp", title: "L'entrée d'un jour", caption: "Des entrées intitulées par date dans le même éditeur de blocs que Notes, avec un mini-calendrier pour sauter d'un jour à l'autre." },
+    { src: "/screenshots/apps/journal/02-weekly-rollup.webp", title: "Récapitulatif hebdomadaire", caption: "Le récapitulatif Cette-semaine rassemble et relie les jours qu'il couvre." },
+  ]}
+/>
+
+## Ce qu'il peut faire
+
+- Sautez à n'importe quel jour, semaine ou mois ; les entrées de récapitulatif hebdomadaire et mensuel relient automatiquement leurs jours.
+- Un sélecteur d'humeur et des pointages d'habitudes colorent le mini-calendrier ; les séries et une heatmap d'écriture suivent l'habitude.
+- Des modèles amorcent une structure de Bilan quotidien, de Gratitude ou d'Écriture libre.
+- Des panneaux de rétroliens et de liens sortants ; mentionnez n'importe quoi par @ depuis une entrée.
+- Recherche en texte intégral sur les jours, filtrable par humeur et habitude.
+- Un rappel quotidien optionnel avertit avant qu'une série ne se brise ; exportez n'importe quelle plage de dates en Markdown ou HTML.
+- Les entrées apparaissent comme des éléments toute la journée dans le Calendrier.
+
+## Associé
+
+- [Notes](/fr/apps/notes/) — le même éditeur de blocs, sans les dates

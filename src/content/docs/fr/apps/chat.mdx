@@ -1,0 +1,30 @@
+---
+title: Chat
+description: "Des canaux d'équipe au-dessus d'objets partagés du coffre."
+sidebar:
+  order: 15
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Chat.** Des canaux dont les messages sont les mêmes objets Message que le reste du coffre utilise, synchronisés aux membres via le partage de collections. Partagez un canal et cela se propage à tous ceux de la liste — pas de silo de chat séparé.
+
+<ShotSlider
+  name="Chat"
+  shots={[
+    { src: "/screenshots/apps/chat/01-channel.webp", title: "Un canal", caption: "Les messages sont des objets du coffre — mise en forme, mentions et pièces jointes dans le compositeur." },
+    { src: "/screenshots/apps/chat/02-members.webp", title: "Membres", caption: "Le panneau d'adhésion, adossé à une liste signée." },
+  ]}
+/>
+
+## Ce qu'il peut faire
+
+- Un compositeur riche avec mise en forme en ligne et liens ; Entrée envoie, Maj+Entrée passe à la ligne.
+- Mentionnez des personnes avec @ et épinglez des documents ou médias à un message comme chips de pièce jointe.
+- Un panneau d'adhésion adossé à une liste signée, avec les auteurs antérieurs affichés comme invités.
+- Les messages se regroupent par auteur dans une fenêtre de cinq minutes, avec des séparateurs de jour et des couleurs stables par auteur.
+- L'ordre déterministe des messages converge vers la même transcription sur chaque appareil.
+
+## En rapport
+
+- [Local-first et synchronisation](/fr/concepts/local-first-and-sync/) — comment les messages atteignent les autres appareils

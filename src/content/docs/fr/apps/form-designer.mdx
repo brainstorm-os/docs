@@ -1,0 +1,31 @@
+---
+title: Formulaires
+description: "Des formulaires qui créent de vrais objets."
+sidebar:
+  order: 18
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Formulaires.** Construisez un formulaire de propriétés sur n'importe quel type d'entité, enregistrez-le comme objet Layout réutilisable, et chaque saisie crée un vrai objet de ce type — il n'y a pas de boîte de réception de soumissions d'où extraire les données à la pelle. Il rend aussi les factures en PDF.
+
+<ShotSlider
+  name="Formulaires"
+  shots={[
+    { src: "/screenshots/apps/form-designer/01-builder.webp", title: "Le constructeur", caption: "Choisissez un type cible et composez ses champs à partir du catalogue de propriétés vivant." },
+    { src: "/screenshots/apps/form-designer/02-fill.webp", title: "Mode de saisie", caption: "Chaque saisie valide les champs obligatoires et crée un vrai objet du type cible." },
+    { src: "/screenshots/apps/form-designer/03-invoice.webp", title: "Factures", caption: "Lignes, totaux et un aperçu papier vivant, exportable en PDF." },
+  ]}
+/>
+
+## Ce qu'il peut faire
+
+- Choisissez un type cible et composez ses champs à partir du catalogue de propriétés vivant du coffre, avec des libellés personnalisables par champ.
+- Visibilité conditionnelle par champ, avec le même langage de prédicats que les filtres de la Base de données.
+- Le mode de saisie valide les champs obligatoires et crée une nouvelle entité à la création.
+- Les formulaires sont des objets de coffre réutilisables, limités au type qu'ils créent.
+- Un type de document Facture avec lignes, taxe, statut et totaux, rendu en PDF.
+
+## Associé
+
+- [Base de données](/fr/apps/database/) — où apparaissent les objets créés

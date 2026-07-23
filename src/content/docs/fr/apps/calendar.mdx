@@ -1,0 +1,43 @@
+---
+title: Calendrier
+description: Une vue temporelle sur tous les objets datés de votre coffre — événements, tâches et tout ce qui possède une propriété de date.
+sidebar:
+  order: 4
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Calendrier** est une lentille temporelle sur votre coffre. Tout ce qui a une date — un événement, la date d'échéance d'une tâche, l'échéance d'une note — peut y apparaître.
+
+<ShotSlider
+  name="Calendrier"
+  shots={[
+    { src: "/screenshots/apps/calendar/01-month.webp", title: "Mois", caption: "Événements, échéances de tâches, jours de journal et anniversaires se projettent sur une grille mensuelle." },
+    { src: "/screenshots/apps/calendar/02-week.webp", title: "Semaine", caption: "Événements horaires et rubans multi-jours disposés heure par heure." },
+    { src: "/screenshots/apps/calendar/03-agenda.webp", title: "Agenda", caption: "Un agenda linéaire de tout ce qui arrive, une ligne par élément." },
+  ]}
+/>
+
+## Ce qu'il peut faire
+
+- Événements récurrents sur un moteur RRULE complet, édités via un éditeur de récurrence en langage clair.
+- Import et export ICS, plus synchronisation CalDAV bidirectionnelle via le framework de connecteurs.
+- Participants avec RSVP par personne, statut d'événement, couleurs, lieu et rappels par événement.
+- Cliquez sur un espace vide pour créer, glissez un chip pour reprogrammer, sélection multiple pour reprogrammer en masse.
+- Événements sensibles au fuseau horaire et rubans multi-jours qui se disposent proprement à travers la semaine.
+- Recherche d'événements classée avec navigation au clavier, et widgets de tableau de bord « Agenda du jour » / « Semaine à venir ».
+
+## Une vue, pas un stockage séparé
+
+Le Calendrier ne conserve pas sa propre liste privée d'événements. Il lit les [objets](/fr/concepts/objects/) qui ont une [propriété](/fr/concepts/objects/) de date et les dispose dans le temps. Créez une tâche dans la [Base de données](/fr/apps/database/) avec une date d'échéance et elle apparaît automatiquement dans le Calendrier — c'est le même objet.
+
+## Travailler avec le temps
+
+- Voyez votre semaine ou votre mois d'un coup d'œil.
+- Déplacez un objet dans le temps en le glissant ; le changement est réécrit directement dans l'objet.
+- Sautez d'une entrée de calendrier à l'objet lui-même pour ajouter du détail.
+
+## En rapport
+
+- [Base de données](/fr/apps/database/) — créez des objets datés qui apparaissent ici
+- [Objets](/fr/concepts/objects/) — les propriétés de date que le Calendrier lit

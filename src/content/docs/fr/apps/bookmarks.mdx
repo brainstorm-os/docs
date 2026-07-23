@@ -1,0 +1,30 @@
+---
+title: Signets
+description: "Enregistrez le web, gardez-le lisible."
+sidebar:
+  order: 7
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Signets.** Une bibliothèque de liens enregistrés qui récupère le titre, le favicon et l'image de partage de chaque page via le courtier réseau de la coquille — et peut capturer le contenu lisible de la page pour une lecture hors ligne. Les signets sont des objets du coffre : étiquetez-les, collectionnez-les, intégrez-les dans des notes.
+
+<ShotSlider
+  name="Signets"
+  shots={[
+    { src: "/screenshots/apps/bookmarks/01-inbox.webp", title: "La boîte de réception", caption: "Pages enregistrées avec titres, favicons et étiquettes récupérés." },
+  ]}
+/>
+
+## Ce qu'il peut faire
+
+- La capture opt-in du lisible stocke le corps de l'article nettoyé hors ligne, avec un tampon de provenance sur le contenu extrait par la machine.
+- Une vue de lecture avec une bande de couverture et un corps modifiable — annotez l'article capturé sur place.
+- Des étiquettes plus un tableau kanban d'étiquettes interactif ; les collections intelligentes enregistrent des filtres en direct, les collections manuelles retiennent des ensembles explicites.
+- Étiquettes de type de contenu — article, vidéo, image, produit — déduites des métadonnées OpenGraph.
+- Les URL en double sont détectées et fusionnées.
+- Collez une URL dans Notes et elle devient une carte de signet intégrée ; un widget du tableau de bord affiche les enregistrements récents.
+
+## En rapport
+
+- [Navigateur](/fr/apps/browser/) — clippez des pages en signets tout en naviguant

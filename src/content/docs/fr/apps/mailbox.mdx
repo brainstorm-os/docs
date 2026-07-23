@@ -1,0 +1,31 @@
+---
+title: Boîte mail
+description: "L'e-mail qui vit dans votre coffre."
+sidebar:
+  order: 13
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Boîte mail.** Un client de messagerie complet — rail de dossiers, liste de messages, volet de lecture, compositeur — où chaque message est un objet de coffre que vous pouvez rechercher, relier et automatiser. Connectez Gmail via OAuth ou n'importe quel compte IMAP/SMTP ; les identifiants sont scellés côté shell et ne touchent jamais l'application.
+
+<ShotSlider
+  name="Boîte mail"
+  shots={[
+    { src: "/screenshots/apps/mailbox/01-connect.webp", title: "Connecter un compte", caption: "Le courrier arrive dès que vous connectez un compte ; jusque-là, l'application ne contient rien du tout." },
+    { src: "/screenshots/apps/mailbox/02-accounts.webp", title: "Apportez n'importe quel compte", caption: "Gmail via OAuth ou simple IMAP/SMTP — dans les deux cas, les identifiants sont scellés côté shell et ne touchent jamais l'application." },
+  ]}
+/>
+
+## Ce qu'il peut faire
+
+- Lisez, composez, répondez et transférez ; l'envoi est idempotent, de sorte qu'une nouvelle tentative ne peut jamais envoyer deux fois.
+- Le courrier HTML s'affiche dans un cadre en sandbox qui bloque les images distantes par défaut — les pixels de suivi ne se déclenchent pas, sauf si vous l'autorisez.
+- Choisissez une fenêtre de synchronisation de 30 jours à tout, avec des drapeaux faisant autorité côté serveur et des étiquettes locales au coffre.
+- Fils de discussion, pièces jointes comme objets fichier et étiquettes par message.
+- D'autres applications et l'Agent peuvent préremplir une composition, une réponse ou un transfert via des intents.
+- Les expéditeurs se résolvent vers des personnes existantes de Contacts — reliées, jamais créées automatiquement.
+
+## Associé
+
+- [Contacts](/fr/apps/contacts/) — les expéditeurs se résolvent vers des personnes existantes

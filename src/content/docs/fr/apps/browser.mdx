@@ -1,0 +1,30 @@
+---
+title: Navigateur
+description: "Une navigation qui enregistre dans votre coffre."
+sidebar:
+  order: 14
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Navigateur.** Navigation par onglets au-dessus de moteurs de rendu web isolés et sans Node que l'application elle-même ne touche jamais — elle voit les métadonnées, jamais les octets de la page. Un clic clippe la page dans un signet, avec le corps lisible de l'article capturé lorsque la page l'autorise.
+
+<ShotSlider
+  name="Navigateur"
+  shots={[
+    { src: "/screenshots/apps/browser/01-tabs.webp", title: "Une page, chargée à distance", caption: "La page se dessine dans un moteur de rendu isolé et sans Node à côté de l'application — l'application elle-même obtient le titre, le favicon et l'état de sécurité, jamais les pixels ni les octets de la page." },
+  ]}
+/>
+
+## Ce qu'il peut faire
+
+- Des onglets avec épinglage, des onglets privés sur des sessions jetables, un anneau des onglets récemment fermés et une restauration complète de session à travers les redémarrages.
+- « Enregistrer dans le coffre » écrit un objet Signet avec le contenu lisible nettoyé attaché ; une page bloquée se dégrade en lien, jamais en clip échoué.
+- État de sécurité par onglet, rendu visible dans le chrome.
+- Rechercher dans la page, et historique de navigation conservé comme objets du coffre avec des compteurs de visites.
+- Les permissions d'appareil par site sont refusées par défaut, rendues visibles via une bannière explicite.
+- Les cookies persistent chiffrés sous la clé du coffre.
+
+## En rapport
+
+- [Signets](/fr/apps/bookmarks/) — où atterrissent les pages clippées

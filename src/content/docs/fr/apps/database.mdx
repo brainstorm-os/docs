@@ -1,0 +1,52 @@
+---
+title: Base de données
+description: Des tables structurées d'objets avec des propriétés typées et plusieurs vues — table, tableau, et plus.
+sidebar:
+  order: 2
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Base de données** transforme vos [objets](/fr/concepts/objects/) en tables structurées et interrogeables — tâches, contacts, une liste de lecture, un CRM, un inventaire.
+
+<ShotSlider
+  name="Base de données"
+  shots={[
+    { src: "/screenshots/apps/database/01-collection.webp", title: "Une liste adossée à une requête", caption: "Les tâches du studio comme collection en direct — pastilles de statut et de priorité dans des cellules typées, comptes dans la barre latérale." },
+    { src: "/screenshots/apps/database/02-board.webp", title: "Mêmes objets, vue tableau", caption: "Changez la vue et la liste devient un kanban groupé par statut — pas d'export, pas de copie." },
+    { src: "/screenshots/apps/database/03-inspector.webp", title: "Inspecteur de ligne", caption: "Ouvrez n'importe quelle ligne dans le panneau de droite et modifiez ses propriétés sans quitter la vue." },
+  ]}
+/>
+
+## Ce qu'il peut faire
+
+- Six types de vue par Liste : grille, liste, galerie, tableau kanban, calendrier et chronologie avec glisser et lignes de dépendance.
+- Filtres avec groupes ET/OU et plages de dates relatives en direct comme « les 7 derniers jours ».
+- Les colonnes de formule et de rollup calculent à travers les propriétés et les relations ; les pieds de page agrègent somme, moyenne, médiane et plus.
+- Modifiez les cellules sur place avec les mêmes cellules typées que le reste de la plateforme utilise.
+- Import CSV avec inférence de type ; exportez une Liste en CSV, JSON ou Markdown.
+- Enregistrez n'importe quel objet comme modèle et démarrez de nouvelles lignes à partir de celui-ci.
+- Intégrez une Liste en direct dans une note avec la commande /database.
+
+## Propriétés typées
+
+Chaque ligne est un objet, et chaque colonne est une **propriété** typée — texte, nombre, date, case à cocher, sélection, lien et plus. Les propriétés sont définies au niveau du coffre, si bien qu'un « Statut » ou une « Date d'échéance » signifie la même chose partout où cet objet apparaît. Les cellules sont modifiées en ligne via le système de propriétés partagé de Brainstorm.
+
+## Plusieurs vues
+
+Le même ensemble d'objets peut être vu de plusieurs façons sans dupliquer les données :
+
+- **Table** — la grille classique de lignes et colonnes.
+- **Tableau** — un kanban groupé par une propriété.
+- **Liste**, **Galerie** et d'autres dispositions pour différentes formes de données.
+
+Une vue définit comment les objets sont filtrés, triés et groupés ; changer de vue ne modifie jamais les objets sous-jacents.
+
+## Partagé avec chaque application
+
+Les lignes sont des objets ordinaires, si bien qu'une tâche que vous créez dans une Base de données peut apparaître dans le [Calendrier](/fr/apps/calendar/), comme un nœud dans le [Graphe](/fr/apps/graph/), et être liée depuis une [Note](/fr/apps/notes/). La base de données est une lentille sur vos données, pas un silo.
+
+## En rapport
+
+- [Objets](/fr/concepts/objects/) — le modèle de lignes et propriétés
+- [Calendrier](/fr/apps/calendar/) — une vue temporelle sur les mêmes objets

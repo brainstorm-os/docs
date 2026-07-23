@@ -1,0 +1,33 @@
+---
+title: Tâches
+description: "Boîte de réception, Aujourd'hui, tableau et chronologie."
+sidebar:
+  order: 3
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Tâches.** Des surfaces ciblées — Boîte de réception, Aujourd'hui, À venir, par projet — sur des objets Tâche que le Calendrier, la Base de données et le Graphe lisent aussi. La structure vit sur l'objet, de sorte que le travail se déplace entre les applications sans déplacer les données.
+
+<ShotSlider
+  name="Tâches"
+  shots={[
+    { src: "/screenshots/apps/tasks/01-today.webp", title: "Aujourd'hui", caption: "La Boîte de réception, Aujourd'hui et À venir maintiennent le focus ; les décomptes se mettent à jour en direct à mesure que le travail avance." },
+    { src: "/screenshots/apps/tasks/02-board.webp", title: "Tableau de statut", caption: "Faites glisser les cartes entre les colonnes de statut — les mêmes objets Tâche que le Calendrier et le Graphe lisent." },
+    { src: "/screenshots/apps/tasks/03-timeline.webp", title: "Chronologie", caption: "Le travail planifié disposé sur les semaines, avec aujourd'hui marqué et le travail non planifié décompté." },
+  ]}
+/>
+
+## Ce qu'il peut faire
+
+- Kanban de statut et filtres par étiquette à côté des surfaces de liste, plus une vue chronologie avec des plages de durée et des chaînes de dépendances.
+- Les sous-tâches font remonter la progression vers le parent ; les dépendances bloquantes et bloquées-par sont explicites.
+- Priorité, récurrence avec un résumé en langage clair, et estimations de temps face au temps enregistré.
+- Les rappels déclenchent de vraies notifications pour le travail dû et planifié.
+- Des commentaires par tâche et un flux d'activité ; les assignés lient vers des objets Personne de Contacts.
+- Un bloc de tâche en ligne intègre une tâche cochable dans n'importe quelle note ; deux widgets de tableau de bord suivent les tâches ouvertes et les statistiques.
+
+## Associé
+
+- [Base de données](/fr/apps/database/) — les mêmes tâches sous forme de table, de tableau ou de chronologie
+- [Calendrier](/fr/apps/calendar/) — les dates d'échéance sur la grille mensuelle
