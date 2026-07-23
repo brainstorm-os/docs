@@ -16,12 +16,14 @@ export default defineConfig({
 			title: "Brainstorm Docs",
 			description:
 				"Documentation for Brainstorm — the local-first, AI-native operating system for knowledge work.",
-			// English at the root, German under /de/. Starlight supplies the
-			// language switcher, hreflang, <html lang> and localised UI chrome.
+			// English at the root, German under /de/, French under /fr/. Starlight
+			// supplies the language switcher, hreflang, <html lang> and localised UI
+			// chrome.
 			defaultLocale: "root",
 			locales: {
 				root: { label: "English", lang: "en" },
 				de: { label: "Deutsch", lang: "de" },
+				fr: { label: "Français", lang: "fr" },
 			},
 			// Bing Webmaster Tools site verification for docs.getbrainstorm.online.
 			head: [
@@ -82,82 +84,82 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: "Start here",
-					translations: { de: "Erste Schritte" },
+					translations: { de: "Erste Schritte", fr: "Premiers pas" },
 					items: [
 						{
 							label: "What is Brainstorm?",
-							translations: { de: "Was ist Brainstorm?" },
+							translations: { de: "Was ist Brainstorm?", fr: "Qu'est-ce que Brainstorm ?" },
 							slug: "start-here/what-is-brainstorm",
 						},
 						{
 							label: "Install",
-							translations: { de: "Installation" },
+							translations: { de: "Installation", fr: "Installation" },
 							slug: "start-here/install",
 						},
 						{
 							label: "Quickstart",
-							translations: { de: "Schnellstart" },
+							translations: { de: "Schnellstart", fr: "Démarrage rapide" },
 							slug: "start-here/quickstart",
 						},
 					],
 				},
 				{
 					label: "Concepts",
-					translations: { de: "Konzepte" },
+					translations: { de: "Konzepte", fr: "Concepts" },
 					items: [
-						{ label: "Vaults", translations: { de: "Vaults" }, slug: "concepts/vaults" },
+						{ label: "Vaults", translations: { de: "Vaults", fr: "Coffres" }, slug: "concepts/vaults" },
 						{
 							label: "Apps & permissions",
-							translations: { de: "Apps & Berechtigungen" },
+							translations: { de: "Apps & Berechtigungen", fr: "Applications et permissions" },
 							slug: "concepts/apps-and-permissions",
 						},
-						{ label: "Objects", translations: { de: "Objekte" }, slug: "concepts/objects" },
+						{ label: "Objects", translations: { de: "Objekte", fr: "Objets" }, slug: "concepts/objects" },
 						{
 							label: "Local-first & sync",
-							translations: { de: "Lokal-first & Synchronisierung" },
+							translations: { de: "Lokal-first & Synchronisierung", fr: "Local-first et synchronisation" },
 							slug: "concepts/local-first-and-sync",
 						},
 						{
 							label: "Your data & security",
-							translations: { de: "Deine Daten & Sicherheit" },
+							translations: { de: "Deine Daten & Sicherheit", fr: "Vos données et sécurité" },
 							slug: "concepts/your-data-and-security",
 						},
 					],
 				},
 				{
 					label: "Apps",
-					translations: { de: "Apps" },
+					translations: { de: "Apps", fr: "Applications" },
 					items: [{ autogenerate: { directory: "apps" } }],
 				},
 				{
 					label: "Build",
-					translations: { de: "Entwickeln" },
+					translations: { de: "Entwickeln", fr: "Développer" },
 					items: [
-						{ label: "Overview", translations: { de: "Überblick" }, slug: "build/overview" },
+						{ label: "Overview", translations: { de: "Überblick", fr: "Aperçu" }, slug: "build/overview" },
 						{
 							label: "Your first app",
-							translations: { de: "Deine erste App" },
+							translations: { de: "Deine erste App", fr: "Votre première application" },
 							slug: "build/your-first-app",
 						},
 						{
 							label: "The manifest",
-							translations: { de: "Das Manifest" },
+							translations: { de: "Das Manifest", fr: "Le manifeste" },
 							slug: "build/the-manifest",
 						},
 						{
 							label: "Capabilities",
-							translations: { de: "Fähigkeiten" },
+							translations: { de: "Fähigkeiten", fr: "Capacités" },
 							slug: "build/capabilities",
 						},
-						{ label: "SDK & runtime", translations: { de: "SDK & Laufzeit" }, slug: "build/the-sdk" },
+						{ label: "SDK & runtime", translations: { de: "SDK & Laufzeit", fr: "SDK et runtime" }, slug: "build/the-sdk" },
 						{
 							label: "Working with data",
-							translations: { de: "Mit Daten arbeiten" },
+							translations: { de: "Mit Daten arbeiten", fr: "Travailler avec les données" },
 							slug: "build/working-with-data",
 						},
 						{
 							label: "Recipes & anti-patterns",
-							translations: { de: "Rezepte & Anti-Patterns" },
+							translations: { de: "Rezepte & Anti-Patterns", fr: "Recettes et anti-patterns" },
 							slug: "build/recipes",
 						},
 					],

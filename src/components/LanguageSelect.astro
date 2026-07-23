@@ -1,20 +1,27 @@
 ---
-// Replaces Starlight's language dropdown with the marketing site's EN/DE pill
+// Replaces Starlight's language dropdown with the marketing site's pill
 // switcher, so the language control matches getbrainstorm.online exactly
 // (same as ThemeSelect mirrors the marketing sun/moon toggle).
 //
-// Locale scheme mirrors the marketing site: English at the root, German under
-// /de/. Each option links to the equivalent page in that locale, so switching
-// keeps you where you are.
+// Locale scheme mirrors the marketing site: English at the root, the rest under
+// a `/<code>/` prefix. Each option links to the equivalent page in that locale,
+// so switching keeps you where you are. Add a locale here + in astro.config's
+// `locales` and it flows through.
+const prefixed = [
+	{ code: "de", label: "DE", name: "Deutsch" },
+	{ code: "fr", label: "FR", name: "Français" },
+] as const;
+
 const here = Astro.url.pathname;
-const neutral = here.replace(/^\/de(?=\/|$)/, "") || "/";
-const deHref = neutral === "/" ? "/de/" : `/de${neutral}`;
-const onDe = here === "/de" || here.startsWith("/de/");
+const prefixRe = new RegExp(`^/(?:${prefixed.map((l) => l.code).join("|")})(?=/|$)`);
+const neutral = here.replace(prefixRe, "") || "/";
+const onLocale = (code: string) => here === `/${code}` || here.startsWith(`/${code}/`);
+const localize = (code: string) => (neutral === "/" ? `/${code}/` : `/${code}${neutral}`);
 
 const opts = [
-	{ code: "en", label: "EN", name: "English", href: neutral, current: !onDe },
-	{ code: "de", label: "DE", name: "Deutsch", href: deHref, current: onDe },
-] as const;
+	{ code: "en", label: "EN", name: "English", href: neutral, current: !prefixed.some((l) => onLocale(l.code)) },
+	...prefixed.map((l) => ({ ...l, href: localize(l.code), current: onLocale(l.code) })),
+];
 ---
 
 <nav class="bs-lang" aria-label="Language">

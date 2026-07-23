@@ -1,0 +1,30 @@
+---
+title: Livres
+description: "Lisez EPUB et PDF, gardez vos surlignages."
+sidebar:
+  order: 16
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Livres.** Une application de lecture avec une bibliothèque dans le coffre : importez un EPUB ou un PDF et il devient un objet Livre qui se souvient de votre position et de votre progression. Les surlignages sont des objets de première classe que vous pouvez intégrer dans des notes.
+
+<ShotSlider
+  name="Livres"
+  shots={[
+    { src: "/screenshots/apps/books/01-library.webp", title: "La bibliothèque", caption: "Livres importés avec auteur et progression, prêts à rouvrir là où vous vous êtes arrêté." },
+  ]}
+/>
+
+## Ce qu'il peut faire
+
+- Lecture paginée avec reflow pour EPUB avec cinq réglages de typographie — famille, taille, interligne, longueur de ligne, thème — qui repaginent sans perdre votre place.
+- Lecture de PDF avec le vrai plan du document, la navigation par page et des liens cliquables sûrs.
+- Sélectionnez pour surligner dans cinq couleurs et attachez une note ; l'ancre survit aux changements de typographie.
+- Une étagère de bibliothèque avec recherche et tri, montrant l'auteur et la progression par livre.
+- Rouvrez n'importe quel livre exactement là où vous vous êtes arrêté.
+- Intégrez une carte de surlignage dans Notes avec la commande /book.
+
+## En rapport
+
+- [Notes](/fr/apps/notes/) — intégrez une carte de surlignage avec la commande /book

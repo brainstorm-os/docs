@@ -1,0 +1,30 @@
+---
+title: Code
+description: "Un vrai éditeur pour les notes en forme de code."
+sidebar:
+  order: 17
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Code.** Édite des snippets, des configurations et d'autres objets en forme de code dans le coffre avec un éditeur vraiment capable : coloration Shiki, multi-curseur, repli, diagnostics et diffs. Il ouvre n'importe quel type MIME de code source que le coffre lui tend.
+
+<ShotSlider
+  name="Code"
+  shots={[
+    { src: "/screenshots/apps/code-editor/01-editor.webp", title: "Édition d'un snippet", caption: "Coloration Shiki et diagnostics sur un tampon collaboratif qui est un objet du coffre." },
+  ]}
+/>
+
+## Ce qu'il peut faire
+
+- Coloration syntaxique Shiki avec des grammaires par langage chargées paresseusement et des thèmes clairs/sombres.
+- Multi-curseur et sélectionner-l'occurrence-suivante, correspondance de parenthèses, fermeture automatique des paires, repli de code et retour à la ligne.
+- Ouverture rapide (Cmd/Ctrl+P) et une palette de commandes floue (Cmd/Ctrl+Maj+P).
+- Diagnostics intégrés avec des soulignements ondulés en ligne, des marqueurs de changement dans la gouttière, et des diffs unifiés ou côte à côte face à la baseline enregistrée.
+- Formatage Prettier pour les langages web, à l'enregistrement ou à la demande.
+- Un tampon Y.Text collaboratif sur le même substrat local-first que tout le reste, avec un rendu virtualisé pour les gros fichiers.
+
+## En rapport
+
+- [Objets](/fr/concepts/objects/) — les fichiers de code sont aussi des objets du coffre

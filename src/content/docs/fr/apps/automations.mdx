@@ -1,0 +1,32 @@
+---
+title: Automatisations
+description: "Des workflows révisables au-dessus de vos propres applications."
+sidebar:
+  order: 12
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Automatisations.** Un constructeur de workflows déclenchés par le temps, des événements d'entité, ou lancés à la main, composés d'étapes qui pilotent d'autres applications via des intentions. Chaque workflow déclare exactement ce qu'il peut toucher avant que vous puissiez l'enregistrer.
+
+<ShotSlider
+  name="Automatisations"
+  shots={[
+    { src: "/screenshots/apps/automations/01-workflows.webp", title: "Workflows", caption: "Chaque workflow affiche son déclencheur et son nombre d'étapes à côté de son état d'activation." },
+    { src: "/screenshots/apps/automations/02-templates.webp", title: "Modèles de départ", caption: "Des points de départ en un clic qui arrivent désactivés jusqu'à ce que vous révisiez ce qu'ils touchent." },
+    { src: "/screenshots/apps/automations/03-reminders.webp", title: "Rappels", caption: "Des rappels à saisie rapide dans leur propre liste, avec terminé et report intégrés." },
+  ]}
+/>
+
+## Ce qu'il peut faire
+
+- Un constructeur linéaire avec des étapes d'intention, d'entité, de notification, d'attente, d'appel IA, d'agent IA, de branchement, de for-each, d'expression, d'export et de sous-workflow.
+- Déclencheurs temporels, par événement d'entité et manuels ; les modèles de départ arrivent désactivés pour que vous révisiez avant d'activer.
+- Une feuille de capacités au moment de l'enregistrement montre les permissions dont les étapes ont besoin face à celles accordées — un dépassement bloque l'enregistrement.
+- Les étapes d'agent IA utilisent les intentions comme outils, fermées par défaut dans l'enveloppe de capacités du workflow.
+- L'historique d'exécution enregistre le statut, les journaux par étape et le coût ; les rappels légers obtiennent leur propre vue de saisie rapide.
+- Importez et exportez des workflows en JSON ; un unique hôte d'automatisation désigné empêche les coffres multi-appareils de s'exécuter en double.
+
+## En rapport
+
+- [Applications et permissions](/fr/concepts/apps-and-permissions/) — les workflows s'exécutent dans une enveloppe de capacités

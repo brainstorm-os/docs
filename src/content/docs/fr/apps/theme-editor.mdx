@@ -1,0 +1,31 @@
+---
+title: Themes
+description: "Concevez l'OS dans lequel vous travaillez."
+sidebar:
+  order: 20
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Themes.** Composez un thème à partir de quatre parties — un ensemble de tokens, un pack d'icônes, la typographie et un pack de style CSS optionnel — et prévisualisez-le en direct sur l'ensemble du shell et de chaque application ouverte. Les thèmes sont des objets de coffre comme tout le reste.
+
+<ShotSlider
+  name="Themes"
+  shots={[
+    { src: "/screenshots/apps/theme-editor/01-tokens.webp", title: "L'ensemble de tokens", caption: "Des tokens sémantiques avec des échantillons en direct et une réinitialisation par token, sur une base claire ou sombre." },
+    { src: "/screenshots/apps/theme-editor/02-typography.webp", title: "Typographie", caption: "Des piles de polices par rôle et une échelle de densité, prévisualisées en direct." },
+  ]}
+/>
+
+## Ce qu'il peut faire
+
+- Modifiez l'espace de noms des tokens sémantiques avec des échantillons en direct, un sélecteur de couleur et une réinitialisation par token, contre une base claire ou sombre.
+- Choisissez un pack d'icônes et définissez des piles de polices par rôle — UI, body, code, display — plus une échelle de densité.
+- Un éditeur de pack de style CSS brut dont le sanitizer rejette les constructions dangereuses et bloque l'enregistrement en cas d'erreurs.
+- Un bouton prévisualise la composition sur le tableau de bord et chaque fenêtre d'application, puis annule automatiquement.
+- Le contrôle de contraste WCAG signale les paires de tokens illisibles.
+- Confiez le CSS du pack de style à l'application [Code](/fr/apps/code-editor/) pour une surface d'édition complète.
+
+## Associé
+
+- [Applications & permissions](/fr/concepts/apps-and-permissions/) — les thèmes sont des objets de coffre

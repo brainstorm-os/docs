@@ -1,0 +1,44 @@
+---
+title: Fichiers
+description: Amenez documents et médias dans votre coffre et parcourez-les aux côtés de vos autres objets.
+sidebar:
+  order: 8
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Fichiers** amène des documents et médias existants — PDF, images et autres pièces jointes — dans votre coffre pour qu'ils vivent aux côtés de vos notes, tâches et bases de données.
+
+<ShotSlider
+  name="Fichiers"
+  shots={[
+    { src: "/screenshots/apps/files/01-list.webp", title: "Le coffre en tant que fichiers", caption: "Les dossiers sont des entités ; la vue liste montre le type et les métadonnées par ligne." },
+    { src: "/screenshots/apps/files/03-inspector.webp", title: "Inspecteur de fichier", caption: "Onglets Aperçu, Propriétés et Liens sur le fichier sélectionné." },
+  ]}
+/>
+
+## Ce qu'il peut faire
+
+- Vues liste, liste à icônes, grille et galerie, mémorisées par dossier.
+- Les dossiers intelligents capturent la requête et la portée d'une recherche comme une entrée vivante de la barre latérale.
+- Téléversez de vrais fichiers via le sélecteur de l'OS ou glissez-les depuis le Finder — octets, type MIME, taille et hachage SHA-256 inclus.
+- Sélection multiple pour suppression, déplacement, copie et renommage en masse avec un nommage à l'épreuve des collisions.
+- Un inspecteur avec onglets Aperçu, Propriétés et Liens ; les couvertures et icônes de dossier sont modifiables au clic.
+- Les listes virtualisées gardent les gros dossiers rapides ; fil d'Ariane, groupement et une vue « Récemment supprimés » les gardent navigables.
+
+## Les fichiers sont aussi des objets
+
+Un fichier que vous ajoutez devient un [objet](/fr/concepts/objects/) dans votre coffre : il peut être lié depuis une note avec `@`, doté de propriétés, collecté dans des ensembles et rendu visible dans le [Graphe](/fr/apps/graph/). Vos documents cessent d'être des pièces jointes éparses et deviennent partie de l'espace de travail connecté.
+
+## Parcourir et prévisualiser
+
+Fichiers vous donne un navigateur familier pour ce qui est dans votre coffre, et l'application **Aperçu** rend les documents et médias pris en charge en ligne pour que vous puissiez lire sans quitter Brainstorm.
+
+## Sur votre disque
+
+Les fichiers que vous ajoutez sont stockés dans votre coffre sur votre propre disque et protégés par votre clé de coffre. Ils se synchronisent avec tout le reste quand vous [activez la synchronisation](/fr/concepts/local-first-and-sync/), chiffrés de bout en bout.
+
+## En rapport
+
+- [Objets](/fr/concepts/objects/) — comment les fichiers se rapportent à tout le reste
+- [Vos données et sécurité](/fr/concepts/your-data-and-security/) — où les fichiers sont stockés et comment ils sont protégés

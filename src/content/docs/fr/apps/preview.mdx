@@ -1,0 +1,31 @@
+---
+title: Aperçu
+description: "Des aperçus rapides pour presque tous les fichiers."
+sidebar:
+  order: 19
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Aperçu.** Un visionneur rapide qui aiguille chaque fichier vers un moteur de rendu par format : images, photos RAW et HEIC, PDF, vidéo, audio, texte, Markdown, code, documents Office et modèles 3D. Chaque moteur de rendu se charge paresseusement, de sorte que l'ouverture reste rapide.
+
+<ShotSlider
+  name="Aperçu"
+  shots={[
+    { src: "/screenshots/apps/preview/01-image.webp", title: "Une image, en aperçu", caption: "Faites un panoramique et zoomez sans agrandissement ; parcourez les fichiers voisins avec les flèches sur la pellicule." },
+    { src: "/screenshots/apps/preview/02-inspector.webp", title: "L'inspecteur", caption: "Modifiez les vraies propriétés de coffre et les commentaires du fichier juste à côté de l'aperçu." },
+  ]}
+/>
+
+## Ce qu'il peut faire
+
+- Les images se déplacent en panoramique et zooment sans agrandissement, avec rotation et miroir ; le HEIC se décode sur place et le RAW montre le JPEG intégré de l'appareil photo.
+- PDF avec navigation de pages, zoom et liens externes sûrs ; audio avec tags ID3, débit binaire et fréquence d'échantillonnage dans l'inspecteur.
+- DOCX, XLSX et PPTX s'ouvrent en texte et tableaux nettoyés, en lecture seule.
+- Les modèles glTF, GLB et OBJ tournent sous des contrôles d'orbite.
+- Parcourez les fichiers voisins avec les flèches sur une pellicule, ou naviguez dans les fichiers du coffre depuis la barre latérale intégrée.
+- L'inspecteur modifie les vraies propriétés de coffre et les commentaires du fichier — le même objet partout.
+
+## Associé
+
+- [Fichiers](/fr/apps/files/) — parcourez tout ce qu'Aperçu peut ouvrir

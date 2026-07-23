@@ -7,12 +7,12 @@ import { getCollection } from "astro:content";
 // file is the whole sitemap. URLs are derived from the same `docs` content
 // collection Starlight routes, so the sitemap never drifts from the pages.
 //
-// The docs are localised (English at the root, German under /de/), so every
-// entry carries xhtml:link alternates for both locales (+ x-default) — this is
-// what makes Google cluster the language versions instead of treating them as
-// duplicate content.
-
-const DE = "de";
+// The docs are localised (English at the root, the rest under a `/<code>/`
+// prefix), so every entry carries xhtml:link alternates for each locale that
+// exists (+ x-default) — this is what makes Google cluster the language
+// versions instead of treating them as duplicate content. Add a locale to
+// PREFIXED (and astro.config's `locales`) and it flows through.
+const PREFIXED = ["de", "fr"] as const;
 
 const route = (id: string): string => {
 	// Starlight serves the root index.md at "/" and "<dir>/index.md" at "/<dir>/".
@@ -22,50 +22,54 @@ const route = (id: string): string => {
 
 // Split a full route into its locale and locale-neutral path.
 const localeOf = (fullRoute: string): { lang: string; neutral: string } => {
-	if (fullRoute === `/${DE}/` || fullRoute.startsWith(`/${DE}/`)) {
-		return { lang: DE, neutral: fullRoute.slice(`/${DE}`.length) || "/" };
+	for (const code of PREFIXED) {
+		if (fullRoute === `/${code}/` || fullRoute.startsWith(`/${code}/`)) {
+			return { lang: code, neutral: fullRoute.slice(`/${code}`.length) || "/" };
+		}
 	}
 	return { lang: "en", neutral: fullRoute };
 };
 
-const enRoute = (neutral: string): string => neutral;
-const deRoute = (neutral: string): string => (neutral === "/" ? `/${DE}/` : `/${DE}${neutral}`);
+// The route for a given locale-neutral path in `lang` ("en" lives at the root).
+const localized = (lang: string, neutral: string): string =>
+	lang === "en" ? neutral : neutral === "/" ? `/${lang}/` : `/${lang}${neutral}`;
 
 export const GET: APIRoute = async ({ site }) => {
 	const base = (site ?? new URL("https://docs.getbrainstorm.online")).toString().replace(/\/$/, "");
 	const docs = await getCollection("docs");
 
 	// Group routes by their locale-neutral path, recording which locales exist.
-	const byNeutral = new Map<string, { en: boolean; de: boolean }>();
+	const byNeutral = new Map<string, Set<string>>();
 	for (const entry of docs) {
 		const { lang, neutral } = localeOf(route(entry.id));
-		const rec = byNeutral.get(neutral) ?? { en: false, de: false };
-		if (lang === DE) rec.de = true;
-		else rec.en = true;
-		byNeutral.set(neutral, rec);
+		const langs = byNeutral.get(neutral) ?? new Set<string>();
+		langs.add(lang);
+		byNeutral.set(neutral, langs);
 	}
 
-	const urlXml = (loc: string, rec: { en: boolean; de: boolean }, neutral: string): string => {
+	const urlXml = (loc: string, langs: Set<string>, neutral: string): string => {
 		const links: string[] = [];
-		if (rec.en)
-			links.push(
-				`\t\t<xhtml:link rel="alternate" hreflang="en" href="${base}${enRoute(neutral)}" />`,
-			);
-		if (rec.de)
-			links.push(
-				`\t\t<xhtml:link rel="alternate" hreflang="de" href="${base}${deRoute(neutral)}" />`,
-			);
-		// x-default points at English when it exists, else the German fallback.
-		const def = rec.en ? enRoute(neutral) : deRoute(neutral);
-		links.push(`\t\t<xhtml:link rel="alternate" hreflang="x-default" href="${base}${def}" />`);
+		for (const lang of ["en", ...PREFIXED]) {
+			if (langs.has(lang)) {
+				links.push(
+					`\t\t<xhtml:link rel="alternate" hreflang="${lang}" href="${base}${localized(lang, neutral)}" />`,
+				);
+			}
+		}
+		// x-default points at English when it exists, else the first prefixed locale.
+		const defLang = langs.has("en") ? "en" : (PREFIXED.find((c) => langs.has(c)) ?? "en");
+		links.push(
+			`\t\t<xhtml:link rel="alternate" hreflang="x-default" href="${base}${localized(defLang, neutral)}" />`,
+		);
 		return `\t<url>\n\t\t<loc>${base}${loc}</loc>\n${links.join("\n")}\n\t</url>`;
 	};
 
 	const urls: string[] = [];
 	for (const neutral of [...byNeutral.keys()].sort()) {
-		const rec = byNeutral.get(neutral) as { en: boolean; de: boolean };
-		if (rec.en) urls.push(urlXml(enRoute(neutral), rec, neutral));
-		if (rec.de) urls.push(urlXml(deRoute(neutral), rec, neutral));
+		const langs = byNeutral.get(neutral) as Set<string>;
+		for (const lang of ["en", ...PREFIXED]) {
+			if (langs.has(lang)) urls.push(urlXml(localized(lang, neutral), langs, neutral));
+		}
 	}
 
 	const body = `<?xml version="1.0" encoding="UTF-8"?>

@@ -1,0 +1,31 @@
+---
+title: Agent
+description: "L'IA qui travaille dans votre coffre."
+sidebar:
+  order: 11
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Agent.** Une surface de chat au-dessus du courtier d'IA partagé : exécutez un modèle Ollama local ou apportez votre propre clé pour Anthropic, OpenAI, Gemini ou GLM. Les conversations sont des objets du coffre, les réponses citent les objets dont elles s'inspirent, et l'agent ne peut agir que dans les limites des capacités que vous avez accordées.
+
+<ShotSlider
+  name="Agent"
+  shots={[
+    { src: "/screenshots/apps/agent/01-conversation.webp", title: "Une conversation ancrée", caption: "L'agent lit le brief depuis le coffre et rédige à partir de celui-ci — la conversation est elle-même un objet du coffre." },
+  ]}
+/>
+
+## Ce qu'il peut faire
+
+- La recherche hybride ancre chaque réponse dans votre coffre, avec des citations qui ouvrent l'objet source.
+- Attachez le contexte explicitement : mentionnez documents et personnes avec @, glissez des fichiers texte ou ajoutez des images pour les modèles de vision.
+- La mémoire à long terme est opt-in et désactivée par défaut — chaque élément mémorisé est visible, rédigeable et supprimable.
+- « Résumer avec l'agent » et « Interroger l'agent à ce sujet » apparaissent sur les objets dans les autres applications.
+- Enregistrez une conversation comme automatisation : sa trace d'outils devient un workflow, ouvert dans le constructeur pour révision.
+- Modèle de capacités fermé par défaut : les outils de l'agent sont toujours un sous-ensemble de ce que vous avez accordé à la conversation, revérifié à chaque appel.
+
+## En rapport
+
+- [Applications et permissions](/fr/concepts/apps-and-permissions/) — les mêmes autorisations régissent les agents
+- [Vos données et sécurité](/fr/concepts/your-data-and-security/) — pourquoi l'IA locale compte

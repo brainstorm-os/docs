@@ -1,0 +1,48 @@
+---
+title: Notes
+description: L'écriture en texte enrichi dans Brainstorm — titres, listes, code, liens vers n'importe quel objet, et un menu de commandes.
+sidebar:
+  order: 1
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Notes** est l'application d'écriture en texte enrichi de Brainstorm. C'est là que commence l'essentiel de la réflexion libre.
+
+<ShotSlider
+  name="Notes"
+  shots={[
+    { src: "/screenshots/apps/notes/01-editor.webp", title: "Des notes qui lient vers l'extérieur", caption: "Une note de lecture avec une carte de signet intégrée en direct — blocs, mentions et intégrations dans un seul éditeur." },
+    { src: "/screenshots/apps/notes/02-document.webp", title: "De vrais documents", caption: "De la prose avec des @-mentions qui lient directement vers des personnes et des projets ; les rétroliens s'accumulent de l'autre côté." },
+    { src: "/screenshots/apps/notes/03-properties.webp", title: "Des propriétés typées sur une page", caption: "Le panneau de propriétés partagé : des champs typés qui vivent sur l'objet note lui-même." },
+  ]}
+/>
+
+## Ce qu'il peut faire
+
+- Les commandes slash, le menu de la poignée de bloc et le clic droit puisent tous dans un seul registre de commandes — transformer-en, insérer et actions de bloc partout.
+- Mentionnez n'importe quel objet du coffre par @ ; les rétroliens et les références sortantes apparaissent dans leur propre panneau.
+- Transcluez un bloc ou une note entière en ligne, et elle reste vivante aux deux endroits.
+- Des blocs de propriétés typées, des tableaux triables avec remplissage vers le bas, et des blocs de code avec coloration syntaxique.
+- Des commentaires ancrés à une plage et des curseurs partagés sur un document local-first.
+- Des couvertures et des icônes, des verrous en lecture seule au niveau de la page et par bloc, rechercher-et-remplacer, et l'export en Markdown, HTML ou PDF.
+
+## Écriture
+
+Notes prend en charge la mise en forme que vous attendez — titres, gras et italique, listes, cases à cocher, citations, blocs de code et séparateurs. Le texte est structuré sous le capot (via Lexical), de sorte qu'il reste propre et portable au lieu de devenir une soupe de balisage.
+
+## Reliez votre savoir
+
+- Tapez **`@`** pour mentionner et lier n'importe quel [objet](/fr/concepts/objects/) de votre coffre — une autre note, une tâche, un contact. Le lien est réel : la cible sait qu'elle est référencée.
+- Tapez **`/`** pour ouvrir le menu de commandes et insérer des blocs, des titres et des intégrations sans quitter le clavier.
+
+Parce qu'une note lie vers de vrais objets, votre écriture devient partie du graphe connecté de votre coffre plutôt qu'une île de texte.
+
+## Toujours enregistré, toujours à vous
+
+Chaque frappe est enregistrée dans votre coffre sur le disque, hors ligne et instantanément. Si vous [synchronisez](/fr/concepts/local-first-and-sync/), les modifications fusionnent proprement entre appareils, sans conflits de version.
+
+## Associé
+
+- [Objets](/fr/concepts/objects/) — ce vers quoi pointent les liens `@`
+- [Graphe](/fr/apps/graph/) — voyez les liens de vos notes visuellement

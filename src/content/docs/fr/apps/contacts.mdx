@@ -1,0 +1,31 @@
+---
+title: Contacts
+description: "Personnes et entreprises comme véritables objets."
+sidebar:
+  order: 6
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Contacts.** Un carnet d'adresses au-dessus des types Personne et Entreprise partagés que toute autre application peut lire. Les relations sont des liens — cliquez sur une entreprise ou une personne liée et elle s'ouvre là où elle vit.
+
+<ShotSlider
+  name="Contacts"
+  shots={[
+    { src: "/screenshots/apps/contacts/01-person.webp", title: "Une personne", caption: "Moyens de contact, rôle et lien vers l'entreprise — les personnes sont des objets que les autres applications référencent." },
+    { src: "/screenshots/apps/contacts/02-new-contact.webp", title: "Nouveau contact", caption: "Saisissez nom, entreprise, e-mail et téléphone dans une seule carte de composition." },
+  ]}
+/>
+
+## Ce qu'il peut faire
+
+- Une liste de personnes recherchable et groupée alphabétiquement avec e-mails, téléphones, rôle, biographie, anniversaire et date d'anniversaire par personne.
+- Groupement par entreprise : ouvrez une entreprise pour voir ses personnes ; les liens d'entreprise d'autres applications atterrissent ici.
+- Import et export vCard 3.0 et 4.0.
+- Les anniversaires se répètent chaque année dans le Calendrier partagé.
+- Mailbox résout les adresses entrantes vers des personnes existantes — en liant, jamais en créant automatiquement.
+- Un widget de tableau de bord garde une liste de personnes épinglée sur le bureau.
+
+## En rapport
+
+- [Objets](/fr/concepts/objects/) — les personnes et entreprises sont des objets vers lesquels les autres applications lient

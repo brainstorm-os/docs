@@ -1,0 +1,44 @@
+---
+title: Graphe
+description: Voyez comment les objets de votre coffre se relient sous forme de graphe navigable et interactif.
+sidebar:
+  order: 9
+---
+
+import ShotSlider from "../../../../components/ShotSlider.astro";
+
+**Graphe** visualise votre coffre tel qu'il est réellement — un réseau d'[objets](/fr/concepts/objects/) connectés. Les notes, les tâches, les fichiers et les liens entre eux deviennent une carte que vous pouvez explorer.
+
+<ShotSlider
+  name="Graphe"
+  shots={[
+    { src: "/screenshots/apps/graph/01-graph.webp", title: "Le coffre entier", caption: "Chaque objet et lien typé dessiné en direct ; les mentions et les relations deviennent des arêtes." },
+    { src: "/screenshots/apps/graph/02-filters.webp", title: "Filtres de motif", caption: "Filtrez par type et condition ; le résumé des correspondances se met à jour en direct pendant que vous affinez." },
+  ]}
+/>
+
+## Ce qu'il peut faire
+
+- Les filtres de motif décrivent des sujets, des arêtes typées et des conditions par sujet ; la requête se compile en SQL et reste vivante.
+- Le mode local parcourt 1 à 10 sauts depuis une racine dans une direction ou les deux ; le mode chemin trouve les chemins les plus courts entre deux objets.
+- L'animation de l'historique rejoue le coffre au fil du temps, avec un histogramme de densité et un curseur de défilement.
+- Dispositions en force, radiale, hiérarchie et circulaire ; faites glisser des nœuds, ou glissez depuis une poignée pour créer un vrai lien typé.
+- Un inspecteur modifiable change les propriétés d'un nœud en ligne, sans quitter le canevas.
+- Exportez en JSON, Graphviz DOT, GraphML ou SVG ; intégrez un graphe en direct dans une note.
+
+## Voyez la forme de votre savoir
+
+Chaque `@`-mention, appartenance à une collection et relation devient une arête. Le graphe révèle des grappes, des pôles et des orphelins que vous ne repéreriez jamais dans une liste — la note vers laquelle tout pointe, le sujet qui a dérivé de son côté.
+
+## Naviguez par relation
+
+Cliquez sur un nœud pour ouvrir l'objet ; suivez les arêtes pour passer d'un objet lié à l'autre. Le graphe est une façon de *parcourir* votre coffre par le sens plutôt que par dossier.
+
+## Conçu pour l'échelle
+
+Le graphe s'affiche sur un canevas haute performance, de sorte qu'il reste fluide à mesure que votre coffre grandit jusqu'à des milliers d'objets et de liens.
+
+## Associé
+
+- [Objets](/fr/concepts/objects/) — ce que représentent les nœuds et les arêtes
+- [Notes](/fr/apps/notes/) — où la plupart des liens sont créés
