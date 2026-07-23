@@ -1,0 +1,139 @@
+---
+/**
+ * Inline YouTube embed for doc pages. Privacy-friendly click-to-load: the
+ * facade (play button + title) contacts nothing on page load; the
+ * youtube-nocookie iframe is only mounted after the reader clicks. Responsive
+ * 16:9, theme-aware via Starlight tokens. Dependency-free.
+ */
+interface Props {
+	/** Bare YouTube id, e.g. "OR-kKDEFhzQ" — not a full URL. */
+	id: string;
+	/** Accessible label / heading for the player. */
+	title: string;
+	/** Optional line beneath the player. */
+	caption?: string;
+	/** Label for the "open on YouTube" link in the caption. */
+	watchLabel?: string;
+}
+
+const { id, title, caption, watchLabel = "Watch on YouTube ↗" } = Astro.props;
+const embedSrc = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&modestbranding=1&playsinline=1`;
+const watchHref = `https://www.youtube.com/watch?v=${id}`;
+---
+
+<figure class="video-embed" data-video-embed data-embed-src={embedSrc}>
+	<div class="video-embed__frame">
+		<button type="button" class="video-embed__facade" data-video-play aria-label={title}>
+			<span class="video-embed__play" aria-hidden="true">
+				<svg width="26" height="26" viewBox="0 0 24 24"><path d="M6 3.5v17l14-8.5-14-8.5Z" fill="currentColor"></path></svg>
+			</span>
+			<span class="video-embed__label">{title}</span>
+		</button>
+	</div>
+	{
+		caption && (
+			<figcaption class="video-embed__caption">
+				{caption} <a href={watchHref} target="_blank" rel="noreferrer noopener">{watchLabel}</a>
+			</figcaption>
+		)
+	}
+</figure>
+
+<style>
+	.video-embed {
+		margin: 1.5rem 0;
+	}
+	.video-embed__frame {
+		position: relative;
+		aspect-ratio: 16 / 9;
+		width: 100%;
+		border-radius: 12px;
+		overflow: hidden;
+		border: 1px solid var(--sl-color-hairline, var(--sl-color-gray-5));
+		background:
+			radial-gradient(120% 120% at 50% 0%, var(--sl-color-gray-6, var(--sl-color-bg-nav)) 0%, var(--sl-color-bg) 70%);
+	}
+	.video-embed__frame :global(iframe) {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		border: 0;
+	}
+	.video-embed__facade {
+		position: absolute;
+		inset: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 0.85rem;
+		width: 100%;
+		height: 100%;
+		padding: 1rem;
+		border: 0;
+		cursor: pointer;
+		background: transparent;
+		color: var(--sl-color-white);
+		transition: background 0.2s ease;
+	}
+	.video-embed__facade:hover {
+		background: color-mix(in srgb, var(--sl-color-accent) 8%, transparent);
+	}
+	.video-embed__play {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 62px;
+		height: 62px;
+		border-radius: 50%;
+		background: var(--sl-color-accent);
+		color: var(--sl-color-white);
+		box-shadow: 0 8px 24px color-mix(in srgb, var(--sl-color-accent) 45%, transparent);
+		transition:
+			transform 0.15s ease,
+			box-shadow 0.2s ease;
+	}
+	.video-embed__play svg {
+		margin-left: 3px;
+	}
+	.video-embed__facade:hover .video-embed__play {
+		transform: scale(1.06);
+	}
+	.video-embed__label {
+		font-size: var(--sl-text-base);
+		font-weight: 600;
+		letter-spacing: -0.01em;
+		text-align: center;
+		max-width: 40ch;
+	}
+	.video-embed__caption {
+		margin-top: 0.6rem;
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-3, var(--sl-color-gray-2));
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.video-embed__facade,
+		.video-embed__play {
+			transition: none;
+		}
+	}
+</style>
+
+<script>
+	for (const fig of document.querySelectorAll<HTMLElement>("[data-video-embed]")) {
+		const btn = fig.querySelector<HTMLButtonElement>("[data-video-play]");
+		const frame = fig.querySelector<HTMLElement>(".video-embed__frame");
+		const src = fig.dataset.embedSrc;
+		if (!btn || !frame || !src) continue;
+		btn.addEventListener("click", () => {
+			const iframe = document.createElement("iframe");
+			iframe.src = src;
+			iframe.title = btn.getAttribute("aria-label") ?? "Video";
+			iframe.allow =
+				"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+			iframe.setAttribute("allowfullscreen", "");
+			frame.replaceChildren(iframe);
+		});
+	}
+</script>
