@@ -23,6 +23,10 @@ const repo = "https://github.com/brainstorm-os/shell";
 	</div>
 	<div class="bs-footer__meta">
 		<span>© {year} Brainstorm</span>
+		<nav class="bs-footer__legal" aria-label="Legal">
+			<a href="https://getbrainstorm.online/privacy">Privacy</a>
+			<a href="https://getbrainstorm.online/terms">Terms</a>
+		</nav>
 		<a href={repo} target="_blank" rel="noopener noreferrer">Open source · AGPL-3.0</a>
 	</div>
 </footer>
@@ -66,6 +70,10 @@ const repo = "https://github.com/brainstorm-os/shell";
 	.bs-footer__links a:hover,
 	.bs-footer__meta a:hover {
 		color: var(--sl-color-text-accent);
+	}
+	.bs-footer__legal {
+		display: inline-flex;
+		gap: 1rem;
 	}
 	.bs-footer__meta {
 		display: flex;
