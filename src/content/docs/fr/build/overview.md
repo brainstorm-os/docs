@@ -11,7 +11,7 @@ Brainstorm est un shell de bureau qui héberge des **applications** — et rien 
 Cette section est le hub développeur pour la construction de ces applications. Elle suppose que vous avez lu les [Concepts](/fr/concepts/vaults/) — en particulier [Applications et permissions](/fr/concepts/apps-and-permissions/) et [Objets](/fr/concepts/objects/) — car les garanties de la plateforme *sont* son API.
 
 :::note
-Brainstorm est en développement actif avant sa bêta publique. Le développement d'applications se fait aujourd'hui à l'intérieur de l'arborescence source du shell (voir [Votre première application](/fr/build/your-first-app/)). Un SDK publié de manière autonome et un pipeline de publication d'applications tierces figurent sur la feuille de route ; cette documentation décrit le modèle d'application et le SDK tels qu'ils existent aujourd'hui, et grandira avec ce pipeline.
+Vous n'avez pas besoin d'une chaîne d'outils pour commencer. Une application, c'est deux fichiers — un `manifest.json` et un `index.html` — et vous pouvez les écrire dans l'[éditeur Code](/fr/apps/code-editor/#créez-une-application-puis-installez-la) intégré et installer directement depuis votre coffre, sans étape de build et sans terminal. Brainstorm installe aussi depuis un dossier sur le disque ou un bundle `.brainstorm`, et les briques de base sont publiées sur npm sous `@brainstorm-os` — tokens, types, les hooks React-Yjs, Block Protocol, le SDK et l'éditeur.
 :::
 
 ## Ce qu'est une application
@@ -20,7 +20,7 @@ Une application est une petite application web — HTML, JavaScript, CSS — qui
 
 Trois propriétés définissent le modèle :
 
-- **En sandbox.** Une application ne peut pas atteindre d'elle-même le système de fichiers, le réseau ou une autre application. Elle ne peut faire que ce que vous avez accordé via le registre de capacités. C'est la frontière de sécurité — c'est ce qui rend sûr le fait d'exécuter des applications tierces, et plus tard des agents autonomes, au-dessus de vos données les plus importantes.
+- **En sandbox.** Une application ne peut pas atteindre d'elle-même le système de fichiers, le réseau ou une autre application. Elle ne peut faire que ce que vous avez accordé via le registre de capacités. Les applications « sideloaded » sont en outre marquées comme non signées et soumises à un niveau de confiance plus strict. C'est la frontière de sécurité — c'est ce qui rend sûr le fait d'exécuter des applications tierces et des agents autonomes au-dessus de vos données les plus importantes.
 - **Contrôlée par capacités.** Chaque action sensible correspond à une capacité nommée que l'application a déclarée et que vous avez approuvée. Rien n'est ambiant ; les vérifications échouent en position fermée. Voir [Capacités](/fr/build/capabilities/).
 - **Au-dessus d'objets partagés.** Les applications ne possèdent pas de silos privés. Elles lisent et écrivent des [objets](/fr/concepts/objects/) typés dans le coffre, de sorte que la note que vous écrivez dans une application est le même objet qu'une autre application peut lier, afficher dans un calendrier ou placer sur un graphe.
 

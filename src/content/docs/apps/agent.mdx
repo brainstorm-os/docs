@@ -7,7 +7,7 @@ sidebar:
 
 import ShotSlider from "../../../components/ShotSlider.astro";
 
-**Agent.** A chat surface over the shared AI broker: run a local Ollama model or bring your own key for Anthropic, OpenAI, Gemini, or GLM. Conversations are vault objects, answers cite the objects they drew from, and the agent can only act within capabilities you granted.
+**Agent.** A chat surface over the shared AI broker: run a local Ollama model or bring your own key for Anthropic, OpenAI, Gemini, or GLM. The agent builds real things with you — notes, tasks, events, whole databases, even apps — proposed as cards you approve before anything is saved. Conversations are vault objects, answers cite the objects they drew from, and the agent can only act within capabilities you granted.
 
 <ShotSlider
   name="Agent"
@@ -18,6 +18,10 @@ import ShotSlider from "../../../components/ShotSlider.astro";
 
 ## What it can do
 
+- **Propose & approve** — ask for a note, task, event, bookmark, or contact and the agent drafts it as a card in chat. Edit a field, approve what's right, discard the rest. Nothing is written to your vault until you approve it — even a hidden instruction in a document can only draft a card, never save one.
+- Propose a database row — or design a whole new database — the same way: as a card you review before anything lands.
+- Draft a reply as an email and hand it straight to the [Mailbox](/apps/mailbox/) composer, ready to send.
+- Ask it for an app and it drafts the manifest and code as files you read and approve, then [install from your vault](/apps/code-editor/).
 - Hybrid retrieval grounds every answer in your vault, with citations that open the source object.
 - Attach context explicitly: @-mention documents and people, drop in text files, or add images for vision models.
 - Long-term memory is opt-in and off by default — every remembered item is visible, redactable, and deletable.

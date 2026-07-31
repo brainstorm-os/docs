@@ -30,9 +30,14 @@ Au premier lancement, Brainstorm vous demande de **créer un coffre** — le foy
 
 ## Mise à jour
 
-Les applications à l'intérieur de Brainstorm se mettent à jour indépendamment de la coque. La coque elle-même vérifie les mises à jour au lancement et les applique en arrière-plan ; vos coffres ne sont jamais touchés par une mise à jour.
+Les applications à l'intérieur de Brainstorm se mettent à jour indépendamment de la coque. La coque elle-même vérifie les mises à jour au lancement et les applique en arrière-plan (ou à la demande depuis **Paramètres → Mises à jour**) ; vos coffres ne sont jamais touchés par une mise à jour.
+
+## Langues
+
+Brainstorm est disponible en **anglais, espagnol, français, allemand, italien et portugais** — la coque et chaque application intégrée. Changez de langue sous **Paramètres → Langue**.
 
 ## Étapes suivantes
 
 - [Démarrage rapide](/fr/start-here/quickstart/) — votre premier coffre et votre première application
+- [Importer vos données](/fr/start-here/import-your-data/) — amenez Notion, Anytype, CSV et vos fichiers
 - [Coffres](/fr/concepts/vaults/) — ce qu'est un coffre et comment il est protégé

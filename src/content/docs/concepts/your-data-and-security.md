@@ -16,11 +16,13 @@ The key is held in memory only while the vault is open and is wiped when you clo
 
 ## Your identity
 
-Each vault carries a cryptographic **identity** — a keypair that signs the changes you make. Collaborators can verify that an edit genuinely came from you, and your private signing key never crosses an app boundary or leaves the device.
+Each vault carries a cryptographic **identity** — a keypair that signs the changes you make. Collaborators can verify that an edit genuinely came from you, and your private signing key never crosses an app boundary or leaves the device. When you [share an object](/concepts/sharing-and-collaboration/), people appear by name with their key fingerprint beside it — the fingerprint, not the name, is what tells two people apart.
 
 ## The sandbox and the ledger
 
 Apps are sandboxed and isolated from each other and the system. Everything sensitive an app can do is mediated by the [capability ledger](/concepts/apps-and-permissions/), which **fails closed**: if a permission can't be confirmed, the action is denied. There's no path by which an app quietly gains access you didn't grant.
+
+Apps you [install yourself](/apps/code-editor/#build-an-app-then-install-it) — from your vault, a folder, or a `.brainstorm` bundle — are unsigned, so they're marked as such and held to a stricter **sideloaded trust tier**: they get the capabilities you grant and nothing more.
 
 ## Encryption at rest and in transit
 

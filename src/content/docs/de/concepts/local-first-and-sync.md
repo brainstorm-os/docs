@@ -25,11 +25,20 @@ Wenn du die Synchronisierung aktivierst, verbindet Brainstorm deine Geräte übe
 
 So bekommst du Synchronisierung und Zusammenarbeit über mehrere Geräte, ohne dein Wissen an einen Dritten zu übergeben.
 
+## Synchronisierung über dein lokales Netzwerk
+
+Zwei Geräte im selben WLAN können auch **direkt synchronisieren, ganz ohne Server**. Schalte es unter **Einstellungen → Synchronisierung** ein: Geräte entdecken sich im lokalen Netzwerk, koppeln sich über einen gerätegebundenen Handshake und tauschen Ende-zu-Ende-verschlüsselte Änderungen Peer-to-Peer aus. Es ist opt-in und verträgt sich mit dem Relay — nutze eines von beiden, oder beide.
+
+## Anhänge folgen dir
+
+Dateien und Bilder, die an deinen Notizen und Entitäten hängen, reisen mit deinem Vault. Vorschaubilder werden immer synchronisiert, sodass Vorschauen auf jedem Gerät sofort erscheinen; die vollständige Datei lädt in dem Moment herunter, in dem du sie öffnest — nichts wartet, und nichts belegt deine Festplatte.
+
 ## Ein Gerät wiederherstellen
 
 Weil die verschlüsselte Historie auf dem Relay (oder deinem eigenen Server) liegt, stellt das Einrichten eines neuen Geräts deinen Vault aus der Synchronisierung wieder her — du authentifizierst dich, und deine Objekte bauen sich lokal aus dem verschlüsselten Strom neu auf.
 
 ## Nächste Schritte
 
+- [Teilen & Zusammenarbeit](/de/concepts/sharing-and-collaboration/) — an denselben Objekten mit anderen arbeiten
 - [Deine Daten & Sicherheit](/de/concepts/your-data-and-security/) — Schlüssel, Identität und das Bedrohungsmodell
 - [Vaults](/de/concepts/vaults/) — das, was synchronisiert wird

@@ -7,7 +7,7 @@ sidebar:
 
 import ShotSlider from "../../../../components/ShotSlider.astro";
 
-**Automatisierungen.** Ein Builder für Workflows, ausgelöst durch Zeit, Entitätsereignisse oder von Hand gestartet, zusammengesetzt aus Schritten, die andere Apps über Intents steuern. Jeder Workflow deklariert genau, was er berühren darf, bevor du ihn speichern kannst.
+**Automatisierungen.** Ein Builder für Workflows, ausgelöst durch Zeit, Entitätsereignisse, eingehende E-Mails, Webhooks, Dateiänderungen oder von Hand gestartet, zusammengesetzt aus Schritten, die andere Apps über Intents steuern. Jeder Workflow deklariert genau, was er berühren darf, bevor du ihn speichern kannst.
 
 <ShotSlider
   name="Automatisierungen"
@@ -21,7 +21,10 @@ import ShotSlider from "../../../../components/ShotSlider.astro";
 ## Was es kann
 
 - Ein linearer Builder mit Intent-, Entitäts-, Benachrichtigungs-, Warte-, KI-Aufruf-, KI-Agent-, Verzweigungs-, For-Each-, Ausdrucks-, Export- und Sub-Workflow-Schritten.
-- Zeit-, Entitätsereignis- und manuelle Auslöser; Startvorlagen kommen deaktiviert an, damit du vor dem Aktivieren prüfst.
+- Auslöser für Zeit, Entitätsereignisse und manuelle Läufe — plus eingehende **Webhooks** (ein Workflow läuft, sobald etwas an seine eigene URL POSTet), eine **beobachtete Datei**, die sich auf der Festplatte ändert, **App-Start** und **eine eingehende E-Mail**, mit einem KI-Triage-Schritt, der die Mail liest und entscheidet, was zu tun ist.
+- Schritte können **festhalten, was sie herausfinden**: Ein Erstellen- oder Aktualisieren-Schritt setzt jedes Feld aus der Antwort eines früheren Schritts — die Priorität aus der KI-Einstufung, den Titel aus dem Betreff der E-Mail.
+- Workflows können **das Web lesen** — in einer separaten, abgemeldeten Sitzung, die nur lesen kann: nie deine angemeldeten Tabs, und nie etwas absenden.
+- Startvorlagen kommen deaktiviert an, damit du vor dem Aktivieren prüfst.
 - Ein Fähigkeitsblatt zum Speicherzeitpunkt zeigt die Berechtigungen, die die Schritte brauchen, gegen das Erteilte — Übergriffe blockieren das Speichern.
 - KI-Agent-Schritte nutzen Intents als Werkzeuge, geschlossen-scheiternd innerhalb der Fähigkeitshülle des Workflows.
 - Die Laufhistorie erfasst Status, Protokolle pro Schritt und Kosten; leichtgewichtige Erinnerungen bekommen ihre eigene Schnellerfassungs-Ansicht.

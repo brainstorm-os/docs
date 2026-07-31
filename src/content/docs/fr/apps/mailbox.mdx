@@ -7,7 +7,7 @@ sidebar:
 
 import ShotSlider from "../../../../components/ShotSlider.astro";
 
-**Boîte mail.** Un client de messagerie complet — rail de dossiers, liste de messages, volet de lecture, compositeur — où chaque message est un objet de coffre que vous pouvez rechercher, relier et automatiser. Connectez Gmail via OAuth ou n'importe quel compte IMAP/SMTP ; les identifiants sont scellés côté shell et ne touchent jamais l'application.
+**Boîte mail.** Un client de messagerie complet — rail de dossiers, liste de messages, volet de lecture, compositeur — où chaque message est un objet de coffre que vous pouvez rechercher, relier et automatiser. Connectez Gmail, Microsoft 365 ou Fastmail (JMAP) pour un envoi et une synchronisation bidirectionnels complets, ou n'importe quel compte IMAP/SMTP ; les identifiants sont scellés côté shell et ne touchent jamais l'application.
 
 <ShotSlider
   name="Boîte mail"
@@ -21,11 +21,14 @@ import ShotSlider from "../../../../components/ShotSlider.astro";
 
 - Lisez, composez, répondez et transférez ; l'envoi est idempotent, de sorte qu'une nouvelle tentative ne peut jamais envoyer deux fois.
 - Le courrier HTML s'affiche dans un cadre en sandbox qui bloque les images distantes par défaut — les pixels de suivi ne se déclenchent pas, sauf si vous l'autorisez.
-- Choisissez une fenêtre de synchronisation de 30 jours à tout, avec des drapeaux faisant autorité côté serveur et des étiquettes locales au coffre.
-- Fils de discussion, pièces jointes comme objets fichier et étiquettes par message.
-- D'autres applications et l'Agent peuvent préremplir une composition, une réponse ou un transfert via des intents.
+- Choisissez une fenêtre de synchronisation de 30 jours à tout, avec des drapeaux faisant autorité côté serveur et des étiquettes locales au coffre — et chargez le courrier plus ancien à la demande, page par page, jusqu'à votre tout premier message.
+- Fils de discussion, étiquettes par message, et pièces jointes comme de vraies entités Fichier que vous pouvez rechercher, relier et réutiliser.
+- Un e-mail entrant peut déclencher une [automatisation](/fr/apps/automations/), avec une étape de tri par IA qui lit le message et décide quoi faire.
+- D'autres applications et l'Agent peuvent préremplir une composition, une réponse ou un transfert via des intents — l'Agent peut vous remettre un brouillon prêt à envoyer.
 - Les expéditeurs se résolvent vers des personnes existantes de Contacts — reliées, jamais créées automatiquement.
+- Un compte en échec se reconnecte sur place avec ses réglages enregistrés — tapez le nouveau mot de passe et vous êtes de retour, en gardant tout le courrier synchronisé.
 
 ## Associé
 
 - [Contacts](/fr/apps/contacts/) — les expéditeurs se résolvent vers des personnes existantes
+- [Automatisations](/fr/apps/automations/) — l'e-mail comme déclencheur

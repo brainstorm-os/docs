@@ -11,7 +11,7 @@ Brainstorm ist eine Desktop-Shell, die **Apps** hostet — und sonst nichts. Not
 Dieser Abschnitt ist der Entwickler-Hub für den Bau dieser Apps. Er setzt voraus, dass du die [Konzepte](/de/concepts/vaults/) gelesen hast — besonders [Apps & Berechtigungen](/de/concepts/apps-and-permissions/) und [Objekte](/de/concepts/objects/) — denn die Garantien der Plattform *sind* ihre API.
 
 :::note
-Brainstorm ist vor seiner öffentlichen Beta in aktiver Entwicklung. App-Entwicklung geschieht heute innerhalb des Shell-Quellbaums (siehe [Deine erste App](/de/build/your-first-app/)). Ein eigenständig veröffentlichtes SDK und eine Pipeline zum Veröffentlichen von Drittanbieter-Apps stehen auf der Roadmap; diese Doku beschreibt das App-Modell und das SDK, wie sie jetzt existieren, und wird mit dieser Pipeline wachsen.
+Du brauchst keine Toolchain, um anzufangen. Eine App besteht aus zwei Dateien — einer `manifest.json` und einer `index.html` — und du kannst sie im eingebauten [Code-Editor](/de/apps/code-editor/#eine-app-bauen-und-installieren) schreiben und direkt aus deinem Vault installieren, ohne Build-Schritt und ohne Terminal. Brainstorm installiert auch aus einem Ordner auf der Festplatte oder einem `.brainstorm`-Bundle, und die Bausteine sind auf npm unter `@brainstorm-os` veröffentlicht — Tokens, Typen, die React-Yjs-Hooks, Block Protocol, das SDK und der Editor.
 :::
 
 ## Was eine App ist
@@ -20,7 +20,7 @@ Eine App ist eine kleine Web-App — HTML, JavaScript, CSS — die in ihrem eige
 
 Drei Eigenschaften definieren das Modell:
 
-- **In einer Sandbox.** Eine App kann von sich aus nicht auf das Dateisystem, das Netzwerk oder eine andere App zugreifen. Sie kann nur tun, was du über das Fähigkeiten-Hauptbuch erteilt hast. Das ist die Sicherheitsgrenze — sie macht es sicher, Drittanbieter-Apps und später autonome Agenten über deinen wichtigsten Daten laufen zu lassen.
+- **In einer Sandbox.** Eine App kann von sich aus nicht auf das Dateisystem, das Netzwerk oder eine andere App zugreifen. Sie kann nur tun, was du über das Fähigkeiten-Hauptbuch erteilt hast. Sideload-Apps werden zusätzlich als unsigniert markiert und einer strengeren Vertrauensstufe unterstellt. Das ist die Sicherheitsgrenze — sie macht es sicher, Drittanbieter-Apps und autonome Agenten über deinen wichtigsten Daten laufen zu lassen.
 - **Fähigkeitsgesteuert.** Jede sensible Aktion entspricht einer benannten Fähigkeit, die die App deklariert und du genehmigt hast. Nichts ist stillschweigend gegeben; Prüfungen scheitern geschlossen. Siehe [Fähigkeiten](/de/build/capabilities/).
 - **Über gemeinsamen Objekten.** Apps besitzen keine privaten Silos. Sie lesen und schreiben typisierte [Objekte](/de/concepts/objects/) im Vault, sodass die Notiz, die du in einer App schreibst, dasselbe Objekt ist, das eine andere App verlinken, in einem Kalender anzeigen oder auf einem Graphen platzieren kann.
 
