@@ -24,3 +24,5 @@ pnpm-debug.log*
 .env*
 
 .obsidian/
+
+node_modules

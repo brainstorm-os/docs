@@ -16,11 +16,13 @@ Der Schlüssel wird nur im Speicher gehalten, solange der Vault geöffnet ist, u
 
 ## Deine Identität
 
-Jeder Vault trägt eine kryptografische **Identität** — ein Schlüsselpaar, das die Änderungen signiert, die du machst. Mitwirkende können überprüfen, dass eine Bearbeitung wirklich von dir kam, und dein privater Signierschlüssel überschreitet nie eine App-Grenze oder verlässt das Gerät.
+Jeder Vault trägt eine kryptografische **Identität** — ein Schlüsselpaar, das die Änderungen signiert, die du machst. Mitwirkende können überprüfen, dass eine Bearbeitung wirklich von dir kam, und dein privater Signierschlüssel überschreitet nie eine App-Grenze oder verlässt das Gerät. Wenn du [ein Objekt teilst](/de/concepts/sharing-and-collaboration/), erscheinen Personen mit Namen und ihrem Schlüssel-Fingerabdruck daneben — der Fingerabdruck, nicht der Name, unterscheidet zwei Personen.
 
 ## Die Sandbox und das Hauptbuch
 
 Apps laufen in einer Sandbox und sind voneinander und vom System isoliert. Alles Sensible, was eine App tun kann, wird durch das [Fähigkeiten-Hauptbuch](/de/concepts/apps-and-permissions/) vermittelt, das **geschlossen scheitert**: Wenn eine Berechtigung nicht bestätigt werden kann, wird die Aktion verweigert. Es gibt keinen Weg, auf dem sich eine App still einen Zugriff verschafft, den du nicht erteilt hast.
+
+Apps, die du [selbst installierst](/de/apps/code-editor/#eine-app-bauen-und-installieren) — aus deinem Vault, einem Ordner oder einem `.brainstorm`-Bundle — sind unsigniert, werden entsprechend markiert und einer strengeren **Sideload-Vertrauensstufe** unterstellt: Sie bekommen die Fähigkeiten, die du erteilst, und nichts darüber hinaus.
 
 ## Verschlüsselung im Ruhezustand und bei der Übertragung
 

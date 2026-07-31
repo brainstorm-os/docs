@@ -30,9 +30,14 @@ On first launch Brainstorm asks you to **create a vault** — the on-disk home f
 
 ## Updating
 
-Apps inside Brainstorm update independently of the shell. The shell itself checks for updates on launch and applies them in the background; your vaults are never touched by an update.
+Apps inside Brainstorm update independently of the shell. The shell itself checks for updates on launch and applies them in the background (or on demand from **Settings → Updates**); your vaults are never touched by an update.
+
+## Languages
+
+Brainstorm ships in **English, Spanish, French, German, Italian, and Portuguese** — the shell and every built-in app. Switch under **Settings → Language**.
 
 ## Next steps
 
 - [Quickstart](/start-here/quickstart/) — your first vault and app
+- [Import your data](/start-here/import-your-data/) — bring in Notion, Anytype, CSV, and files
 - [Vaults](/concepts/vaults/) — what a vault is and how it's protected

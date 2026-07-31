@@ -11,7 +11,7 @@ Brainstorm is a desktop shell that hosts **apps** — and nothing else. Notes, D
 This section is the developer hub for building those apps. It assumes you've read the [Concepts](/concepts/vaults/) — especially [Apps & permissions](/concepts/apps-and-permissions/) and [Objects](/concepts/objects/) — because the platform's guarantees *are* its API.
 
 :::note
-Brainstorm is in active development ahead of its public beta. App building today happens inside the shell source tree (see [Your first app](/build/your-first-app/)). A standalone published SDK and a third-party app-publishing pipeline are on the roadmap; these docs describe the app model and SDK as they exist now and will grow as that pipeline lands.
+You don't need a toolchain to start. An app is two files — a `manifest.json` and an `index.html` — and you can write them in the built-in [Code editor](/apps/code-editor/#build-an-app-then-install-it) and install straight from your vault, no build step and no terminal. Brainstorm also installs from a folder on disk or a `.brainstorm` bundle, and the building blocks are published on npm under `@brainstorm-os` — tokens, types, the React-Yjs hooks, Block Protocol, the SDK, and the editor.
 :::
 
 ## What an app is
@@ -20,7 +20,7 @@ An app is a small web app — HTML, JavaScript, CSS — that runs in its own san
 
 Three properties define the model:
 
-- **Sandboxed.** An app can't reach the filesystem, the network, or another app on its own. It can only do what you've granted through the capability ledger. This is the security boundary — it's what makes it safe to run third-party apps, and later autonomous agents, over your most important data.
+- **Sandboxed.** An app can't reach the filesystem, the network, or another app on its own. It can only do what you've granted through the capability ledger. Sideloaded apps are additionally marked unsigned and held to a stricter trust tier. This is the security boundary — it's what makes it safe to run third-party apps and autonomous agents over your most important data.
 - **Capability-gated.** Every sensitive action maps to a named capability the app declared and you approved. Nothing is ambient; checks fail closed. See [Capabilities](/build/capabilities/).
 - **Over shared objects.** Apps don't own private silos. They read and write typed [objects](/concepts/objects/) in the vault, so the note you write in one app is the same object another app can link to, show on a calendar, or place on a graph.
 

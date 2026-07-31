@@ -30,9 +30,14 @@ Beim ersten Start bittet dich Brainstorm, einen **Vault zu erstellen** — das Z
 
 ## Aktualisieren
 
-Apps innerhalb von Brainstorm aktualisieren sich unabhängig von der Shell. Die Shell selbst prüft beim Start auf Updates und wendet sie im Hintergrund an; deine Vaults werden von einem Update nie berührt.
+Apps innerhalb von Brainstorm aktualisieren sich unabhängig von der Shell. Die Shell selbst prüft beim Start auf Updates und wendet sie im Hintergrund an (oder auf Abruf unter **Einstellungen → Updates**); deine Vaults werden von einem Update nie berührt.
+
+## Sprachen
+
+Brainstorm ist in **Englisch, Spanisch, Französisch, Deutsch, Italienisch und Portugiesisch** verfügbar — die Shell und jede eingebaute App. Wechsle unter **Einstellungen → Sprache**.
 
 ## Nächste Schritte
 
 - [Schnellstart](/de/start-here/quickstart/) — dein erster Vault und deine erste App
+- [Daten importieren](/de/start-here/import-your-data/) — hol Notion, Anytype, CSV und Dateien herein
 - [Vaults](/de/concepts/vaults/) — was ein Vault ist und wie er geschützt wird

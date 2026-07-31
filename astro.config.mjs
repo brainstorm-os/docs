@@ -101,6 +101,11 @@ export default defineConfig({
 							translations: { de: "Schnellstart", fr: "Démarrage rapide" },
 							slug: "start-here/quickstart",
 						},
+						{
+							label: "Import your data",
+							translations: { de: "Daten importieren", fr: "Importer vos données" },
+							slug: "start-here/import-your-data",
+						},
 					],
 				},
 				{
@@ -118,6 +123,11 @@ export default defineConfig({
 							label: "Local-first & sync",
 							translations: { de: "Lokal-first & Synchronisierung", fr: "Local-first et synchronisation" },
 							slug: "concepts/local-first-and-sync",
+						},
+						{
+							label: "Sharing & collaboration",
+							translations: { de: "Teilen & Zusammenarbeit", fr: "Partage et collaboration" },
+							slug: "concepts/sharing-and-collaboration",
 						},
 						{
 							label: "Your data & security",
