@@ -16,7 +16,10 @@ const here = Astro.url.pathname;
 const prefixRe = new RegExp(`^/(?:${prefixed.map((l) => l.code).join("|")})(?=/|$)`);
 const neutral = here.replace(prefixRe, "") || "/";
 const onLocale = (code: string) => here === `/${code}` || here.startsWith(`/${code}/`);
-const localize = (code: string) => (neutral === "/" ? `/${code}/` : `/${code}${neutral}`);
+// No trailing slash on the locale root — `/de/` 308-redirects to `/de` under
+// `trailingSlash: "never"`, and a switcher that links to a redirect shows up as
+// "page has links to redirect" on every page of the site.
+const localize = (code: string) => (neutral === "/" ? `/${code}` : `/${code}${neutral}`);
 
 const opts = [
 	{ code: "en", label: "EN", name: "English", href: neutral, current: !prefixed.some((l) => onLocale(l.code)) },

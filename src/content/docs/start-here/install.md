@@ -1,6 +1,6 @@
 ---
 title: Install
-description: How to get Brainstorm running on macOS, Windows, and Linux.
+description: "How to get Brainstorm running on macOS, Windows, and Linux — system requirements, where to get each beta build, and how updates reach you."
 ---
 
 Brainstorm is a desktop application for **macOS, Windows, and Linux**.
@@ -26,7 +26,7 @@ Download the build for your platform from [getbrainstorm.online/downloads](https
 
 ## First launch
 
-On first launch Brainstorm asks you to **create a vault** — the on-disk home for your knowledge. Pick a folder, choose how to protect it (system keychain or a passphrase), and you're in. The full walkthrough is in the [Quickstart](/start-here/quickstart/).
+On first launch Brainstorm asks you to **create a vault** — the on-disk home for your knowledge. Pick a folder, choose how to protect it (system keychain or a passphrase), and you're in. The full walkthrough is in the [Quickstart](/start-here/quickstart).
 
 ## Updating
 
@@ -38,6 +38,6 @@ Brainstorm ships in **English, Spanish, French, German, Italian, and Portuguese*
 
 ## Next steps
 
-- [Quickstart](/start-here/quickstart/) — your first vault and app
-- [Import your data](/start-here/import-your-data/) — bring in Notion, Anytype, CSV, and files
-- [Vaults](/concepts/vaults/) — what a vault is and how it's protected
+- [Quickstart](/start-here/quickstart) — your first vault and app
+- [Import your data](/start-here/import-your-data) — bring in Notion, Anytype, CSV, and files
+- [Vaults](/concepts/vaults) — what a vault is and how it's protected

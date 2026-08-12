@@ -14,16 +14,21 @@ import { getCollection } from "astro:content";
 // PREFIXED (and astro.config's `locales`) and it flows through.
 const PREFIXED = ["de", "fr"] as const;
 
+// Routes carry no trailing slash (the site root "/" aside), matching
+// `trailingSlash: "never"` in astro.config.mjs and `"trailingSlash": false` in
+// vercel.json. A slashed URL 308-redirects to the bare one, so emitting slashes
+// here would make every sitemap entry — and every hreflang alternate — point at
+// a redirect rather than the page itself.
 const route = (id: string): string => {
-	// Starlight serves the root index.md at "/" and "<dir>/index.md" at "/<dir>/".
+	// Starlight serves the root index.md at "/" and "<dir>/index.md" at "/<dir>".
 	const slug = id.replace(/(^|\/)index$/, "").replace(/^\/+|\/+$/g, "");
-	return slug === "" ? "/" : `/${slug}/`;
+	return slug === "" ? "/" : `/${slug}`;
 };
 
 // Split a full route into its locale and locale-neutral path.
 const localeOf = (fullRoute: string): { lang: string; neutral: string } => {
 	for (const code of PREFIXED) {
-		if (fullRoute === `/${code}/` || fullRoute.startsWith(`/${code}/`)) {
+		if (fullRoute === `/${code}` || fullRoute.startsWith(`/${code}/`)) {
 			return { lang: code, neutral: fullRoute.slice(`/${code}`.length) || "/" };
 		}
 	}
@@ -32,7 +37,7 @@ const localeOf = (fullRoute: string): { lang: string; neutral: string } => {
 
 // The route for a given locale-neutral path in `lang` ("en" lives at the root).
 const localized = (lang: string, neutral: string): string =>
-	lang === "en" ? neutral : neutral === "/" ? `/${lang}/` : `/${lang}${neutral}`;
+	lang === "en" ? neutral : neutral === "/" ? `/${lang}` : `/${lang}${neutral}`;
 
 export const GET: APIRoute = async ({ site }) => {
 	const base = (site ?? new URL("https://docs.getbrainstorm.online")).toString().replace(/\/$/, "");

@@ -28,7 +28,7 @@ Erlaubnisse werden pro Vault festgehalten, sodass eine App, der du in deinem Arb
 
 ## Isolierung zwischen Apps
 
-Apps sind sowohl voneinander als auch vom System isoliert. Eine App kann den privaten Zustand einer anderen App nicht lesen oder in ihr Fenster greifen. Wenn Apps Daten teilen, geschieht das über die gemeinsame Objektschicht, die du sehen und steuern kannst — nicht über Hintertüren. Siehe [Objekte](/de/concepts/objects/).
+Apps sind sowohl voneinander als auch vom System isoliert. Eine App kann den privaten Zustand einer anderen App nicht lesen oder in ihr Fenster greifen. Wenn Apps Daten teilen, geschieht das über die gemeinsame Objektschicht, die du sehen und steuern kannst — nicht über Hintertüren. Siehe [Objekte](/de/concepts/objects).
 
 ## Agenten sind auch Apps
 
@@ -36,5 +36,5 @@ KI-Agenten in Brainstorm sitzen hinter demselben Hauptbuch. Ein Agent arbeitet u
 
 ## Nächste Schritte
 
-- [Objekte](/de/concepts/objects/) — die gemeinsamen Daten, die Apps lesen und schreiben
-- [Deine Daten & Sicherheit](/de/concepts/your-data-and-security/) — die Garantien darunter
+- [Objekte](/de/concepts/objects) — die gemeinsamen Daten, die Apps lesen und schreiben
+- [Deine Daten & Sicherheit](/de/concepts/your-data-and-security) — die Garantien darunter

@@ -70,7 +70,7 @@ Le scaffold n'est délibérément pas une page vide — il monte une véritable 
 }
 ```
 
-Voir [Le manifeste](/fr/build/the-manifest/) pour chaque champ et [Capacités](/fr/build/capabilities/) pour la signification de ces chaînes de capacité.
+Voir [Le manifeste](/fr/build/the-manifest) pour chaque champ et [Capacités](/fr/build/capabilities) pour la signification de ces chaînes de capacité.
 
 **`src/main.tsx`** monte React. Deux imports sont obligatoires et viennent en premier — la feuille de style du thème d'application (qui porte le chrome `.app-header` partagé et les tokens de thème) et l'hôte de menus :
 
@@ -133,7 +133,7 @@ export function FieldNotesApp() {
 }
 ```
 
-La liste est **en direct** : `useVaultEntities` s'abonne au coffre, de sorte que la liste se re-rend lorsqu'un objet de ce type est créé ou modifié — par votre application, une autre application ou un autre appareil. Vous n'écrivez jamais de boucle manuelle `onChange → setState` ; c'est [la règle de réactivité](/fr/build/recipes/#ne-construisez-pas-la-réactivité-à-la-main).
+La liste est **en direct** : `useVaultEntities` s'abonne au coffre, de sorte que la liste se re-rend lorsqu'un objet de ce type est créé ou modifié — par votre application, une autre application ou un autre appareil. Vous n'écrivez jamais de boucle manuelle `onChange → setState` ; c'est [la règle de réactivité](/fr/build/recipes#ne-construisez-pas-la-réactivité-à-la-main).
 
 ## Enregistrer et exécuter
 
@@ -164,6 +164,6 @@ await bs.services.entities.create(APP_TYPE, {
 
 Aucun rafraîchissement, aucun rechargement — la requête en direct déjà abonnée à ce type se re-rend. À partir d'ici :
 
-- [Travailler avec les données](/fr/build/working-with-data/) — interroger, éditer, texte enrichi et stockage privé à l'application.
-- [SDK & runtime](/fr/build/the-sdk/) — les composants et services à partir desquels vous construisez le reste de l'UI.
-- [Recettes & anti-patterns](/fr/build/recipes/) — les conventions qui gardent une application cohérente avec la plateforme.
+- [Travailler avec les données](/fr/build/working-with-data) — interroger, éditer, texte enrichi et stockage privé à l'application.
+- [SDK & runtime](/fr/build/the-sdk) — les composants et services à partir desquels vous construisez le reste de l'UI.
+- [Recettes & anti-patterns](/fr/build/recipes) — les conventions qui gardent une application cohérente avec la plateforme.

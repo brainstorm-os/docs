@@ -39,6 +39,6 @@ Because the encrypted history lives on the relay (or your own server), setting u
 
 ## Next steps
 
-- [Sharing & collaboration](/concepts/sharing-and-collaboration/) — working on the same objects with other people
-- [Your data & security](/concepts/your-data-and-security/) — keys, identity, and the threat model
-- [Vaults](/concepts/vaults/) — the thing being synced
+- [Sharing & collaboration](/concepts/sharing-and-collaboration) — working on the same objects with other people
+- [Your data & security](/concepts/your-data-and-security) — keys, identity, and the threat model
+- [Vaults](/concepts/vaults) — the thing being synced

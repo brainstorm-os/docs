@@ -1,6 +1,6 @@
 ---
 title: Recipes & anti-patterns
-description: The patterns that keep an app consistent with the platform, and the mistakes that get rejected in review.
+description: "The patterns that keep an app consistent with the platform, and the mistakes that get rejected in review. Brainstorm apps share a small set of conventions."
 sidebar:
   label: Recipes & anti-patterns
   order: 6
@@ -47,7 +47,7 @@ try {
 
 ### Open the SDK before you build
 
-Need a menu, popover, picker, icon, date formatter, property cell, or empty state? It's almost certainly in `@brainstorm/sdk`. Import it. See [SDK & runtime](/build/the-sdk/).
+Need a menu, popover, picker, icon, date formatter, property cell, or empty state? It's almost certainly in `@brainstorm/sdk`. Import it. See [SDK & runtime](/build/the-sdk).
 
 ### Use the standard header
 
@@ -86,7 +86,7 @@ import { SelectMenu } from "@brainstorm/sdk/select-menu";
 
 ### Don't put content in per-device settings
 
-`settings` is for device-local UI state (a panel width, the open tab) — it doesn't sync. Real content goes in entities; app-private content that should travel with the vault goes in `storage`. Mixing these up means data that silently won't follow the user, or device preferences that fight across machines. See [Working with data](/build/working-with-data/).
+`settings` is for device-local UI state (a panel width, the open tab) — it doesn't sync. Real content goes in entities; app-private content that should travel with the vault goes in `storage`. Mixing these up means data that silently won't follow the user, or device preferences that fight across machines. See [Working with data](/build/working-with-data).
 
 ### Don't leave strings unwrapped
 
@@ -98,5 +98,5 @@ There's no ambient filesystem, network, or cross-app access. If you find yoursel
 
 ## Next
 
-- [Overview](/build/overview/) — the model these conventions come from.
-- [Concepts](/concepts/apps-and-permissions/) — the security and object model underneath.
+- [Overview](/build/overview) — the model these conventions come from.
+- [Concepts](/concepts/apps-and-permissions) — the security and object model underneath.

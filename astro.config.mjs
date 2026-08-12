@@ -6,6 +6,7 @@ import starlightLlmsTxt from "starlight-llms-txt";
 // https://astro.build/config
 export default defineConfig({
 	site: "https://docs.getbrainstorm.online",
+	trailingSlash: "never",
 	integrations: [
 		// Suppress Starlight's bundled @astrojs/sitemap (which emits a
 		// sitemap-index.xml + chunked sitemap-N.xml). An integration already
@@ -25,8 +26,8 @@ export default defineConfig({
 				de: { label: "Deutsch", lang: "de" },
 				fr: { label: "Français", lang: "fr" },
 			},
-			// Bing Webmaster Tools site verification for docs.getbrainstorm.online.
 			head: [
+				// Bing Webmaster Tools site verification for docs.getbrainstorm.online.
 				{
 					tag: "meta",
 					attrs: {
@@ -34,6 +35,10 @@ export default defineConfig({
 						content: "E5A4E21AFE9DE84C10B6A60D56F7E341",
 					},
 				},
+				// Starlight defaults this to /sitemap-index.xml, which the suppressed
+				// @astrojs/sitemap integration would have emitted — here it 404s. A
+				// `rel="sitemap"` supplied in this array wins over Starlight's own.
+				{ tag: "link", attrs: { rel: "sitemap", href: "/sitemap.xml" } },
 			],
 			logo: {
 				// Indigo mark in both themes (the dark variant keeps its own gradient).

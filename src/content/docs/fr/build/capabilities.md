@@ -1,12 +1,12 @@
 ---
 title: Capacités
-description: Les applications déclarent les permissions étroites dont elles ont besoin ; le shell accorde, demande ou refuse. Rien n'est ambiant et les vérifications échouent en position fermée.
+description: "Les applications déclarent les permissions étroites dont elles ont besoin ; le shell accorde, demande ou refuse. Les vérifications échouent en fermeture."
 sidebar:
   label: Capacités
   order: 3
 ---
 
-Une application Brainstorm démarre avec presque aucun pouvoir. Elle peut rendre sa propre fenêtre et lire et écrire son propre stockage — c'est tout. Tout le reste — lire d'autres types d'objets, atteindre le réseau, poster une notification, signer une charge utile — est une **capacité** nommée que l'application déclare et que l'utilisateur accorde. C'est le même modèle décrit dans [Applications et permissions](/fr/concepts/apps-and-permissions/), vu du côté du développeur.
+Une application Brainstorm démarre avec presque aucun pouvoir. Elle peut rendre sa propre fenêtre et lire et écrire son propre stockage — c'est tout. Tout le reste — lire d'autres types d'objets, atteindre le réseau, poster une notification, signer une charge utile — est une **capacité** nommée que l'application déclare et que l'utilisateur accorde. C'est le même modèle décrit dans [Applications et permissions](/fr/concepts/apps-and-permissions), vu du côté du développeur.
 
 Deux invariants façonnent la manière dont vous écrivez des applications :
 
@@ -105,5 +105,5 @@ Une application qui masque ou désactive ce qu'elle ne peut pas faire actuelleme
 
 ## Ensuite
 
-- [SDK et runtime](/fr/build/the-sdk/) — les services que ces capacités contrôlent.
-- [Travailler avec les données](/fr/build/working-with-data/) — les appels `entities`, `files` et `intents` en pratique.
+- [SDK et runtime](/fr/build/the-sdk) — les services que ces capacités contrôlent.
+- [Travailler avec les données](/fr/build/working-with-data) — les appels `entities`, `files` et `intents` en pratique.

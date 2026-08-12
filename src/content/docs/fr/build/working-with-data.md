@@ -6,7 +6,7 @@ sidebar:
   order: 5
 ---
 
-Le vrai travail d'une application, ce sont les données : lire et écrire des [objets](/fr/concepts/objects/), synchroniser les documents qui les sous-tendent, conserver un peu d'état privé et confier du travail à d'autres applications. Brainstorm vous donne quatre stockages distincts, chacun pour une tâche différente — utiliser le bon est l'essentiel d'une bonne gestion des données.
+Le vrai travail d'une application, ce sont les données : lire et écrire des [objets](/fr/concepts/objects), synchroniser les documents qui les sous-tendent, conserver un peu d'état privé et confier du travail à d'autres applications. Brainstorm vous donne quatre stockages distincts, chacun pour une tâche différente — utiliser le bon est l'essentiel d'une bonne gestion des données.
 
 | Utilité | Pour |
 | --- | --- |
@@ -40,7 +40,7 @@ const recent = await bs.services.entities.query({
 });
 ```
 
-Chacun d'eux est soumis à la [capacité](/fr/build/capabilities/) correspondante : `entities.read:<type>` pour lire, `entities.write:<type>` pour créer, mettre à jour ou supprimer.
+Chacun d'eux est soumis à la [capacité](/fr/build/capabilities) correspondante : `entities.read:<type>` pour lire, `entities.write:<type>` pour créer, mettre à jour ou supprimer.
 
 Pour tout ce qui rend une liste, préférez le hook **en direct** à la `query` ponctuelle — il s'abonne, de sorte que l'UI se met à jour lorsque des objets changent où que ce soit :
 
@@ -104,7 +104,7 @@ const bytes = await bs.services.files.read(handle);
 await bs.services.files.write(handle, newBytes);
 ```
 
-Choisir nécessite un geste de l'utilisateur ; écrire nécessite `files.write`. Lorsque votre application est lancée *comme opener* pour un fichier (via un [opener](/fr/build/the-manifest/#enregistrements--sinsérer-dans-le-shell) du manifeste), le fichier arrive dans votre contexte `launch`.
+Choisir nécessite un geste de l'utilisateur ; écrire nécessite `files.write`. Lorsque votre application est lancée *comme opener* pour un fichier (via un [opener](/fr/build/the-manifest#enregistrements--sinsérer-dans-le-shell) du manifeste), le fichier arrive dans votre contexte `launch`.
 
 ## Parler à d'autres applications
 
@@ -118,7 +118,7 @@ await bs.services.intents.dispatch({
 });
 ```
 
-Envoyer `open` est accordé par défaut ; les autres verbes sont soumis à `intents.dispatch:<verb>`. Pour *recevoir* des intents, enregistrez un handler dans votre [manifeste](/fr/build/the-manifest/#enregistrements--sinsérer-dans-le-shell) et écoutez :
+Envoyer `open` est accordé par défaut ; les autres verbes sont soumis à `intents.dispatch:<verb>`. Pour *recevoir* des intents, enregistrez un handler dans votre [manifeste](/fr/build/the-manifest#enregistrements--sinsérer-dans-le-shell) et écoutez :
 
 ```ts
 bs.on("intent", (intent) => {
@@ -130,5 +130,5 @@ C'est ainsi que tout l'espace de travail reste connecté : une note renvoie à u
 
 ## Suivant
 
-- [Recettes & anti-patterns](/fr/build/recipes/) — des motifs à copier et des erreurs à éviter.
-- [SDK & runtime](/fr/build/the-sdk/) — la surface complète des services et la bibliothèque de composants.
+- [Recettes & anti-patterns](/fr/build/recipes) — des motifs à copier et des erreurs à éviter.
+- [SDK & runtime](/fr/build/the-sdk) — la surface complète des services et la bibliothèque de composants.

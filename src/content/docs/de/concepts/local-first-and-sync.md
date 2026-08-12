@@ -1,6 +1,6 @@
 ---
 title: Lokal-first & Synchronisierung
-description: Brainstorm funktioniert vollständig offline auf deiner eigenen Festplatte und synchronisiert über Geräte hinweg mit Ende-zu-Ende-Verschlüsselung durch ein Relay, das deine Daten nicht lesen kann.
+description: "Brainstorm arbeitet vollständig offline auf deiner Festplatte und synchronisiert Ende-zu-Ende-verschlüsselt über ein Relay, das deine Daten nicht lesen kann."
 ---
 
 Brainstorm ist **lokal-first**: Dein Vault liegt auf deiner Festplatte, die App liest und schreibt ihn direkt, und nichts an deinen eigenen Inhalten braucht einen Server. Die Synchronisierung ist eine Option, die du einschaltest — keine Abhängigkeit, auf die du angewiesen bist.
@@ -39,6 +39,6 @@ Weil die verschlüsselte Historie auf dem Relay (oder deinem eigenen Server) lie
 
 ## Nächste Schritte
 
-- [Teilen & Zusammenarbeit](/de/concepts/sharing-and-collaboration/) — an denselben Objekten mit anderen arbeiten
-- [Deine Daten & Sicherheit](/de/concepts/your-data-and-security/) — Schlüssel, Identität und das Bedrohungsmodell
-- [Vaults](/de/concepts/vaults/) — das, was synchronisiert wird
+- [Teilen & Zusammenarbeit](/de/concepts/sharing-and-collaboration) — an denselben Objekten mit anderen arbeiten
+- [Deine Daten & Sicherheit](/de/concepts/your-data-and-security) — Schlüssel, Identität und das Bedrohungsmodell
+- [Vaults](/de/concepts/vaults) — das, was synchronisiert wird

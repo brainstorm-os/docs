@@ -1,6 +1,6 @@
 ---
 title: Installation
-description: So bringst du Brainstorm auf macOS, Windows und Linux zum Laufen.
+description: "So bringst du Brainstorm auf macOS, Windows und Linux zum Laufen — Systemanforderungen, wo es die Beta-Builds gibt und wie dich Updates erreichen."
 ---
 
 Brainstorm ist eine Desktop-Anwendung für **macOS, Windows und Linux**.
@@ -26,7 +26,7 @@ Lade den Build für deine Plattform von [getbrainstorm.online/de/downloads](http
 
 ## Erster Start
 
-Beim ersten Start bittet dich Brainstorm, einen **Vault zu erstellen** — das Zuhause deines Wissens auf der Festplatte. Wähle einen Ordner, entscheide, wie du ihn schützt (System-Schlüsselbund oder eine Passphrase), und du bist drin. Die vollständige Anleitung steht im [Schnellstart](/de/start-here/quickstart/).
+Beim ersten Start bittet dich Brainstorm, einen **Vault zu erstellen** — das Zuhause deines Wissens auf der Festplatte. Wähle einen Ordner, entscheide, wie du ihn schützt (System-Schlüsselbund oder eine Passphrase), und du bist drin. Die vollständige Anleitung steht im [Schnellstart](/de/start-here/quickstart).
 
 ## Aktualisieren
 
@@ -38,6 +38,6 @@ Brainstorm ist in **Englisch, Spanisch, Französisch, Deutsch, Italienisch und P
 
 ## Nächste Schritte
 
-- [Schnellstart](/de/start-here/quickstart/) — dein erster Vault und deine erste App
-- [Daten importieren](/de/start-here/import-your-data/) — hol Notion, Anytype, CSV und Dateien herein
-- [Vaults](/de/concepts/vaults/) — was ein Vault ist und wie er geschützt wird
+- [Schnellstart](/de/start-here/quickstart) — dein erster Vault und deine erste App
+- [Daten importieren](/de/start-here/import-your-data) — hol Notion, Anytype, CSV und Dateien herein
+- [Vaults](/de/concepts/vaults) — was ein Vault ist und wie er geschützt wird

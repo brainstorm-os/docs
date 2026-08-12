@@ -6,7 +6,7 @@ sidebar:
   order: 3
 ---
 
-A Brainstorm app starts with almost no power. It can render its own window and read and write its own storage — that's it. Everything else — reading other object types, reaching the network, posting a notification, signing a payload — is a named **capability** the app declares and the user grants. This is the same model described in [Apps & permissions](/concepts/apps-and-permissions/), seen from the builder's side.
+A Brainstorm app starts with almost no power. It can render its own window and read and write its own storage — that's it. Everything else — reading other object types, reaching the network, posting a notification, signing a payload — is a named **capability** the app declares and the user grants. This is the same model described in [Apps & permissions](/concepts/apps-and-permissions), seen from the builder's side.
 
 Two invariants shape how you write apps:
 
@@ -105,5 +105,5 @@ An app that hides or disables what it can't currently do — rather than throwin
 
 ## Next
 
-- [SDK & runtime](/build/the-sdk/) — the services these capabilities gate.
-- [Working with data](/build/working-with-data/) — the `entities`, `files`, and `intents` calls in practice.
+- [SDK & runtime](/build/the-sdk) — the services these capabilities gate.
+- [Working with data](/build/working-with-data) — the `entities`, `files`, and `intents` calls in practice.

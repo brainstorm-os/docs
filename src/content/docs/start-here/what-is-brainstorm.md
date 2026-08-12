@@ -13,11 +13,11 @@ The shell itself does almost nothing. It hosts **apps**: Notes, Database, Files,
 
 ## Your data, your disk
 
-Your knowledge lives in a **vault** — a folder of files on your own disk, not a row in someone else's database. Brainstorm is local-first: it works fully offline, opens instantly, and never requires a server to read or write your own content. When you choose to sync across devices, traffic is end-to-end encrypted and the relay never sees your data. See [Local-first & sync](/concepts/local-first-and-sync/).
+Your knowledge lives in a **vault** — a folder of files on your own disk, not a row in someone else's database. Brainstorm is local-first: it works fully offline, opens instantly, and never requires a server to read or write your own content. When you choose to sync across devices, traffic is end-to-end encrypted and the relay never sees your data. See [Local-first & sync](/concepts/local-first-and-sync).
 
 ## Permissions you grant
 
-Every app and every AI agent runs behind a **capability ledger**. An app can only touch the data and services you have explicitly allowed — reading a note, saving a file, reaching the network. Nothing is ambient. This is what makes it safe to run third-party apps and autonomous agents over your most important data. See [Apps & permissions](/concepts/apps-and-permissions/).
+Every app and every AI agent runs behind a **capability ledger**. An app can only touch the data and services you have explicitly allowed — reading a note, saving a file, reaching the network. Nothing is ambient. This is what makes it safe to run third-party apps and autonomous agents over your most important data. See [Apps & permissions](/concepts/apps-and-permissions).
 
 ## Built on open foundations
 
@@ -35,6 +35,6 @@ Brainstorm is in open beta and under active development. Some features described
 
 ## Next steps
 
-- [Install Brainstorm](/start-here/install/)
-- [Quickstart](/start-here/quickstart/) — create a vault and open your first app
-- [Concepts](/concepts/vaults/) — the model behind the product
+- [Install Brainstorm](/start-here/install)
+- [Quickstart](/start-here/quickstart) — create a vault and open your first app
+- [Concepts](/concepts/vaults) — the model behind the product

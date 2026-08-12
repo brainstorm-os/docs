@@ -1,6 +1,6 @@
 ---
 title: Local-first & synchronisation
-description: Brainstorm fonctionne entièrement hors ligne sur votre propre disque, et se synchronise entre appareils avec un chiffrement de bout en bout via un relais incapable de lire vos données.
+description: "Brainstorm fonctionne hors ligne sur votre disque et se synchronise entre appareils, chiffré de bout en bout via un relais incapable de lire vos données."
 ---
 
 Brainstorm est **local-first** : votre coffre est sur votre disque, l'application le lit et l'écrit directement, et rien de votre propre contenu ne nécessite un serveur. La synchronisation est une option que vous activez — pas une dépendance dont vous dépendez.
@@ -39,6 +39,6 @@ Comme l'historique chiffré réside sur le relais (ou votre propre serveur), con
 
 ## Étapes suivantes
 
-- [Partage & collaboration](/fr/concepts/sharing-and-collaboration/) — travailler sur les mêmes objets avec d'autres personnes
-- [Vos données & sécurité](/fr/concepts/your-data-and-security/) — clés, identité et modèle de menace
-- [Coffres](/fr/concepts/vaults/) — la chose qui est synchronisée
+- [Partage & collaboration](/fr/concepts/sharing-and-collaboration) — travailler sur les mêmes objets avec d'autres personnes
+- [Vos données & sécurité](/fr/concepts/your-data-and-security) — clés, identité et modèle de menace
+- [Coffres](/fr/concepts/vaults) — la chose qui est synchronisée

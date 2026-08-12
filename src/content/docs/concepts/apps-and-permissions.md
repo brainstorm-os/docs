@@ -1,6 +1,6 @@
 ---
 title: Apps & permissions
-description: Every app runs sandboxed behind a capability ledger and can only touch what you explicitly allow.
+description: "Every app runs sandboxed behind a capability ledger: it can't reach your data, your network, or another app on its own — only what you explicitly allow."
 ---
 
 Brainstorm is built entirely out of **apps**, and every app runs **sandboxed**. An app can't reach your data, your network, or another app on its own — it can only do what you've granted it through the **capability ledger**.
@@ -28,7 +28,7 @@ Grants are recorded per vault, so an app you trust in your work vault has no sta
 
 ## Isolation between apps
 
-Apps are isolated from each other as well as from the system. One app can't read another app's private state or reach into its window. When apps do share data, it's through the common object layer you can see and control — not through back channels. See [Objects](/concepts/objects/).
+Apps are isolated from each other as well as from the system. One app can't read another app's private state or reach into its window. When apps do share data, it's through the common object layer you can see and control — not through back channels. See [Objects](/concepts/objects).
 
 ## Agents are apps too
 
@@ -36,5 +36,5 @@ AI agents in Brainstorm sit behind the same ledger. An agent operates under a ce
 
 ## Next steps
 
-- [Objects](/concepts/objects/) — the shared data apps read and write
-- [Your data & security](/concepts/your-data-and-security/) — the guarantees underneath
+- [Objects](/concepts/objects) — the shared data apps read and write
+- [Your data & security](/concepts/your-data-and-security) — the guarantees underneath

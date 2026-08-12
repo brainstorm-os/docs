@@ -1,6 +1,6 @@
 ---
 title: Qu'est-ce que Brainstorm ?
-description: Brainstorm est un système d'exploitation local-first et natif de l'IA pour le travail intellectuel — une coque de bureau qui héberge des applications en sandbox par-dessus vos propres données.
+description: "Brainstorm est un système d'exploitation local-first et natif de l'IA — une coque de bureau qui héberge des applications en sandbox sur vos propres données."
 ---
 
 Brainstorm est un **système d'exploitation local-first et natif de l'IA pour le travail intellectuel**. Il a l'apparence et le comportement d'un OS de bureau — une coque qui héberge de petites applications ciblées — sauf que l'« ordinateur » est votre savoir, et tout tourne sur votre propre machine.
@@ -13,11 +13,11 @@ La coque elle-même ne fait presque rien. Elle héberge des **applications** : N
 
 ## Vos données, votre disque
 
-Votre savoir vit dans un **coffre** — un dossier de fichiers sur votre propre disque, pas une ligne dans la base de données de quelqu'un d'autre. Brainstorm est local-first : il fonctionne entièrement hors ligne, s'ouvre instantanément et ne requiert jamais un serveur pour lire ou écrire votre propre contenu. Lorsque vous choisissez de synchroniser entre appareils, le trafic est chiffré de bout en bout et le relais ne voit jamais vos données. Voir [Local-first & synchronisation](/fr/concepts/local-first-and-sync/).
+Votre savoir vit dans un **coffre** — un dossier de fichiers sur votre propre disque, pas une ligne dans la base de données de quelqu'un d'autre. Brainstorm est local-first : il fonctionne entièrement hors ligne, s'ouvre instantanément et ne requiert jamais un serveur pour lire ou écrire votre propre contenu. Lorsque vous choisissez de synchroniser entre appareils, le trafic est chiffré de bout en bout et le relais ne voit jamais vos données. Voir [Local-first & synchronisation](/fr/concepts/local-first-and-sync).
 
 ## Des permissions que vous accordez
 
-Chaque application et chaque agent d'IA s'exécute derrière un **registre de capacités**. Une application ne peut toucher que les données et services que vous avez explicitement autorisés — lire une note, enregistrer un fichier, atteindre le réseau. Rien n'est ambiant. C'est ce qui rend sûr le fait de faire tourner des applications tierces et des agents autonomes sur vos données les plus importantes. Voir [Applications & permissions](/fr/concepts/apps-and-permissions/).
+Chaque application et chaque agent d'IA s'exécute derrière un **registre de capacités**. Une application ne peut toucher que les données et services que vous avez explicitement autorisés — lire une note, enregistrer un fichier, atteindre le réseau. Rien n'est ambiant. C'est ce qui rend sûr le fait de faire tourner des applications tierces et des agents autonomes sur vos données les plus importantes. Voir [Applications & permissions](/fr/concepts/apps-and-permissions).
 
 ## Bâti sur des fondations ouvertes
 
@@ -35,6 +35,6 @@ Brainstorm est en bêta ouverte et en développement actif. Certaines fonctionna
 
 ## Étapes suivantes
 
-- [Installer Brainstorm](/fr/start-here/install/)
-- [Démarrage rapide](/fr/start-here/quickstart/) — créer un coffre et ouvrir votre première application
-- [Concepts](/fr/concepts/vaults/) — le modèle derrière le produit
+- [Installer Brainstorm](/fr/start-here/install)
+- [Démarrage rapide](/fr/start-here/quickstart) — créer un coffre et ouvrir votre première application
+- [Concepts](/fr/concepts/vaults) — le modèle derrière le produit
