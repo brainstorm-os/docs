@@ -1,13 +1,13 @@
 ---
 title: Mailbox
-description: "Email that lives in your vault."
+description: "Email that lives in your vault: a full mail client where every message is a vault object you can search, link and automate. Gmail, Microsoft 365, IMAP."
 sidebar:
   order: 13
 ---
 
 import ShotSlider from "../../../components/ShotSlider.astro";
 
-**Mailbox.** A full mail client — folder rail, message list, reading pane, composer — where every message is a vault object you can search, link, and automate. Connect Gmail via OAuth or any IMAP/SMTP account; credentials are sealed shell-side and never touch the app.
+**Mailbox.** A full mail client — folder rail, message list, reading pane, composer — where every message is a vault object you can search, link, and automate. Connect Gmail, Microsoft 365, or Fastmail (JMAP) for full two-way send and sync, or any IMAP/SMTP account; credentials are sealed shell-side and never touch the app.
 
 <ShotSlider
   name="Mailbox"
@@ -21,11 +21,14 @@ import ShotSlider from "../../../components/ShotSlider.astro";
 
 - Read, compose, reply, and forward; sending is idempotent, so a retry can never double-send.
 - HTML mail renders in a sandboxed frame that blocks remote images by default — tracking pixels don't fire unless you opt in.
-- Choose a sync window from 30 days to everything, with server-authoritative flags and vault-local tags.
-- Threads, attachments as file objects, and per-message tags.
-- Other apps and the Agent can pre-seed a compose, reply, or forward through intents.
+- Choose a sync window from 30 days to everything, with server-authoritative flags and vault-local tags — and load older mail on demand, page by page, all the way back to your oldest message.
+- Threads, per-message tags, and attachments as real File entities you can search, link, and reuse.
+- An incoming email can trigger an [automation](/apps/automations), with an AI-triage step that reads the mail and decides what to do.
+- Other apps and the Agent can pre-seed a compose, reply, or forward through intents — the Agent can hand you a ready-to-send draft.
 - Senders resolve to existing Contacts people — linked, never auto-created.
+- A failed account reconnects in place with its stored settings — type the new password and you're back, keeping all synced mail.
 
 ## Related
 
-- [Contacts](/apps/contacts/) — senders resolve to existing people
+- [Contacts](/apps/contacts) — senders resolve to existing people
+- [Automations](/apps/automations) — email as a trigger

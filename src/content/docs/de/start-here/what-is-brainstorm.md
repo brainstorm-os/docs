@@ -13,11 +13,11 @@ Die Shell selbst tut fast nichts. Sie hostet **Apps**: Notizen, Datenbank, Datei
 
 ## Deine Daten, deine Festplatte
 
-Dein Wissen lebt in einem **Vault** — einem Ordner mit Dateien auf deiner eigenen Festplatte, nicht einer Zeile in der Datenbank eines anderen. Brainstorm ist lokal-first: Es funktioniert vollständig offline, öffnet sofort und braucht nie einen Server, um deine eigenen Inhalte zu lesen oder zu schreiben. Wenn du dich entscheidest, über Geräte hinweg zu synchronisieren, ist der Verkehr Ende-zu-Ende-verschlüsselt und das Relay sieht deine Daten nie. Siehe [Lokal-first & Synchronisierung](/de/concepts/local-first-and-sync/).
+Dein Wissen lebt in einem **Vault** — einem Ordner mit Dateien auf deiner eigenen Festplatte, nicht einer Zeile in der Datenbank eines anderen. Brainstorm ist lokal-first: Es funktioniert vollständig offline, öffnet sofort und braucht nie einen Server, um deine eigenen Inhalte zu lesen oder zu schreiben. Wenn du dich entscheidest, über Geräte hinweg zu synchronisieren, ist der Verkehr Ende-zu-Ende-verschlüsselt und das Relay sieht deine Daten nie. Siehe [Lokal-first & Synchronisierung](/de/concepts/local-first-and-sync).
 
 ## Berechtigungen, die du erteilst
 
-Jede App und jeder KI-Agent läuft hinter einem **Fähigkeiten-Hauptbuch**. Eine App kann nur die Daten und Dienste berühren, die du ausdrücklich erlaubt hast — eine Notiz lesen, eine Datei speichern, das Netzwerk erreichen. Nichts ist stillschweigend gegeben. Genau das macht es sicher, Apps von Drittanbietern und autonome Agenten über deinen wichtigsten Daten laufen zu lassen. Siehe [Apps & Berechtigungen](/de/concepts/apps-and-permissions/).
+Jede App und jeder KI-Agent läuft hinter einem **Fähigkeiten-Hauptbuch**. Eine App kann nur die Daten und Dienste berühren, die du ausdrücklich erlaubt hast — eine Notiz lesen, eine Datei speichern, das Netzwerk erreichen. Nichts ist stillschweigend gegeben. Genau das macht es sicher, Apps von Drittanbietern und autonome Agenten über deinen wichtigsten Daten laufen zu lassen. Siehe [Apps & Berechtigungen](/de/concepts/apps-and-permissions).
 
 ## Auf offenen Fundamenten gebaut
 
@@ -35,6 +35,6 @@ Brainstorm ist in offener Beta und in aktiver Entwicklung. Einige in dieser Doku
 
 ## Nächste Schritte
 
-- [Brainstorm installieren](/de/start-here/install/)
-- [Schnellstart](/de/start-here/quickstart/) — einen Vault erstellen und deine erste App öffnen
-- [Konzepte](/de/concepts/vaults/) — das Modell hinter dem Produkt
+- [Brainstorm installieren](/de/start-here/install)
+- [Schnellstart](/de/start-here/quickstart) — einen Vault erstellen und deine erste App öffnen
+- [Konzepte](/de/concepts/vaults) — das Modell hinter dem Produkt

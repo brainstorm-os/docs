@@ -22,7 +22,7 @@ Objects relate to each other:
 - **Mentions** — type `@` in rich text to link to any object. The link is real and bidirectional, so you can see everything that references a given object.
 - **Collections** — group objects into typed sets (a reading list, a project's tasks) without copying them.
 
-The [Graph](/apps/graph/) app visualizes these relationships directly.
+The [Graph](/apps/graph) app visualizes these relationships directly.
 
 ## Built on Block Protocol
 
@@ -30,5 +30,5 @@ Under the hood, objects follow the **Block Protocol** — an open standard for t
 
 ## Next steps
 
-- [Apps](/apps/) — the lenses you use to work with objects
-- [Local-first & sync](/concepts/local-first-and-sync/) — how objects stay consistent across devices
+- [Apps](/apps) — the lenses you use to work with objects
+- [Local-first & sync](/concepts/local-first-and-sync) — how objects stay consistent across devices

@@ -16,15 +16,17 @@ La clé n'est conservée en mémoire que tant que le coffre est ouvert et est ef
 
 ## Votre identité
 
-Chaque coffre porte une **identité** cryptographique — une paire de clés qui signe les modifications que vous effectuez. Les collaborateurs peuvent vérifier qu'une modification provient réellement de vous, et votre clé de signature privée ne franchit jamais une frontière d'application ni ne quitte l'appareil.
+Chaque coffre porte une **identité** cryptographique — une paire de clés qui signe les modifications que vous effectuez. Les collaborateurs peuvent vérifier qu'une modification provient réellement de vous, et votre clé de signature privée ne franchit jamais une frontière d'application ni ne quitte l'appareil. Lorsque vous [partagez un objet](/fr/concepts/sharing-and-collaboration), les personnes apparaissent par leur nom avec leur empreinte de clé à côté — c'est l'empreinte, pas le nom, qui distingue deux personnes.
 
 ## La sandbox et le registre
 
-Les applications sont isolées les unes des autres et du système. Tout ce qu'une application peut faire de sensible passe par le [registre de capacités](/fr/concepts/apps-and-permissions/), qui **échoue en position fermée** : si une permission ne peut pas être confirmée, l'action est refusée. Il n'existe aucun chemin par lequel une application obtiendrait discrètement un accès que vous n'avez pas accordé.
+Les applications sont isolées les unes des autres et du système. Tout ce qu'une application peut faire de sensible passe par le [registre de capacités](/fr/concepts/apps-and-permissions), qui **échoue en position fermée** : si une permission ne peut pas être confirmée, l'action est refusée. Il n'existe aucun chemin par lequel une application obtiendrait discrètement un accès que vous n'avez pas accordé.
+
+Les applications que vous [installez vous-même](/fr/apps/code-editor#créez-une-application-puis-installez-la) — depuis votre coffre, un dossier ou un bundle `.brainstorm` — ne sont pas signées : elles sont marquées comme telles et soumises à un niveau de confiance « sideloaded » plus strict — elles obtiennent les capacités que vous leur accordez et rien de plus.
 
 ## Chiffrement au repos et en transit
 
-- **En transit :** lors de la synchronisation, le contenu est chiffré de bout en bout avant de quitter votre appareil ; le relais ne peut pas le lire. Voir [Local-first & synchronisation](/fr/concepts/local-first-and-sync/).
+- **En transit :** lors de la synchronisation, le contenu est chiffré de bout en bout avant de quitter votre appareil ; le relais ne peut pas le lire. Voir [Local-first & synchronisation](/fr/concepts/local-first-and-sync).
 - **Au repos :** votre coffre est stocké localement sous votre contrôle, protégé par votre clé maîtresse.
 
 ## Ce que Brainstorm ne fait *pas*
@@ -35,5 +37,5 @@ Les applications sont isolées les unes des autres et du système. Tout ce qu'un
 
 ## Étapes suivantes
 
-- [Applications & permissions](/fr/concepts/apps-and-permissions/) — le modèle de capacités en détail
-- [Coffres](/fr/concepts/vaults/) — comment un coffre est créé et protégé
+- [Applications & permissions](/fr/concepts/apps-and-permissions) — le modèle de capacités en détail
+- [Coffres](/fr/concepts/vaults) — comment un coffre est créé et protégé

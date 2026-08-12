@@ -22,7 +22,7 @@ Les objets entretiennent des relations entre eux :
 - **Mentions** — tapez `@` dans du texte enrichi pour créer un lien vers n'importe quel objet. Le lien est réel et bidirectionnel, si bien que vous pouvez voir tout ce qui référence un objet donné.
 - **Collections** — regroupez des objets en ensembles typés (une liste de lecture, les tâches d'un projet) sans les copier.
 
-L'application [Graph](/fr/apps/graph/) visualise ces relations directement.
+L'application [Graph](/fr/apps/graph) visualise ces relations directement.
 
 ## Bâti sur le Block Protocol
 
@@ -30,5 +30,5 @@ Sous le capot, les objets suivent le **Block Protocol** — un standard ouvert p
 
 ## Étapes suivantes
 
-- [Applications](/fr/apps/) — les lentilles avec lesquelles vous travaillez sur les objets
-- [Local-first & synchronisation](/fr/concepts/local-first-and-sync/) — comment les objets restent cohérents entre les appareils
+- [Applications](/fr/apps) — les lentilles avec lesquelles vous travaillez sur les objets
+- [Local-first & synchronisation](/fr/concepts/local-first-and-sync) — comment les objets restent cohérents entre les appareils

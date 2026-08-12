@@ -1,6 +1,6 @@
 ---
 title: Lokal-first & Synchronisierung
-description: Brainstorm funktioniert vollständig offline auf deiner eigenen Festplatte und synchronisiert über Geräte hinweg mit Ende-zu-Ende-Verschlüsselung durch ein Relay, das deine Daten nicht lesen kann.
+description: "Brainstorm arbeitet vollständig offline auf deiner Festplatte und synchronisiert Ende-zu-Ende-verschlüsselt über ein Relay, das deine Daten nicht lesen kann."
 ---
 
 Brainstorm ist **lokal-first**: Dein Vault liegt auf deiner Festplatte, die App liest und schreibt ihn direkt, und nichts an deinen eigenen Inhalten braucht einen Server. Die Synchronisierung ist eine Option, die du einschaltest — keine Abhängigkeit, auf die du angewiesen bist.
@@ -25,11 +25,20 @@ Wenn du die Synchronisierung aktivierst, verbindet Brainstorm deine Geräte übe
 
 So bekommst du Synchronisierung und Zusammenarbeit über mehrere Geräte, ohne dein Wissen an einen Dritten zu übergeben.
 
+## Synchronisierung über dein lokales Netzwerk
+
+Zwei Geräte im selben WLAN können auch **direkt synchronisieren, ganz ohne Server**. Schalte es unter **Einstellungen → Synchronisierung** ein: Geräte entdecken sich im lokalen Netzwerk, koppeln sich über einen gerätegebundenen Handshake und tauschen Ende-zu-Ende-verschlüsselte Änderungen Peer-to-Peer aus. Es ist opt-in und verträgt sich mit dem Relay — nutze eines von beiden, oder beide.
+
+## Anhänge folgen dir
+
+Dateien und Bilder, die an deinen Notizen und Entitäten hängen, reisen mit deinem Vault. Vorschaubilder werden immer synchronisiert, sodass Vorschauen auf jedem Gerät sofort erscheinen; die vollständige Datei lädt in dem Moment herunter, in dem du sie öffnest — nichts wartet, und nichts belegt deine Festplatte.
+
 ## Ein Gerät wiederherstellen
 
 Weil die verschlüsselte Historie auf dem Relay (oder deinem eigenen Server) liegt, stellt das Einrichten eines neuen Geräts deinen Vault aus der Synchronisierung wieder her — du authentifizierst dich, und deine Objekte bauen sich lokal aus dem verschlüsselten Strom neu auf.
 
 ## Nächste Schritte
 
-- [Deine Daten & Sicherheit](/de/concepts/your-data-and-security/) — Schlüssel, Identität und das Bedrohungsmodell
-- [Vaults](/de/concepts/vaults/) — das, was synchronisiert wird
+- [Teilen & Zusammenarbeit](/de/concepts/sharing-and-collaboration) — an denselben Objekten mit anderen arbeiten
+- [Deine Daten & Sicherheit](/de/concepts/your-data-and-security) — Schlüssel, Identität und das Bedrohungsmodell
+- [Vaults](/de/concepts/vaults) — das, was synchronisiert wird

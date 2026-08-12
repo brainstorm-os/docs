@@ -1,9 +1,9 @@
 ---
 title: Quickstart
-description: Create a vault, open your first app, and capture your first note in Brainstorm.
+description: "Create a vault, open your first app, and capture your first note in Brainstorm. This walkthrough takes about five minutes."
 ---
 
-This walkthrough takes about five minutes. It assumes Brainstorm is [installed](/start-here/install/).
+This walkthrough takes about five minutes. It assumes Brainstorm is [installed](/start-here/install).
 
 ## 1. Create a vault
 
@@ -16,7 +16,7 @@ On first launch, Brainstorm asks where your knowledge should live.
    - **Passphrase** — you type a passphrase to unlock. Nothing else can open the vault.
 4. Give the vault a name and confirm.
 
-Your vault is now a folder of files you fully own. See [Vaults](/concepts/vaults/) for what's inside.
+Your vault is now a folder of files you fully own. See [Vaults](/concepts/vaults) for what's inside.
 
 ## 2. Open an app
 
@@ -26,7 +26,7 @@ Brainstorm opens to a dashboard. Everything you do happens inside an **app**.
 2. Pick **Notes**.
 3. The app opens in its own window, sandboxed and scoped to only the data it's allowed to touch.
 
-The first time an app needs a new capability (for example, reading a different kind of object), Brainstorm asks you to grant it. You can review and revoke these grants any time — see [Apps & permissions](/concepts/apps-and-permissions/).
+The first time an app needs a new capability (for example, reading a different kind of object), Brainstorm asks you to grant it. You can review and revoke these grants any time — see [Apps & permissions](/concepts/apps-and-permissions).
 
 ## 3. Capture something
 
@@ -46,13 +46,13 @@ Brainstorm's value comes from objects relating to each other:
 - Open **Graph** to see how your notes and objects link together.
 - Open **Files** to bring existing documents into the vault.
 
-The same object can appear in many apps; they're all views over one shared data layer. See [Objects](/concepts/objects/).
+The same object can appear in many apps; they're all views over one shared data layer. See [Objects](/concepts/objects).
 
 ## 5. (Optional) Sync across devices
 
-If you want your vault on more than one machine, enable sync. Your data is end-to-end encrypted before it leaves your device, and the relay that forwards it can't read it. See [Local-first & sync](/concepts/local-first-and-sync/).
+If you want your vault on more than one machine, enable sync. Your data is end-to-end encrypted before it leaves your device, and the relay that forwards it can't read it. See [Local-first & sync](/concepts/local-first-and-sync).
 
 ## Where to go next
 
-- [Concepts](/concepts/vaults/) — the model behind everything you just did
-- [Apps](/apps/) — what each built-in app does
+- [Concepts](/concepts/vaults) — the model behind everything you just did
+- [Apps](/apps) — what each built-in app does

@@ -1,12 +1,12 @@
 ---
 title: Le manifeste
-description: Chaque application livre un manifeste qui déclare son identité, les types d'objets qu'elle possède, les capacités qu'elle nécessite et la manière dont elle s'enregistre auprès du shell.
+description: "Chaque application livre un manifeste : son identité, les types d'objets qu'elle possède, les capacités requises et son enregistrement auprès du shell."
 sidebar:
   label: Le manifeste
   order: 2
 ---
 
-Chaque application livre un `manifest.json`. C'est le contrat de l'application avec le shell : qui est l'application, quels types d'objets elle possède, quelles [capacités](/fr/build/capabilities/) elle nécessite et comment elle s'insère dans le reste du système (comme opener pour un type, comme widget sur le tableau de bord, comme handler pour un intent). Le shell le lit à l'installation puis à chaque lancement.
+Chaque application livre un `manifest.json`. C'est le contrat de l'application avec le shell : qui est l'application, quels types d'objets elle possède, quelles [capacités](/fr/build/capabilities) elle nécessite et comment elle s'insère dans le reste du système (comme opener pour un type, comme widget sur le tableau de bord, comme handler pour un intent). Le shell le lit à l'installation puis à chaque lancement.
 
 ## Un manifeste réel
 
@@ -97,7 +97,7 @@ Le `schema` valide les propriétés de l'objet. Le suffixe de version (`/v1`) es
 Tout ce qui se trouve sous `registrations` est optionnel. Chaque bloc est la manière dont votre application se compose avec l'espace de travail au lieu de rester isolée.
 
 - **`openers`** — déclare votre application comme un moyen d'ouvrir quelque chose. `kind: "primary"` fait de votre application l'application par défaut pour un type d'entité ; `kind: "secondary"` vous enregistre comme alternative, et `mime` vous permet d'ouvrir des fichiers d'un type MIME. C'est ainsi qu'un double-clic sur une note est acheminé vers Notes.
-- **`intents`** — enregistre votre application comme handler pour un [verbe](/fr/build/working-with-data/#parler-à-dautres-applications) sur un type (`open`, `compose`, `share`, …) avec une `priority`. D'autres applications envoient ces intents sans savoir que votre application existe.
+- **`intents`** — enregistre votre application comme handler pour un [verbe](/fr/build/working-with-data#parler-à-dautres-applications) sur un type (`open`, `compose`, `share`, …) avec une `priority`. D'autres applications envoient ces intents sans savoir que votre application existe.
 - **`widgets`** — widgets de tableau de bord que votre application contribue, chacun avec un `id`, un `name` et une `size` (`small`, `medium` ou `large`). Nécessite la capacité `widgets.publish`.
 - **`blocks`** — contributions Block-Protocol que votre application fournit (p. ex. un bloc de tâche en ligne), liées aux types d'entités qu'elles rendent. Nécessite `blocks.provide:<blockId>`.
 
@@ -105,5 +105,5 @@ Parmi les autres sections du manifeste que vous rencontrerez à mesure que l'app
 
 ## Ensuite
 
-- [Capacités](/fr/build/capabilities/) — ce que chaque chaîne du tableau `capabilities` accorde, et comment demander davantage à l'exécution.
-- [Travailler avec les données](/fr/build/working-with-data/) — lire et écrire les types d'objets que vous avez déclarés ici.
+- [Capacités](/fr/build/capabilities) — ce que chaque chaîne du tableau `capabilities` accorde, et comment demander davantage à l'exécution.
+- [Travailler avec les données](/fr/build/working-with-data) — lire et écrire les types d'objets que vous avez déclarés ici.

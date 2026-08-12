@@ -22,7 +22,7 @@ Objekte stehen zueinander in Beziehung:
 - **Erwähnungen** — tippe `@` in Rich Text, um auf ein beliebiges Objekt zu verlinken. Der Link ist echt und bidirektional, sodass du alles sehen kannst, was auf ein bestimmtes Objekt verweist.
 - **Sammlungen** — gruppiere Objekte in typisierte Mengen (eine Leseliste, die Aufgaben eines Projekts), ohne sie zu kopieren.
 
-Die [Graph](/de/apps/graph/)-App visualisiert diese Beziehungen direkt.
+Die [Graph](/de/apps/graph)-App visualisiert diese Beziehungen direkt.
 
 ## Auf dem Block Protocol gebaut
 
@@ -30,5 +30,5 @@ Unter der Haube folgen Objekte dem **Block Protocol** — einem offenen Standard
 
 ## Nächste Schritte
 
-- [Apps](/de/apps/) — die Linsen, mit denen du an Objekten arbeitest
-- [Lokal-first & Synchronisierung](/de/concepts/local-first-and-sync/) — wie Objekte über Geräte hinweg konsistent bleiben
+- [Apps](/de/apps) — die Linsen, mit denen du an Objekten arbeitest
+- [Lokal-first & Synchronisierung](/de/concepts/local-first-and-sync) — wie Objekte über Geräte hinweg konsistent bleiben

@@ -1,6 +1,6 @@
 ---
 title: Browser
-description: "Browsing that saves into your vault."
+description: "Browsing that saves into your vault. Tabbed browsing over isolated, Node-less web renderers the app itself never touches — it sees metadata, never page bytes."
 sidebar:
   order: 14
 ---
@@ -20,6 +20,10 @@ import ShotSlider from "../../../components/ShotSlider.astro";
 
 - Tabs with pinning, private tabs on throwaway sessions, a recently-closed ring, and full session restore across restarts.
 - Save to vault writes a Bookmark object with the cleaned readable content attached; a blocked page degrades to a link, never a failed clip.
+- Reader mode (Cmd/Ctrl+Shift+R) strips a page to a clean article.
+- Summarize this page — ask for the gist of whatever you're reading from the ⋯ menu; the summary says where it came from.
+- Downloads save straight into your vault as file objects.
+- [Automations](/apps/automations) can browse read-only in a separate, signed-out session — never your logged-in tabs.
 - Per-tab security state surfaced in the chrome.
 - Find in page, and browsing history kept as vault objects with visit counts.
 - Per-site device permissions are deny-by-default, surfaced through an explicit banner.
@@ -27,4 +31,4 @@ import ShotSlider from "../../../components/ShotSlider.astro";
 
 ## Related
 
-- [Bookmarks](/apps/bookmarks/) — where clipped pages land
+- [Bookmarks](/apps/bookmarks) — where clipped pages land

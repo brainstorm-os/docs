@@ -6,7 +6,7 @@ sidebar:
   order: 5
 ---
 
-An app's real work is data: reading and writing [objects](/concepts/objects/), syncing the documents behind them, keeping a little private state, and handing work to other apps. Brainstorm gives you four distinct stores, each for a different job — using the right one is most of getting data handling right.
+An app's real work is data: reading and writing [objects](/concepts/objects), syncing the documents behind them, keeping a little private state, and handing work to other apps. Brainstorm gives you four distinct stores, each for a different job — using the right one is most of getting data handling right.
 
 | Use | For |
 | --- | --- |
@@ -40,7 +40,7 @@ const recent = await bs.services.entities.query({
 });
 ```
 
-Each of these is gated by the matching [capability](/build/capabilities/): `entities.read:<type>` to read, `entities.write:<type>` to create, update, or delete.
+Each of these is gated by the matching [capability](/build/capabilities): `entities.read:<type>` to read, `entities.write:<type>` to create, update, or delete.
 
 For anything that renders a list, prefer the **live** hook over one-shot `query` — it subscribes so the UI updates when objects change anywhere:
 
@@ -104,7 +104,7 @@ const bytes = await bs.services.files.read(handle);
 await bs.services.files.write(handle, newBytes);
 ```
 
-Picking requires a user gesture; writing requires `files.write`. When your app is launched *as an opener* for a file (via a manifest [opener](/build/the-manifest/#registrations--plugging-into-the-shell)), the file arrives in your `launch` context.
+Picking requires a user gesture; writing requires `files.write`. When your app is launched *as an opener* for a file (via a manifest [opener](/build/the-manifest#registrations--plugging-into-the-shell)), the file arrives in your `launch` context.
 
 ## Talking to other apps
 
@@ -118,7 +118,7 @@ await bs.services.intents.dispatch({
 });
 ```
 
-Dispatching `open` is default-granted; other verbs are gated by `intents.dispatch:<verb>`. To *receive* intents, register a handler in your [manifest](/build/the-manifest/#registrations--plugging-into-the-shell) and listen:
+Dispatching `open` is default-granted; other verbs are gated by `intents.dispatch:<verb>`. To *receive* intents, register a handler in your [manifest](/build/the-manifest#registrations--plugging-into-the-shell) and listen:
 
 ```ts
 bs.on("intent", (intent) => {
@@ -130,5 +130,5 @@ This is how the whole workspace stays connected: a note links to a task, clickin
 
 ## Next
 
-- [Recipes & anti-patterns](/build/recipes/) — patterns to copy and mistakes to avoid.
-- [SDK & runtime](/build/the-sdk/) — the full service surface and component library.
+- [Recipes & anti-patterns](/build/recipes) — patterns to copy and mistakes to avoid.
+- [SDK & runtime](/build/the-sdk) — the full service surface and component library.

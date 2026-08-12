@@ -22,7 +22,7 @@ Wenn du einen Vault erstellst, entscheidest du, wie sein Schlüssel gespeichert 
 - **System-Schlüsselbund** — der Hauptschlüssel liegt im sicheren Schlüsselbund deines Betriebssystems und der Vault entsperrt sich, wenn du dich anmeldest.
 - **Passphrase** — du gibst eine Passphrase an, aus der der Schlüssel abgeleitet wird. Ohne sie kann der Vault nicht geöffnet werden.
 
-Der Hauptschlüssel verlässt deinen Rechner nie im Klartext und wird nur im Speicher gehalten, solange der Vault geöffnet ist. Siehe [Deine Daten & Sicherheit](/de/concepts/your-data-and-security/).
+Der Hauptschlüssel verlässt deinen Rechner nie im Klartext und wird nur im Speicher gehalten, solange der Vault geöffnet ist. Siehe [Deine Daten & Sicherheit](/de/concepts/your-data-and-security).
 
 ## Öffnen und Schließen
 
@@ -30,5 +30,5 @@ Es ist immer nur ein Vault „aktiv". Einen Vault zu öffnen lädt seine Daten u
 
 ## Nächste Schritte
 
-- [Apps & Berechtigungen](/de/concepts/apps-and-permissions/) — wie Apps beschränkten Zugriff auf einen Vault bekommen
-- [Lokal-first & Synchronisierung](/de/concepts/local-first-and-sync/) — einen Vault auf viele Geräte bringen
+- [Apps & Berechtigungen](/de/concepts/apps-and-permissions) — wie Apps beschränkten Zugriff auf einen Vault bekommen
+- [Lokal-first & Synchronisierung](/de/concepts/local-first-and-sync) — einen Vault auf viele Geräte bringen

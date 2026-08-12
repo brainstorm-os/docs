@@ -1,6 +1,6 @@
 ---
 title: SDK & runtime
-description: La bibliothèque de composants partagée à partir de laquelle vous construisez des applications, et le runtime window.brainstorm que le shell injecte pour arbitrer chaque appel système.
+description: "La bibliothèque de composants partagée avec laquelle vous construisez, et le runtime window.brainstorm que le shell injecte pour arbitrer chaque appel."
 sidebar:
   label: SDK & runtime
   order: 4
@@ -23,7 +23,7 @@ window.brainstorm.services.*     // les services hôtes que vous appelez pour tr
 window.brainstorm.on(event, fn)  // cycle de vie : ready, intent, capability-changed, suspend, resume, close
 ```
 
-Chaque appel `services.*` est empaqueté dans une enveloppe IPC structurée, vérifié par rapport aux [capacités](/fr/build/capabilities/) qui vous sont accordées, et transmis à un service du shell. Un appel pour lequel la capacité vous manque est rejeté — elle n'est jamais accordée silencieusement.
+Chaque appel `services.*` est empaqueté dans une enveloppe IPC structurée, vérifié par rapport aux [capacités](/fr/build/capabilities) qui vous sont accordées, et transmis à un service du shell. Un appel pour lequel la capacité vous manque est rejeté — elle n'est jamais accordée silencieusement.
 
 ### Espaces de noms de services
 
@@ -31,7 +31,7 @@ Les services qu'une application appelle le plus :
 
 | Service | Ce qu'il fait |
 | --- | --- |
-| `entities` | Créer, lire, mettre à jour, supprimer et interroger des [objets](/fr/concepts/objects/) ; charger et synchroniser leurs documents. |
+| `entities` | Créer, lire, mettre à jour, supprimer et interroger des [objets](/fr/concepts/objects) ; charger et synchroniser leurs documents. |
 | `vaultEntities` | Un instantané en direct des objets du coffre — la source derrière le hook `useVaultEntities`. |
 | `files` | Choisir, lire, écrire et surveiller les fichiers que l'utilisateur sélectionne (pas de chemins de système de fichiers bruts). |
 | `storage` | Le stockage clé/valeur privé de votre application, plus l'envoi de fichiers adressé par contenu. |
@@ -44,7 +44,7 @@ Les services qu'une application appelle le plus :
 | `capabilities` | Vérifier et demander des capacités à l'exécution. |
 | `theme` | Réagir aux changements de thème ; prévisualiser un thème. |
 
-D'autres existent pour des applications plus riches — `blocks` et `bp` (Block Protocol), `network`, `dashboard`, `selection`, `dnd`, `sharing`, `ai`, `automations`, `webView`. Voir [Travailler avec les données](/fr/build/working-with-data/) pour ceux que vous utiliserez en premier.
+D'autres existent pour des applications plus riches — `blocks` et `bp` (Block Protocol), `network`, `dashboard`, `selection`, `dnd`, `sharing`, `ai`, `automations`, `webView`. Voir [Travailler avec les données](/fr/build/working-with-data) pour ceux que vous utiliserez en premier.
 
 ## Réactivité : ne codez jamais une boucle de changement à la main
 
@@ -62,7 +62,7 @@ const props = useYMap(doc, "properties");
 const body = useYText(doc, "body");
 ```
 
-N'écrivez **pas** `vaultEntities.onChange → list() → setState`. Cela réimplémente la couche de réactivité pour chaque application — précisément la dérive que cette pile existe pour empêcher. Lisez l'état en direct via les hooks et laissez React le rendre. C'est imposé dans le dépôt du shell ; voir [les anti-patterns](/fr/build/recipes/#ne-construisez-pas-la-réactivité-à-la-main).
+N'écrivez **pas** `vaultEntities.onChange → list() → setState`. Cela réimplémente la couche de réactivité pour chaque application — précisément la dérive que cette pile existe pour empêcher. Lisez l'état en direct via les hooks et laissez React le rendre. C'est imposé dans le dépôt du shell ; voir [les anti-patterns](/fr/build/recipes#ne-construisez-pas-la-réactivité-à-la-main).
 
 ## La bibliothèque de composants
 
@@ -115,5 +115,5 @@ Chaque chaîne visible par l'utilisateur est enveloppée dans un appel de traduc
 
 ## Suivant
 
-- [Travailler avec les données](/fr/build/working-with-data/) — les API `entities`, `storage`, `intents` et de documents en pratique.
-- [Recettes & anti-patterns](/fr/build/recipes/) — les conventions qui gardent une application cohérente avec la plateforme.
+- [Travailler avec les données](/fr/build/working-with-data) — les API `entities`, `storage`, `intents` et de documents en pratique.
+- [Recettes & anti-patterns](/fr/build/recipes) — les conventions qui gardent une application cohérente avec la plateforme.

@@ -1,13 +1,13 @@
 ---
 title: Code
-description: "Ein echter Editor für code-förmige Notizen."
+description: "Ein echter Editor für code-förmige Notizen. Bearbeitet Snippets, Konfigurationen und andere code-förmige Objekte im Vault mit einem wirklich fähigen Editor."
 sidebar:
   order: 17
 ---
 
 import ShotSlider from "../../../../components/ShotSlider.astro";
 
-**Code.** Bearbeitet Snippets, Konfigurationen und andere code-förmige Objekte im Vault mit einem wirklich fähigen Editor: Shiki-Hervorhebung, Multi-Cursor, Faltung, Diagnosen und Diffs. Er öffnet jeden Quellcode-MIME-Typ, den ihm der Vault reicht.
+**Code.** Bearbeitet Snippets, Konfigurationen und andere code-förmige Objekte im Vault mit einem wirklich fähigen Editor: Shiki-Hervorhebung, Multi-Cursor, Faltung, Diagnosen und Diffs. Er öffnet jeden Quellcode-MIME-Typ, den ihm der Vault reicht — und hier kannst du eine ganze Brainstorm-App schreiben und installieren, ohne Build-Schritt und ohne Terminal.
 
 <ShotSlider
   name="Code"
@@ -24,7 +24,15 @@ import ShotSlider from "../../../../components/ShotSlider.astro";
 - Eingebaute Diagnosen mit Inline-Schlängellinien, Änderungsmarkierungen am Rand und vereinheitlichten oder nebeneinanderliegenden Diffs gegen die gespeicherte Baseline.
 - Prettier-Formatierung für Web-Sprachen, beim Speichern oder auf Abruf.
 - Ein kollaborativer Y.Text-Puffer auf demselben lokal-first-Substrat wie alles andere, mit virtualisiertem Rendering für große Dateien.
+- Ein Dateibaum mit Ordnern und ein Referenzen-/Diagnose-Panel, das beim Tippen stillhält.
+
+## Eine App bauen und installieren
+
+Eine App besteht aus zwei Dateien — einer `manifest.json` und einer `index.html` — ganz ohne Build-Schritt. Schreib sie in Code, wähle sie aus und wähle **Als App installieren**: Sie landet sofort auf deinem Dashboard, ohne Neustart. Du kannst Brainstorm auch auf einen Ordner auf der Festplatte zeigen lassen, oder auf ein `.brainstorm`-Bundle, das dir jemand geschickt hat. Der [Agent](/de/apps/agent) kann die Dateien für dich entwerfen — als Karten, die du liest und freigibst.
+
+Eine so installierte App ist unsigniert, wird entsprechend markiert und der Sideload-Vertrauensstufe unterstellt — sie bekommt die Fähigkeiten, die du ihr erteilst, und nichts darüber hinaus. Das vollständige App-Modell steht in [Auf Brainstorm entwickeln](/de/build/overview).
 
 ## Verwandt
 
-- [Objekte](/de/concepts/objects/) — Code-Dateien sind auch Vault-Objekte
+- [Objekte](/de/concepts/objects) — Code-Dateien sind auch Vault-Objekte
+- [Auf Brainstorm entwickeln](/de/build/overview) — Manifest, Fähigkeiten und SDK

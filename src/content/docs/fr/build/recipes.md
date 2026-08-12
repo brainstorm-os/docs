@@ -47,7 +47,7 @@ try {
 
 ### Ouvrir le SDK avant de construire
 
-Besoin d'un menu, d'un popover, d'un picker, d'une icône, d'un formateur de dates, d'une cellule de propriété ou d'un état vide ? C'est presque certainement dans `@brainstorm/sdk`. Importez-le. Voir [SDK et runtime](/fr/build/the-sdk/).
+Besoin d'un menu, d'un popover, d'un picker, d'une icône, d'un formateur de dates, d'une cellule de propriété ou d'un état vide ? C'est presque certainement dans `@brainstorm/sdk`. Importez-le. Voir [SDK et runtime](/fr/build/the-sdk).
 
 ### Utiliser l'en-tête standard
 
@@ -86,7 +86,7 @@ import { SelectMenu } from "@brainstorm/sdk/select-menu";
 
 ### Ne mettez pas de contenu dans les réglages par appareil
 
-`settings` est destiné à l'état d'UI local à l'appareil (une largeur de panneau, l'onglet ouvert) — il ne se synchronise pas. Le vrai contenu va dans les entités ; le contenu app-privé qui doit voyager avec le coffre va dans `storage`. Les confondre signifie des données qui ne suivront pas l'utilisateur en silence, ou des préférences d'appareil qui se disputent d'une machine à l'autre. Voir [Travailler avec les données](/fr/build/working-with-data/).
+`settings` est destiné à l'état d'UI local à l'appareil (une largeur de panneau, l'onglet ouvert) — il ne se synchronise pas. Le vrai contenu va dans les entités ; le contenu app-privé qui doit voyager avec le coffre va dans `storage`. Les confondre signifie des données qui ne suivront pas l'utilisateur en silence, ou des préférences d'appareil qui se disputent d'une machine à l'autre. Voir [Travailler avec les données](/fr/build/working-with-data).
 
 ### Ne laissez pas de chaînes non enveloppées
 
@@ -98,5 +98,5 @@ Il n'y a aucun accès ambiant au système de fichiers, au réseau ou aux autres 
 
 ## Ensuite
 
-- [Aperçu](/fr/build/overview/) — le modèle d'où viennent ces conventions.
-- [Concepts](/fr/concepts/apps-and-permissions/) — le modèle de sécurité et d'objets sous-jacent.
+- [Aperçu](/fr/build/overview) — le modèle d'où viennent ces conventions.
+- [Concepts](/fr/concepts/apps-and-permissions) — le modèle de sécurité et d'objets sous-jacent.

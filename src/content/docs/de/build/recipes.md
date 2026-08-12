@@ -1,6 +1,6 @@
 ---
 title: Rezepte & Anti-Patterns
-description: Die Muster, die eine App mit der Plattform konsistent halten, und die Fehler, die im Review abgelehnt werden.
+description: "Die Muster, die eine App mit der Plattform konsistent halten, und die Fehler, die im Review abgelehnt werden — Tastaturmodell, Theming, Datendisziplin."
 sidebar:
   label: Rezepte & Anti-Patterns
   order: 6
@@ -47,7 +47,7 @@ try {
 
 ### Öffne das SDK, bevor du baust
 
-Brauchst du ein Menü, Popover, Picker, Icon, Datumsformatierer, eine Eigenschaftszelle oder einen Leerzustand? Es ist fast sicher in `@brainstorm/sdk`. Importiere es. Siehe [SDK & Laufzeit](/de/build/the-sdk/).
+Brauchst du ein Menü, Popover, Picker, Icon, Datumsformatierer, eine Eigenschaftszelle oder einen Leerzustand? Es ist fast sicher in `@brainstorm/sdk`. Importiere es. Siehe [SDK & Laufzeit](/de/build/the-sdk).
 
 ### Nutze den Standard-Header
 
@@ -86,7 +86,7 @@ import { SelectMenu } from "@brainstorm/sdk/select-menu";
 
 ### Leg keinen Inhalt in geräte-spezifische Einstellungen
 
-`settings` ist für gerätelokalen UI-Zustand (eine Panel-Breite, der offene Tab) — es synchronisiert nicht. Echter Inhalt kommt in Entities; app-privater Inhalt, der mit dem Vault reisen soll, kommt in `storage`. Diese zu verwechseln bedeutet Daten, die dem Nutzer still nicht folgen, oder Geräteeinstellungen, die über Rechner hinweg streiten. Siehe [Mit Daten arbeiten](/de/build/working-with-data/).
+`settings` ist für gerätelokalen UI-Zustand (eine Panel-Breite, der offene Tab) — es synchronisiert nicht. Echter Inhalt kommt in Entities; app-privater Inhalt, der mit dem Vault reisen soll, kommt in `storage`. Diese zu verwechseln bedeutet Daten, die dem Nutzer still nicht folgen, oder Geräteeinstellungen, die über Rechner hinweg streiten. Siehe [Mit Daten arbeiten](/de/build/working-with-data).
 
 ### Lass keine Strings ungewickelt
 
@@ -98,5 +98,5 @@ Es gibt keinen stillschweigenden Zugriff auf Dateisystem, Netzwerk oder andere A
 
 ## Weiter
 
-- [Überblick](/de/build/overview/) — das Modell, aus dem diese Konventionen kommen.
-- [Konzepte](/de/concepts/apps-and-permissions/) — das Sicherheits- und Objektmodell darunter.
+- [Überblick](/de/build/overview) — das Modell, aus dem diese Konventionen kommen.
+- [Konzepte](/de/concepts/apps-and-permissions) — das Sicherheits- und Objektmodell darunter.

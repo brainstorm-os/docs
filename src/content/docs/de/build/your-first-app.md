@@ -1,6 +1,6 @@
 ---
 title: Deine erste App
-description: Scaffolde eine Brainstorm-App, führe sie in der Shell aus und sieh eine Live-Liste deiner eigenen Objekte.
+description: "Scaffolde eine Brainstorm-App, führe sie in der Shell aus und sieh eine Live-Liste deiner eigenen Objekte. Es dauert etwa zehn Minuten."
 sidebar:
   label: Deine erste App
   order: 1
@@ -70,7 +70,7 @@ Das Scaffold ist bewusst keine leere Seite — es mountet eine echte `useVaultEn
 }
 ```
 
-Siehe [Das Manifest](/de/build/the-manifest/) für jedes Feld und [Fähigkeiten](/de/build/capabilities/) für die Bedeutung dieser Fähigkeits-Strings.
+Siehe [Das Manifest](/de/build/the-manifest) für jedes Feld und [Fähigkeiten](/de/build/capabilities) für die Bedeutung dieser Fähigkeits-Strings.
 
 **`src/main.tsx`** mountet React. Zwei Importe sind Pflicht und kommen zuerst — das App-Theme-Stylesheet (das das gemeinsame `.app-header`-Chrome und die Theme-Tokens trägt) und der Menü-Host:
 
@@ -133,7 +133,7 @@ export function FieldNotesApp() {
 }
 ```
 
-Die Liste ist **live**: `useVaultEntities` abonniert den Vault, sodass die Liste neu rendert, wenn ein Objekt dieses Typs erstellt oder geändert wird — von deiner App, einer anderen App oder einem anderen Gerät. Du schreibst nie eine manuelle `onChange → setState`-Schleife; das ist [die Reaktivitätsregel](/de/build/recipes/#nutze-die-reaktivitätsschicht).
+Die Liste ist **live**: `useVaultEntities` abonniert den Vault, sodass die Liste neu rendert, wenn ein Objekt dieses Typs erstellt oder geändert wird — von deiner App, einer anderen App oder einem anderen Gerät. Du schreibst nie eine manuelle `onChange → setState`-Schleife; das ist [die Reaktivitätsregel](/de/build/recipes#nutze-die-reaktivitätsschicht).
 
 ## Registrieren und ausführen
 
@@ -164,6 +164,6 @@ await bs.services.entities.create(APP_TYPE, {
 
 Kein Refresh, kein Neuladen — die Live-Abfrage, die diesen Typ bereits abonniert hat, rendert neu. Von hier aus:
 
-- [Mit Daten arbeiten](/de/build/working-with-data/) — Abfragen, Bearbeiten, Rich Text und app-privater Speicher.
-- [SDK & Laufzeit](/de/build/the-sdk/) — die Komponenten und Dienste, aus denen du den Rest der UI baust.
-- [Rezepte & Anti-Patterns](/de/build/recipes/) — die Konventionen, die eine App mit der Plattform konsistent halten.
+- [Mit Daten arbeiten](/de/build/working-with-data) — Abfragen, Bearbeiten, Rich Text und app-privater Speicher.
+- [SDK & Laufzeit](/de/build/the-sdk) — die Komponenten und Dienste, aus denen du den Rest der UI baust.
+- [Rezepte & Anti-Patterns](/de/build/recipes) — die Konventionen, die eine App mit der Plattform konsistent halten.

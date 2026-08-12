@@ -22,7 +22,7 @@ Lorsque vous créez un coffre, vous choisissez comment sa clé est stockée :
 - **Trousseau du système** — la clé maîtresse réside dans le trousseau sécurisé de votre système d'exploitation et le coffre se déverrouille lorsque vous vous connectez.
 - **Phrase secrète** — vous fournissez une phrase secrète pour dériver la clé. Sans elle, le coffre ne peut pas être ouvert.
 
-La clé maîtresse ne quitte jamais votre machine en clair et n'est conservée en mémoire que tant que le coffre est ouvert. Voir [Vos données & sécurité](/fr/concepts/your-data-and-security/).
+La clé maîtresse ne quitte jamais votre machine en clair et n'est conservée en mémoire que tant que le coffre est ouvert. Voir [Vos données & sécurité](/fr/concepts/your-data-and-security).
 
 ## Ouvrir et fermer
 
@@ -30,5 +30,5 @@ Un seul coffre est « actif » à la fois. Ouvrir un coffre charge ses données 
 
 ## Étapes suivantes
 
-- [Applications & permissions](/fr/concepts/apps-and-permissions/) — comment les applications obtiennent un accès délimité à un coffre
-- [Local-first & synchronisation](/fr/concepts/local-first-and-sync/) — placer un même coffre sur plusieurs appareils
+- [Applications & permissions](/fr/concepts/apps-and-permissions) — comment les applications obtiennent un accès délimité à un coffre
+- [Local-first & synchronisation](/fr/concepts/local-first-and-sync) — placer un même coffre sur plusieurs appareils

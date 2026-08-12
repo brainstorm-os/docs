@@ -23,7 +23,7 @@ window.brainstorm.services.*     // the host services you call to do work
 window.brainstorm.on(event, fn)  // lifecycle: ready, intent, capability-changed, suspend, resume, close
 ```
 
-Every `services.*` call is marshalled into a structured IPC envelope, checked against your granted [capabilities](/build/capabilities/), and forwarded to a shell service. A call you lack the capability for rejects — it's never silently granted.
+Every `services.*` call is marshalled into a structured IPC envelope, checked against your granted [capabilities](/build/capabilities), and forwarded to a shell service. A call you lack the capability for rejects — it's never silently granted.
 
 ### Service namespaces
 
@@ -31,7 +31,7 @@ The services an app calls most:
 
 | Service | What it does |
 | --- | --- |
-| `entities` | Create, read, update, delete, and query [objects](/concepts/objects/); load and sync their documents. |
+| `entities` | Create, read, update, delete, and query [objects](/concepts/objects); load and sync their documents. |
 | `vaultEntities` | A live snapshot of vault objects — the source behind the `useVaultEntities` hook. |
 | `files` | Pick, read, write, and watch files the user chooses (no raw filesystem paths). |
 | `storage` | Your app's private key/value store, plus content-addressed file upload. |
@@ -44,7 +44,7 @@ The services an app calls most:
 | `capabilities` | Check and request capabilities at runtime. |
 | `theme` | React to theme changes; preview a theme. |
 
-Others exist for richer apps — `blocks` and `bp` (Block Protocol), `network`, `dashboard`, `selection`, `dnd`, `sharing`, `ai`, `automations`, `webView`. See [Working with data](/build/working-with-data/) for the ones you'll use first.
+Others exist for richer apps — `blocks` and `bp` (Block Protocol), `network`, `dashboard`, `selection`, `dnd`, `sharing`, `ai`, `automations`, `webView`. See [Working with data](/build/working-with-data) for the ones you'll use first.
 
 ## Reactivity: never hand-roll a change loop
 
@@ -62,7 +62,7 @@ const props = useYMap(doc, "properties");
 const body = useYText(doc, "body");
 ```
 
-Do **not** write `vaultEntities.onChange → list() → setState`. That re-implements the reactivity layer per app — the exact drift this stack exists to prevent. Read the live state through the hooks and let React render it. This is enforced in the shell repo; see [the anti-patterns](/build/recipes/#use-the-reactivity-layer).
+Do **not** write `vaultEntities.onChange → list() → setState`. That re-implements the reactivity layer per app — the exact drift this stack exists to prevent. Read the live state through the hooks and let React render it. This is enforced in the shell repo; see [the anti-patterns](/build/recipes#use-the-reactivity-layer).
 
 ## The component library
 
@@ -115,5 +115,5 @@ Every user-visible string wraps in a translation call. Apps use the lightweight 
 
 ## Next
 
-- [Working with data](/build/working-with-data/) — the `entities`, `storage`, `intents`, and document APIs in practice.
-- [Recipes & anti-patterns](/build/recipes/) — the conventions that keep an app consistent with the platform.
+- [Working with data](/build/working-with-data) — the `entities`, `storage`, `intents`, and document APIs in practice.
+- [Recipes & anti-patterns](/build/recipes) — the conventions that keep an app consistent with the platform.

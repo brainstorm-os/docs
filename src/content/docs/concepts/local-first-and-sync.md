@@ -25,11 +25,20 @@ When you enable sync, Brainstorm connects your devices through a **relay** — b
 
 So you get multi-device sync and collaboration without handing your knowledge to a third party.
 
+## Sync over your local network
+
+Two devices on the same Wi-Fi can also sync **directly, with no server involved at all**. Turn it on under **Settings → Sync**: devices discover each other on the local network, pair with a device-bound handshake, and exchange end-to-end encrypted changes peer to peer. It's opt-in, and it composes with the relay — use either, or both.
+
+## Attachments follow you
+
+Files and images attached to your notes and entities travel with your vault. Thumbnails are always synced, so previews appear instantly on every device; the full file downloads the moment you open it — nothing waits, and nothing hogs your disk.
+
 ## Restoring a device
 
 Because the encrypted history lives on the relay (or your own server), setting up a new device restores your vault from sync — you authenticate, and your objects rebuild locally from the encrypted stream.
 
 ## Next steps
 
-- [Your data & security](/concepts/your-data-and-security/) — keys, identity, and the threat model
-- [Vaults](/concepts/vaults/) — the thing being synced
+- [Sharing & collaboration](/concepts/sharing-and-collaboration) — working on the same objects with other people
+- [Your data & security](/concepts/your-data-and-security) — keys, identity, and the threat model
+- [Vaults](/concepts/vaults) — the thing being synced

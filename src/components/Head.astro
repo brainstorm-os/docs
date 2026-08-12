@@ -1,6 +1,22 @@
 ---
 import Default from "@astrojs/starlight/components/Head.astro";
+
+// Starlight's <Head> emits og:title/description/url/type/locale/site_name and
+// twitter:card, but no image — which leaves every Open Graph card incomplete
+// (and a `summary_large_image` twitter:card with nothing to show). The share
+// image is the same one the marketing site uses, so a docs link and a site link
+// unfurl identically.
+const ogImage = new URL("/og.png", Astro.site ?? "https://docs.getbrainstorm.online").toString();
 ---
+
+<meta property="og:image" content={ogImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta
+	property="og:image:alt"
+	content="Brainstorm — a desktop OS for you and your AI"
+/>
+<meta name="twitter:image" content={ogImage} />
 
 <script is:inline>
 	// Adopt the theme shared across getbrainstorm.online subdomains (set by the

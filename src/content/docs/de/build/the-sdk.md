@@ -23,7 +23,7 @@ window.brainstorm.services.*     // die Host-Dienste, die du aufrufst, um zu arb
 window.brainstorm.on(event, fn)  // Lebenszyklus: ready, intent, capability-changed, suspend, resume, close
 ```
 
-Jeder `services.*`-Aufruf wird in einen strukturierten IPC-Umschlag verpackt, gegen deine erteilten [Fähigkeiten](/de/build/capabilities/) geprüft und an einen Shell-Dienst weitergeleitet. Ein Aufruf, für den dir die Fähigkeit fehlt, wird abgelehnt — er wird nie stillschweigend erteilt.
+Jeder `services.*`-Aufruf wird in einen strukturierten IPC-Umschlag verpackt, gegen deine erteilten [Fähigkeiten](/de/build/capabilities) geprüft und an einen Shell-Dienst weitergeleitet. Ein Aufruf, für den dir die Fähigkeit fehlt, wird abgelehnt — er wird nie stillschweigend erteilt.
 
 ### Service-Namensräume
 
@@ -31,7 +31,7 @@ Die Dienste, die eine App am häufigsten aufruft:
 
 | Dienst | Was er tut |
 | --- | --- |
-| `entities` | [Objekte](/de/concepts/objects/) erstellen, lesen, aktualisieren, löschen und abfragen; ihre Dokumente laden und synchronisieren. |
+| `entities` | [Objekte](/de/concepts/objects) erstellen, lesen, aktualisieren, löschen und abfragen; ihre Dokumente laden und synchronisieren. |
 | `vaultEntities` | Ein Live-Schnappschuss der Vault-Objekte — die Quelle hinter dem `useVaultEntities`-Hook. |
 | `files` | Dateien wählen, lesen, schreiben und beobachten, die der Nutzer aussucht (keine rohen Dateisystempfade). |
 | `storage` | Der private Key/Value-Speicher deiner App, plus inhaltsadressierter Datei-Upload. |
@@ -44,7 +44,7 @@ Die Dienste, die eine App am häufigsten aufruft:
 | `capabilities` | Fähigkeiten zur Laufzeit prüfen und anfordern. |
 | `theme` | Auf Theme-Änderungen reagieren; ein Theme in der Vorschau anzeigen. |
 
-Weitere existieren für reichhaltigere Apps — `blocks` und `bp` (Block Protocol), `network`, `dashboard`, `selection`, `dnd`, `sharing`, `ai`, `automations`, `webView`. Siehe [Mit Daten arbeiten](/de/build/working-with-data/) für die, die du zuerst nutzen wirst.
+Weitere existieren für reichhaltigere Apps — `blocks` und `bp` (Block Protocol), `network`, `dashboard`, `selection`, `dnd`, `sharing`, `ai`, `automations`, `webView`. Siehe [Mit Daten arbeiten](/de/build/working-with-data) für die, die du zuerst nutzen wirst.
 
 ## Reaktivität: baue nie selbst eine Änderungsschleife
 
@@ -62,7 +62,7 @@ const props = useYMap(doc, "properties");
 const body = useYText(doc, "body");
 ```
 
-Schreibe **nicht** `vaultEntities.onChange → list() → setState`. Das implementiert die Reaktivitätsschicht pro App neu — genau die Drift, die dieser Stack verhindern soll. Lies den Live-Zustand über die Hooks und lass React ihn rendern. Das wird im Shell-Repo erzwungen; siehe [die Anti-Patterns](/de/build/recipes/#baue-reaktivität-nicht-selbst).
+Schreibe **nicht** `vaultEntities.onChange → list() → setState`. Das implementiert die Reaktivitätsschicht pro App neu — genau die Drift, die dieser Stack verhindern soll. Lies den Live-Zustand über die Hooks und lass React ihn rendern. Das wird im Shell-Repo erzwungen; siehe [die Anti-Patterns](/de/build/recipes#baue-reaktivität-nicht-selbst).
 
 ## Die Komponentenbibliothek
 
@@ -115,5 +115,5 @@ Jeder für den Nutzer sichtbare String wird in einen Übersetzungsaufruf gewicke
 
 ## Weiter
 
-- [Mit Daten arbeiten](/de/build/working-with-data/) — die `entities`-, `storage`-, `intents`- und Dokument-APIs in der Praxis.
-- [Rezepte & Anti-Patterns](/de/build/recipes/) — die Konventionen, die eine App mit der Plattform konsistent halten.
+- [Mit Daten arbeiten](/de/build/working-with-data) — die `entities`-, `storage`-, `intents`- und Dokument-APIs in der Praxis.
+- [Rezepte & Anti-Patterns](/de/build/recipes) — die Konventionen, die eine App mit der Plattform konsistent halten.

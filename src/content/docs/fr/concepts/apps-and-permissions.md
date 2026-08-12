@@ -28,7 +28,7 @@ Les autorisations sont enregistrées par coffre, de sorte qu'une application en 
 
 ## Isolation entre applications
 
-Les applications sont isolées les unes des autres tout comme du système. Une application ne peut pas lire l'état privé d'une autre application ni s'introduire dans sa fenêtre. Lorsque des applications partagent des données, cela se fait via la couche d'objets commune que vous pouvez voir et contrôler — pas par des canaux détournés. Voir [Objets](/fr/concepts/objects/).
+Les applications sont isolées les unes des autres tout comme du système. Une application ne peut pas lire l'état privé d'une autre application ni s'introduire dans sa fenêtre. Lorsque des applications partagent des données, cela se fait via la couche d'objets commune que vous pouvez voir et contrôler — pas par des canaux détournés. Voir [Objets](/fr/concepts/objects).
 
 ## Les agents sont aussi des applications
 
@@ -36,5 +36,5 @@ Les agents d'IA dans Brainstorm se placent derrière le même registre. Un agent
 
 ## Étapes suivantes
 
-- [Objets](/fr/concepts/objects/) — les données partagées que les applications lisent et écrivent
-- [Vos données & sécurité](/fr/concepts/your-data-and-security/) — les garanties sous-jacentes
+- [Objets](/fr/concepts/objects) — les données partagées que les applications lisent et écrivent
+- [Vos données & sécurité](/fr/concepts/your-data-and-security) — les garanties sous-jacentes

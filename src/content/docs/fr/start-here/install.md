@@ -1,6 +1,6 @@
 ---
 title: Installation
-description: Comment faire tourner Brainstorm sur macOS, Windows et Linux.
+description: "Comment faire tourner Brainstorm sur macOS, Windows et Linux — configuration requise, où récupérer les builds de la bêta et comment arrivent les mises à jour."
 ---
 
 Brainstorm est une application de bureau pour **macOS, Windows et Linux**.
@@ -26,13 +26,18 @@ Téléchargez le build pour votre plateforme depuis [getbrainstorm.online/fr/dow
 
 ## Premier lancement
 
-Au premier lancement, Brainstorm vous demande de **créer un coffre** — le foyer sur disque de votre savoir. Choisissez un dossier, décidez comment le protéger (trousseau du système ou une phrase secrète), et vous voilà entré. Le guide complet se trouve dans le [Démarrage rapide](/fr/start-here/quickstart/).
+Au premier lancement, Brainstorm vous demande de **créer un coffre** — le foyer sur disque de votre savoir. Choisissez un dossier, décidez comment le protéger (trousseau du système ou une phrase secrète), et vous voilà entré. Le guide complet se trouve dans le [Démarrage rapide](/fr/start-here/quickstart).
 
 ## Mise à jour
 
-Les applications à l'intérieur de Brainstorm se mettent à jour indépendamment de la coque. La coque elle-même vérifie les mises à jour au lancement et les applique en arrière-plan ; vos coffres ne sont jamais touchés par une mise à jour.
+Les applications à l'intérieur de Brainstorm se mettent à jour indépendamment de la coque. La coque elle-même vérifie les mises à jour au lancement et les applique en arrière-plan (ou à la demande depuis **Paramètres → Mises à jour**) ; vos coffres ne sont jamais touchés par une mise à jour.
+
+## Langues
+
+Brainstorm est disponible en **anglais, espagnol, français, allemand, italien et portugais** — la coque et chaque application intégrée. Changez de langue sous **Paramètres → Langue**.
 
 ## Étapes suivantes
 
-- [Démarrage rapide](/fr/start-here/quickstart/) — votre premier coffre et votre première application
-- [Coffres](/fr/concepts/vaults/) — ce qu'est un coffre et comment il est protégé
+- [Démarrage rapide](/fr/start-here/quickstart) — votre premier coffre et votre première application
+- [Importer vos données](/fr/start-here/import-your-data) — amenez Notion, Anytype, CSV et vos fichiers
+- [Coffres](/fr/concepts/vaults) — ce qu'est un coffre et comment il est protégé

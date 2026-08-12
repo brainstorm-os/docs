@@ -1,6 +1,6 @@
 ---
 title: Vaults
-description: A vault is the on-disk home for your knowledge — a folder of files you own, protected by a key only you hold.
+description: "A vault is the on-disk home for your knowledge — a folder of files you own, not a row in someone else's database, protected by a key only you hold."
 ---
 
 A **vault** is where your knowledge lives. It's a folder on your own disk — not a row in someone else's database — and it's the unit Brainstorm opens, protects, and (optionally) syncs.
@@ -22,7 +22,7 @@ When you create a vault you choose how its key is stored:
 - **System keychain** — the master key lives in your operating system's secure keychain and the vault unlocks when you log in.
 - **Passphrase** — you supply a passphrase to derive the key. Without it, the vault can't be opened.
 
-The master key never leaves your machine in plaintext and is held in memory only while the vault is open. See [Your data & security](/concepts/your-data-and-security/).
+The master key never leaves your machine in plaintext and is held in memory only while the vault is open. See [Your data & security](/concepts/your-data-and-security).
 
 ## Opening and closing
 
@@ -30,5 +30,5 @@ Only one vault is "active" at a time. Opening a vault loads its data and makes i
 
 ## Next steps
 
-- [Apps & permissions](/concepts/apps-and-permissions/) — how apps get scoped access to a vault
-- [Local-first & sync](/concepts/local-first-and-sync/) — putting one vault on many devices
+- [Apps & permissions](/concepts/apps-and-permissions) — how apps get scoped access to a vault
+- [Local-first & sync](/concepts/local-first-and-sync) — putting one vault on many devices

@@ -1,6 +1,6 @@
 ---
 title: Your first app
-description: Scaffold a Brainstorm app, run it in the shell, and see a live list of your own objects.
+description: "Scaffold a Brainstorm app, run it in the shell, and see a live list of your own objects rendering from your vault. About ten minutes end to end."
 sidebar:
   label: Your first app
   order: 1
@@ -70,7 +70,7 @@ The scaffold is deliberately not a blank page — it mounts a real `useVaultEnti
 }
 ```
 
-See [The manifest](/build/the-manifest/) for every field and [Capabilities](/build/capabilities/) for what those capability strings mean.
+See [The manifest](/build/the-manifest) for every field and [Capabilities](/build/capabilities) for what those capability strings mean.
 
 **`src/main.tsx`** mounts React. Two imports are mandatory and come first — the app-theme stylesheet (which carries the shared `.app-header` chrome and theme tokens) and the menu host:
 
@@ -133,7 +133,7 @@ export function FieldNotesApp() {
 }
 ```
 
-The list is **live**: `useVaultEntities` subscribes to the vault, so when an object of this type is created or changed — by your app, another app, or another device — the list re-renders. You never write a manual `onChange → setState` loop; that's [the reactivity rule](/build/recipes/#use-the-reactivity-layer).
+The list is **live**: `useVaultEntities` subscribes to the vault, so when an object of this type is created or changed — by your app, another app, or another device — the list re-renders. You never write a manual `onChange → setState` loop; that's [the reactivity rule](/build/recipes#use-the-reactivity-layer).
 
 ## Register and run
 
@@ -164,6 +164,6 @@ await bs.services.entities.create(APP_TYPE, {
 
 No refresh, no refetch — the live query already subscribed to this type re-renders. From here:
 
-- [Working with data](/build/working-with-data/) — querying, editing, rich text, and app-private storage.
-- [SDK & runtime](/build/the-sdk/) — the components and services you build the rest of the UI from.
-- [Recipes & anti-patterns](/build/recipes/) — the conventions that keep an app consistent with the platform.
+- [Working with data](/build/working-with-data) — querying, editing, rich text, and app-private storage.
+- [SDK & runtime](/build/the-sdk) — the components and services you build the rest of the UI from.
+- [Recipes & anti-patterns](/build/recipes) — the conventions that keep an app consistent with the platform.

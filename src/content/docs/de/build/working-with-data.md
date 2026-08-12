@@ -6,7 +6,7 @@ sidebar:
   order: 5
 ---
 
-Die eigentliche Arbeit einer App sind Daten: [Objekte](/de/concepts/objects/) lesen und schreiben, die Dokumente dahinter synchronisieren, ein wenig privaten Zustand halten und Arbeit an andere Apps übergeben. Brainstorm gibt dir vier verschiedene Speicher, jeden für eine andere Aufgabe — den richtigen zu nutzen ist der Großteil dessen, Datenverarbeitung richtig zu machen.
+Die eigentliche Arbeit einer App sind Daten: [Objekte](/de/concepts/objects) lesen und schreiben, die Dokumente dahinter synchronisieren, ein wenig privaten Zustand halten und Arbeit an andere Apps übergeben. Brainstorm gibt dir vier verschiedene Speicher, jeden für eine andere Aufgabe — den richtigen zu nutzen ist der Großteil dessen, Datenverarbeitung richtig zu machen.
 
 | Nutzen | Für |
 | --- | --- |
@@ -40,7 +40,7 @@ const recent = await bs.services.entities.query({
 });
 ```
 
-Jeder davon wird durch die passende [Fähigkeit](/de/build/capabilities/) gesteuert: `entities.read:<type>` zum Lesen, `entities.write:<type>` zum Erstellen, Aktualisieren oder Löschen.
+Jeder davon wird durch die passende [Fähigkeit](/de/build/capabilities) gesteuert: `entities.read:<type>` zum Lesen, `entities.write:<type>` zum Erstellen, Aktualisieren oder Löschen.
 
 Für alles, was eine Liste rendert, bevorzuge den **Live**-Hook gegenüber der einmaligen `query` — er abonniert, sodass die UI sich aktualisiert, wenn sich Objekte irgendwo ändern:
 
@@ -104,7 +104,7 @@ const bytes = await bs.services.files.read(handle);
 await bs.services.files.write(handle, newBytes);
 ```
 
-Das Wählen erfordert eine Nutzergeste; das Schreiben erfordert `files.write`. Wenn deine App *als Opener* für eine Datei gestartet wird (über einen Manifest-[Opener](/de/build/the-manifest/#registrierungen--sich-in-die-shell-einklinken)), kommt die Datei in deinem `launch`-Kontext an.
+Das Wählen erfordert eine Nutzergeste; das Schreiben erfordert `files.write`. Wenn deine App *als Opener* für eine Datei gestartet wird (über einen Manifest-[Opener](/de/build/the-manifest#registrierungen--sich-in-die-shell-einklinken)), kommt die Datei in deinem `launch`-Kontext an.
 
 ## Mit anderen Apps sprechen
 
@@ -118,7 +118,7 @@ await bs.services.intents.dispatch({
 });
 ```
 
-`open` zu verschicken ist standardmäßig erteilt; andere Verben werden durch `intents.dispatch:<verb>` gesteuert. Um Intents zu *empfangen*, registriere einen Handler in deinem [Manifest](/de/build/the-manifest/#registrierungen--sich-in-die-shell-einklinken) und höre zu:
+`open` zu verschicken ist standardmäßig erteilt; andere Verben werden durch `intents.dispatch:<verb>` gesteuert. Um Intents zu *empfangen*, registriere einen Handler in deinem [Manifest](/de/build/the-manifest#registrierungen--sich-in-die-shell-einklinken) und höre zu:
 
 ```ts
 bs.on("intent", (intent) => {
@@ -130,5 +130,5 @@ So bleibt der ganze Arbeitsbereich verbunden: Eine Notiz verlinkt auf eine Aufga
 
 ## Weiter
 
-- [Rezepte & Anti-Patterns](/de/build/recipes/) — Muster zum Kopieren und Fehler zum Vermeiden.
-- [SDK & Laufzeit](/de/build/the-sdk/) — die vollständige Dienstoberfläche und Komponentenbibliothek.
+- [Rezepte & Anti-Patterns](/de/build/recipes) — Muster zum Kopieren und Fehler zum Vermeiden.
+- [SDK & Laufzeit](/de/build/the-sdk) — die vollständige Dienstoberfläche und Komponentenbibliothek.

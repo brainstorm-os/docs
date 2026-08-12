@@ -1,12 +1,12 @@
 ---
 title: Fähigkeiten
-description: Apps deklarieren die eng gefassten Berechtigungen, die sie brauchen; die Shell erteilt, fragt nach oder verweigert. Nichts ist stillschweigend gegeben, und Prüfungen scheitern geschlossen.
+description: "Apps deklarieren die eng gefassten Berechtigungen, die sie brauchen; die Shell erteilt, fragt nach oder verweigert. Nichts ist stillschweigend gegeben."
 sidebar:
   label: Fähigkeiten
   order: 3
 ---
 
-Eine Brainstorm-App startet mit fast keiner Macht. Sie kann ihr eigenes Fenster rendern und ihren eigenen Speicher lesen und schreiben — das war's. Alles andere — andere Objekttypen lesen, das Netzwerk erreichen, eine Benachrichtigung senden, eine Nutzlast signieren — ist eine benannte **Fähigkeit**, die die App deklariert und der Nutzer erteilt. Das ist dasselbe Modell, das in [Apps & Berechtigungen](/de/concepts/apps-and-permissions/) beschrieben ist, von der Seite des Entwicklers aus gesehen.
+Eine Brainstorm-App startet mit fast keiner Macht. Sie kann ihr eigenes Fenster rendern und ihren eigenen Speicher lesen und schreiben — das war's. Alles andere — andere Objekttypen lesen, das Netzwerk erreichen, eine Benachrichtigung senden, eine Nutzlast signieren — ist eine benannte **Fähigkeit**, die die App deklariert und der Nutzer erteilt. Das ist dasselbe Modell, das in [Apps & Berechtigungen](/de/concepts/apps-and-permissions) beschrieben ist, von der Seite des Entwicklers aus gesehen.
 
 Zwei Invarianten prägen, wie du Apps schreibst:
 
@@ -105,5 +105,5 @@ Eine App, die ausblendet oder deaktiviert, was sie derzeit nicht tun kann — st
 
 ## Weiter
 
-- [SDK & Laufzeit](/de/build/the-sdk/) — die Dienste, die diese Fähigkeiten steuern.
-- [Mit Daten arbeiten](/de/build/working-with-data/) — die `entities`-, `files`- und `intents`-Aufrufe in der Praxis.
+- [SDK & Laufzeit](/de/build/the-sdk) — die Dienste, die diese Fähigkeiten steuern.
+- [Mit Daten arbeiten](/de/build/working-with-data) — die `entities`-, `files`- und `intents`-Aufrufe in der Praxis.

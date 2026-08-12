@@ -1,6 +1,6 @@
 ---
 title: Local-first & synchronisation
-description: Brainstorm fonctionne entièrement hors ligne sur votre propre disque, et se synchronise entre appareils avec un chiffrement de bout en bout via un relais incapable de lire vos données.
+description: "Brainstorm fonctionne hors ligne sur votre disque et se synchronise entre appareils, chiffré de bout en bout via un relais incapable de lire vos données."
 ---
 
 Brainstorm est **local-first** : votre coffre est sur votre disque, l'application le lit et l'écrit directement, et rien de votre propre contenu ne nécessite un serveur. La synchronisation est une option que vous activez — pas une dépendance dont vous dépendez.
@@ -25,11 +25,20 @@ Lorsque vous activez la synchronisation, Brainstorm connecte vos appareils via u
 
 Vous obtenez ainsi la synchronisation et la collaboration multi-appareils sans confier votre savoir à un tiers.
 
+## Synchronisation sur votre réseau local
+
+Deux appareils sur le même Wi-Fi peuvent aussi se synchroniser **directement, sans aucun serveur**. Activez-la sous **Paramètres → Synchronisation** : les appareils se découvrent sur le réseau local, s'apparient via une poignée de main liée à l'appareil, et échangent des modifications chiffrées de bout en bout, de pair à pair. C'est opt-in, et cela se combine avec le relais — utilisez l'un, l'autre, ou les deux.
+
+## Les pièces jointes vous suivent
+
+Les fichiers et images attachés à vos notes et entités voyagent avec votre coffre. Les vignettes sont toujours synchronisées, si bien que les aperçus apparaissent instantanément sur chaque appareil ; le fichier complet se télécharge dès que vous l'ouvrez — rien n'attend, et rien n'encombre votre disque.
+
 ## Restaurer un appareil
 
 Comme l'historique chiffré réside sur le relais (ou votre propre serveur), configurer un nouvel appareil restaure votre coffre depuis la synchronisation — vous vous authentifiez, et vos objets se reconstruisent localement à partir du flux chiffré.
 
 ## Étapes suivantes
 
-- [Vos données & sécurité](/fr/concepts/your-data-and-security/) — clés, identité et modèle de menace
-- [Coffres](/fr/concepts/vaults/) — la chose qui est synchronisée
+- [Partage & collaboration](/fr/concepts/sharing-and-collaboration) — travailler sur les mêmes objets avec d'autres personnes
+- [Vos données & sécurité](/fr/concepts/your-data-and-security) — clés, identité et modèle de menace
+- [Coffres](/fr/concepts/vaults) — la chose qui est synchronisée

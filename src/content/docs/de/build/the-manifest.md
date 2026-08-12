@@ -1,12 +1,12 @@
 ---
 title: Das Manifest
-description: Jede App liefert ein Manifest, das ihre Identität, die Objekttypen, die sie besitzt, die Fähigkeiten, die sie braucht, und ihre Registrierung bei der Shell deklariert.
+description: "Jede App liefert ein Manifest: Identität, die Objekttypen, die sie besitzt, die Fähigkeiten, die sie braucht, und ihre Registrierung bei der Shell."
 sidebar:
   label: Das Manifest
   order: 2
 ---
 
-Jede App liefert eine `manifest.json`. Es ist der Vertrag der App mit der Shell: wer die App ist, welche Objekttypen sie besitzt, welche [Fähigkeiten](/de/build/capabilities/) sie braucht und wie sie sich in den Rest des Systems einklinkt (als Opener für einen Typ, als Widget auf dem Dashboard, als Handler für einen Intent). Die Shell liest es bei der Installation und erneut bei jedem Start.
+Jede App liefert eine `manifest.json`. Es ist der Vertrag der App mit der Shell: wer die App ist, welche Objekttypen sie besitzt, welche [Fähigkeiten](/de/build/capabilities) sie braucht und wie sie sich in den Rest des Systems einklinkt (als Opener für einen Typ, als Widget auf dem Dashboard, als Handler für einen Intent). Die Shell liest es bei der Installation und erneut bei jedem Start.
 
 ## Ein echtes Manifest
 
@@ -97,7 +97,7 @@ Das `schema` validiert die Eigenschaften des Objekts. Das Versionssuffix (`/v1`)
 Alles unter `registrations` ist optional. Jeder Block ist, wie deine App mit dem Arbeitsbereich zusammenspielt, statt allein zu stehen.
 
 - **`openers`** — deklariert deine App als eine Möglichkeit, etwas zu öffnen. `kind: "primary"` macht deine App zum Standard für einen Entitätstyp; `kind: "secondary"` registriert dich als Alternative, und `mime` lässt dich Dateien eines MIME-Typs öffnen. So leitet ein Doppelklick auf eine Notiz zu Notizen.
-- **`intents`** — registriert deine App als Handler für ein [Verb](/de/build/working-with-data/#mit-anderen-apps-sprechen) auf einem Typ (`open`, `compose`, `share`, …) mit einer `priority`. Andere Apps verschicken diese Intents, ohne zu wissen, dass deine App existiert.
+- **`intents`** — registriert deine App als Handler für ein [Verb](/de/build/working-with-data#mit-anderen-apps-sprechen) auf einem Typ (`open`, `compose`, `share`, …) mit einer `priority`. Andere Apps verschicken diese Intents, ohne zu wissen, dass deine App existiert.
 - **`widgets`** — Dashboard-Widgets, die deine App beisteuert, jedes mit einer `id`, einem `name` und einer `size` (`small`, `medium` oder `large`). Erfordert die Fähigkeit `widgets.publish`.
 - **`blocks`** — Block-Protocol-Beiträge, die deine App bereitstellt (z. B. ein Inline-Aufgaben-Block), gebunden an die Entitätstypen, die sie rendern. Erfordert `blocks.provide:<blockId>`.
 
@@ -105,5 +105,5 @@ Weitere Manifest-Abschnitte, denen du begegnest, wenn die App wächst, sind `sho
 
 ## Weiter
 
-- [Fähigkeiten](/de/build/capabilities/) — was jeder String im `capabilities`-Array gewährt und wie man zur Laufzeit um mehr bittet.
-- [Mit Daten arbeiten](/de/build/working-with-data/) — die hier deklarierten Objekttypen lesen und schreiben.
+- [Fähigkeiten](/de/build/capabilities) — was jeder String im `capabilities`-Array gewährt und wie man zur Laufzeit um mehr bittet.
+- [Mit Daten arbeiten](/de/build/working-with-data) — die hier deklarierten Objekttypen lesen und schreiben.

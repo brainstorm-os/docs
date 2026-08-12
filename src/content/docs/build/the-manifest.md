@@ -6,7 +6,7 @@ sidebar:
   order: 2
 ---
 
-Every app ships a `manifest.json`. It's the app's contract with the shell: who the app is, what object types it owns, which [capabilities](/build/capabilities/) it needs, and how it plugs into the rest of the system (as an opener for a type, a widget on the dashboard, a handler for an intent). The shell reads it at install time and again on every launch.
+Every app ships a `manifest.json`. It's the app's contract with the shell: who the app is, what object types it owns, which [capabilities](/build/capabilities) it needs, and how it plugs into the rest of the system (as an opener for a type, a widget on the dashboard, a handler for an intent). The shell reads it at install time and again on every launch.
 
 ## A real manifest
 
@@ -97,7 +97,7 @@ The `schema` validates the object's properties. The version suffix (`/v1`) is ho
 Everything under `registrations` is optional. Each block is how your app composes with the workspace rather than standing alone.
 
 - **`openers`** — declares your app as a way to open something. `kind: "primary"` makes your app the default for an entity type; `kind: "secondary"` registers you as an alternative, and `mime` lets you open files of a MIME type. This is how double-clicking a note routes to Notes.
-- **`intents`** — registers your app as a handler for a [verb](/build/working-with-data/#talking-to-other-apps) on a type (`open`, `compose`, `share`, …) with a `priority`. Other apps dispatch these intents without knowing your app exists.
+- **`intents`** — registers your app as a handler for a [verb](/build/working-with-data#talking-to-other-apps) on a type (`open`, `compose`, `share`, …) with a `priority`. Other apps dispatch these intents without knowing your app exists.
 - **`widgets`** — dashboard widgets your app contributes, each with an `id`, `name`, and `size` (`small`, `medium`, or `large`). Requires the `widgets.publish` capability.
 - **`blocks`** — block-protocol contributions your app provides (e.g. an inline-task block), bound to the entity types they render. Requires `blocks.provide:<blockId>`.
 
@@ -105,5 +105,5 @@ Other manifest sections you'll encounter as the app grows include `shortcuts` (d
 
 ## Next
 
-- [Capabilities](/build/capabilities/) — what each string in the `capabilities` array grants, and how to ask for more at runtime.
-- [Working with data](/build/working-with-data/) — reading and writing the object types you declared here.
+- [Capabilities](/build/capabilities) — what each string in the `capabilities` array grants, and how to ask for more at runtime.
+- [Working with data](/build/working-with-data) — reading and writing the object types you declared here.
